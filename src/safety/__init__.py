@@ -1,3 +1,3 @@
-from .cbf_clf_qp import CBFCLFQPFilter
+from .drawdown_filter import CushionGapFilter
 
-__all__ = ["CBFCLFQPFilter"]
+__all__ = ["CushionGapFilter"]
