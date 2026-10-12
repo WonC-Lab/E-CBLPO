@@ -158,7 +158,12 @@ def main():
                 jobs.append(("pw", mkt, v, s))
             for v in ["PPO", "PPO-Lagrangian", "E-CBLPO (PPO-trained)"]:
                 jobs.append(("ppo", mkt, v, s))
-    jobs = [j for j in jobs if j[0] != "rules"] + [j for j in jobs if j[0] == "rules"]
+    # priority: cheap rule evaluations, then E-CBLPO, then ablations / RL baselines
+    prio = lambda j: 0 if j[0] == "rules" else (1 if (j[0] == "pw" and j[2] == "E-CBLPO") else 2)
+    jobs = sorted(jobs, key=prio)
+    kinds = os.environ.get("JOB_KINDS")
+    if kinds:
+        jobs = [j for j in jobs if j[0] in kinds.split(",")]
 
     # resume: skip jobs whose evaluation output already exists
     def done(j):
