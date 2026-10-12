@@ -1,63 +1,76 @@
-# E-CBLPO: Equivariant Certified-Cushion Policy Optimization for Drawdown-Constrained Portfolio Choice
+# Certified Cushion Policies for Drawdown-Constrained Portfolio Choice
 
-Code for *Equivariant Control Barrier-Lyapunov Policy Optimization for Safe Dynamic Portfolio Choice*
-(WonChan Cho, Department of Mathematics, Sungkyunkwan University — `chln0124@skku.edu`).
+Code and results for the revised version of *Equivariant Control Barrier-Lyapunov Policy Optimization
+for Safe Dynamic Portfolio Choice* (WonChan Cho, Department of Mathematics, Sungkyunkwan University,
+`chln0124@skku.edu`).
 
-> **Revision note (v0.2, October 2026).** Version 0.1 of this repository evaluated reinforcement-learning
-> agents **without training them**, and two figures (the 50-asset weight heat-map and the Pareto
-> frontier) were produced from hand-written rules or typed-in numbers rather than from experiments.
-> All of that code and its outputs have been removed. Every number and figure is now produced by
-> `experiments/run_all.sh` from saved evaluation files, and the theory has been corrected
-> (see `docs/theory_revision.tex`). A list of affected statements in the earlier manuscript is in
-> `docs/manuscript_corrections.md`.
+> **Revision note (v0.2, October 2026).** Version 0.1 of this repository evaluated the
+> reinforcement-learning agents **without training them**, and two figures (the 50-asset weight
+> heat-map and the Pareto frontier) were drawn from hand-written rules or typed-in numbers rather than
+> from experiments. That code and its outputs have been removed; they remain visible in the git
+> history. In v0.2 every number and figure is produced by `experiments/run_all.sh` from saved
+> evaluation files, and the theory has been corrected: the drift-only barrier condition of the
+> original Theorem 5.1 does not imply almost-sure invariance (a counterexample is checked numerically
+> in `tests/test_theory.py`).
 
-## What the method does
+## Problem and main findings
 
-Problem: maximise CRRA utility of terminal wealth subject to a running-maximum drawdown limit
-$W_t \ge (1-\alpha) H_t$, $H_t=\max_{s\le t}W_s$.
+Maximise CRRA utility of terminal wealth subject to a running-maximum drawdown limit
+$W_t \ge (1-\alpha)H_t$, $H_t=\max_{s\le t}W_s$, with daily trading and proportional costs.
 
-* **Policy.** Dollar exposure is the cushion $h_t = W_t-(1-\alpha)H_t$ times a multiplier:
-  $u_t = (h_t/W_t)\,[\Sigma_t^{-1}(\mu_t-r)/\rho' + f_\phi(x_t)]$. The first term is the
-  Grossman–Zhou / Cvitanić–Karatzas solution; $f_\phi$ is an $S_N$-equivariant DeepSets residual
-  initialised at zero.
+* **The finite-horizon optimum cannot be executed safely in discrete time.** Near the floor its cushion
+  multiplier diverges, and under daily rebalancing it breaches the limit on 7–36% of paths.
+* **Price of discrete-time safety.** Capping the cushion multiplier at $K$ costs roughly $K^{-2}$ in
+  certainty equivalent. The robust class ($K=1$; De Franco, Nicolle & Pham 2020; Hsieh 2026) costs
+  about 123 bp per year in our calibration, while $K=15$ costs 0.6 bp and produces no violations.
+* **Learning the certified optimum where no Bellman reduction exists.** An $S_N$-equivariant residual on
+  the Grossman–Zhou cushion multiplier, trained by pathwise gradients through the wealth recursion,
+  is within 1 bp of the exact (2-D HJB) certified optimum in a Kim–Omberg market, beats
+  portfolio-insurance rules by 31–90 bp per year in four markets with no violations, and transfers
+  from 5 to 50 assets without retraining.
+
+Tables: `results/tables/tables.md` · Figures: `results/figures/` · Configuration: `results/config.json`.
+
+## Method
+
+* **Policy.** $u_t = (h_t/W_t)\,[\Sigma_t^{-1}(\mu_t-r)/\rho' + f_\phi(x_t)]$ with cushion
+  $h_t = W_t-(1-\alpha)H_t$: the Grossman–Zhou / Cvitanić–Karatzas multiplier plus an
+  $S_N$-equivariant DeepSets residual initialised at zero.
 * **Safety.** A closed-form radial filter enforces
   $c\|u_{t-1}\|_1+(\ell+2c)\|u_t\|_1\le(1-\eta)h_t/W_t$. This gives almost-sure invariance in
-  continuous time and pathwise invariance in discrete time whenever one-period moves stay
-  within the stress bound $\ell$, with proportional costs included. Without such a bound,
-  pathwise safety with Gaussian returns is impossible except in cash (Proposition 5.4).
-* **Training.** Returns are exogenous (no price impact), so $\nabla_\phi\mathbb E[U(W_T)]$ is computed
-  by back-propagating through the simulated wealth recursion. PPO training of the same policy is
-  included as an ablation.
+  continuous time and pathwise invariance in discrete time whenever one-period moves stay below the
+  stress bound $\ell$, with costs included.
+* **Training.** Returns are exogenous (no price impact), so $\nabla_\phi\mathbb E[U(W_T)]$ is obtained by
+  back-propagating through simulated wealth paths. PPO training of the same policy is an ablation.
 
-## Benchmarks
+## Benchmarks and experiments
 
-| Group | Strategies |
+| Group | Contents |
 |---|---|
-| Analytical / numerical | Grossman–Zhou (plug-in), Merton (unconstrained), finite-horizon HJB optimum (continuous-time and restricted to the certified class; constant coefficients only) |
-| Portfolio insurance | CPPI (static floor, m = 3), TIPP (ratcheting floor, m = 3, 5), 60% constant mix, cash |
-| Learned | PPO, PPO-Lagrangian, E-CBLPO trained with PPO, E-CBLPO without the GZ prior, E-CBLPO with an MLP instead of DeepSets |
+| Exact / numerical optima | finite-horizon HJB, unrestricted and restricted to multiplier cap $K$: 1-D (Black–Scholes), 2-D (Kim–Omberg, incl. hedging demand) |
+| Analytical rules | Grossman–Zhou (plug-in), Merton (unconstrained) |
+| Portfolio insurance | CPPI (static floor), TIPP (ratcheting floor, m = 3, 5), 60% constant mix, cash |
+| Learned | E-CBLPO; ablations: MLP instead of DeepSets, no GZ prior, PPO-trained; PPO and PPO-Lagrangian baselines |
+| Markets | Black–Scholes (1 asset), Kim–Omberg (1), Heston (5; zero-shot to 50), Merton jump-diffusion (1) |
+| Extra studies | price of safety vs $K$; zero-cost optimality gap; drift-estimation risk; $\alpha$ sweep; risk aversion and horizon |
 
-Markets: Black–Scholes with constant coefficients (1 asset), Kim–Omberg (1 asset), multi-asset Heston
-(5 assets; zero-shot transfer to 50 assets), Merton jump-diffusion with common crashes (1 asset).
-Main metric: certainty-equivalent terminal wealth on common random paths, reported with path
-violation rates and mean gross exposure.
+Main metric: certainty-equivalent terminal wealth on common random paths, with path-violation
+rates (Clopper–Pearson bounds) and gross exposure, to show that strategies are not simply holding cash.
 
 ## Layout
 
 ```
-src/sim/markets.py            vectorised market models (B paths in parallel)
-src/sim/portfolio_env.py      drawdown-constrained wealth recursion with costs
-src/safety/drawdown_filter.py certified cushion-gap filter
-src/agents/rules.py           GZ, Merton, CPPI, TIPP, constant mix, cash
-src/agents/hjb.py             finite-horizon HJB solver (constant coefficients)
-src/agents/pathwise.py        E-CBLPO, pathwise-gradient training
-src/agents/ppo.py             PPO / PPO-Lagrangian / PPO-trained E-CBLPO
-experiments/run_benchmark.py  main benchmark (resumable)
-experiments/run_extensions.py 50-asset zero-shot transfer, alpha sweep
-experiments/make_tables.py    tables from results/ only
-experiments/make_figures.py   figures from results/ only
-tests/test_theory.py          numerical checks of the propositions
-docs/theory_revision.tex      revised Section 5 and proofs
+src/sim/markets.py                 vectorised market models (incl. drift-uncertainty market)
+src/sim/portfolio_env.py           drawdown-constrained wealth recursion with costs
+src/safety/drawdown_filter.py      certified cushion-gap filter
+src/agents/rules.py                GZ, Merton, CPPI, TIPP, constant mix, cash
+src/agents/hjb.py, hjb_ko.py       finite-horizon HJB solvers (1-D, 2-D Kim-Omberg)
+src/agents/pathwise.py             E-CBLPO with pathwise-gradient training
+src/agents/ppo.py                  PPO / PPO-Lagrangian / PPO-trained E-CBLPO
+experiments/run_*.py               one script per experiment (all resumable)
+experiments/make_tables.py         tables from results/ only
+experiments/make_figures.py        figures from results/ only
+tests/test_theory.py               numerical checks of the propositions
 ```
 
 ## Reproduce
@@ -65,12 +78,9 @@ docs/theory_revision.tex      revised Section 5 and proofs
 ```bash
 pip install torch numpy scipy matplotlib pytest
 pytest -q tests
-bash experiments/run_all.sh        # about 3 CPU-hours on 2 cores; safe to re-run after interruption
+bash experiments/run_all.sh        # about 5-6 hours on 2 CPU cores; re-run safely after interruption
 ```
-
-Outputs: `results/tables/` (LaTeX, Markdown, JSON), `results/figures/`, `results/checkpoints/`,
-and per-path evaluation files in `results/<market>/raw/`.
 
 ## License
 
-MIT.
+MIT (see `LICENSE`).
