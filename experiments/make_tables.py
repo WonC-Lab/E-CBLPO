@@ -118,9 +118,10 @@ def to_latex(market, rows):
         r = rows[name]
         if name == "PPO":
             lines.append(r"\midrule")
-        nm = r"\textbf{" + name + "}" if name == "E-CBLPO" else name
-        d = "--" if name == "Grossman-Zhou" else f"{r['dCE_vs_GZ_bp']:+.1f} $\\pm$ {r['dCE_vs_GZ_se_bp']:.1f}"
-        p = "--" if name == "Grossman-Zhou" else fmt_p(r["p_vs_GZ"])
+        tex_name = name.replace("%", r"\%").replace("Grossman-Zhou", "Grossman--Zhou")
+        nm = r"\textbf{" + tex_name + "}" if name == "E-CBLPO" else tex_name
+        d = "--" if name == "Grossman-Zhou" else f"${r['dCE_vs_GZ_bp']:+.1f}\\pm{r['dCE_vs_GZ_se_bp']:.1f}$"
+        p = "--" if name == "Grossman-Zhou" else "$" + fmt_p(r["p_vs_GZ"]) + "$"
         v = f"{100*r['viol_rate']:.2f} [{100*r['viol_ub95']:.2f}]"
         lines.append(f"{nm} & {r['CE']:.4f} $\\pm$ {r['CE_se']:.4f} & {d} & {p} & {v} & {100*r['mean_maxdd']:.2f} & {r['gross']:.3f} \\\\")
     lines += [r"\bottomrule", r"\end{tabular}", r"\end{table}"]
