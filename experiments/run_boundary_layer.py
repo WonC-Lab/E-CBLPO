@@ -40,6 +40,26 @@ def main():
             slopes[str(tf)] = float(np.polyfit(np.log(1 / yz), m ** 2 * sig ** 2 * (1 - tf), 1)[0])
         out["r_zero"].append({"sigma": sig, "slope_m2_sigma2_tau_vs_log": slopes})
         print("r=0 sigma", sig, {k: round(v, 2) for k, v in slopes.items()}, flush=True)
+    # (2b) dual test at r = 0: slope of the multiplier against ln v_x should be 1/(sigma theta tau);
+    #      and the floor marginal value v_x(t, a+) is finite for r > 0, infinite for r = 0.
+    out["dual_slope_r0"] = []
+    for mu, sig in [(0.06, 0.2), (0.06, 0.3), (0.10, 0.2), (0.04, 0.2)]:
+        for tau in (0.25, 0.5, 0.9):
+            s = solve_hjb_graded(T=tau, days=int(round(tau * 252)), keep_times=(0.0,), M=3000, q=3.5, r=0.0, mu=mu, sigma=sig)
+            y = s["y"]; vx = np.gradient(s["v0"], y); m = s["pi"][0.0] * s["x"] / np.where(y > 0, y, np.nan)
+            sel = (y > 1e-10) & (y < 1e-5) & np.isfinite(m) & (vx > 0) & (m * y < 1.99)
+            lv, mm = np.log(vx[sel]), m[sel]
+            k = np.argsort(lv); lv, mm = lv[k], mm[k]
+            dl = np.diff(lv); loc = np.diff(mm)[dl > 1e-6] / dl[dl > 1e-6]
+            pred = 1 / (sig * (mu / sig) * tau)
+            out["dual_slope_r0"].append({"mu": mu, "sigma": sig, "tau": tau, "median_slope": float(np.median(loc)), "prediction": pred})
+            print("dual slope", mu, sig, tau, round(float(np.median(loc)) / pred, 3), flush=True)
+    out["floor_marginal_value"] = {}
+    for r, mu in [(0.02, 0.08), (0.0, 0.06)]:
+        s = solve_hjb_graded(M=3000, q=3.5, r=r, mu=mu, keep_times=())
+        vx = np.gradient(s["v0"], s["y"])
+        out["floor_marginal_value"][str(r)] = {"y": [1e-9, 1e-7, 1e-5, 1e-3], "v_x": np.interp([1e-9, 1e-7, 1e-5, 1e-3], s["y"], vx).tolist()}
+        print("v_x near floor, r =", r, np.round(out["floor_marginal_value"][str(r)]["v_x"], 3), flush=True)
     Ks = [2, 3, 4, 5, 6, 8, 10, 14, 20, 30, 50]
     for r, mu in [(0.02, 0.08), (0.04, 0.10), (0.0, 0.06)]:
         kw = dict(M=1600, q=3.0, r=r, mu=mu, keep_times=())
