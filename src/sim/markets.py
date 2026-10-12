@@ -216,5 +216,49 @@ class JumpDiffusion:
         return np.zeros((state["B"], self.N, 0))
 
 
+
+
+
+class EstimatedDriftBS(ConstantBS):
+    """Single-asset Black-Scholes with parameter uncertainty.
+
+    Per path, the true drift is drawn from a prior, mu ~ N(mu0, prior_sd^2), and the
+    investor observes only a noisy estimate mu_hat = mu + N(0, est_sd^2) (est_sd = vol / sqrt(years of data)).
+    Simulation uses the true mu; every strategy's observation (excess_drift, Merton
+    direction) uses mu_hat.  The true excess drift is exposed only as `oracle_excess`
+    for the infeasible oracle benchmark.
+    """
+
+    name = "estimated_bs"
+
+    def __init__(self, mu0=0.08, prior_sd=0.03, est_sd=0.045, vol=0.20, r=0.02, dt=1.0 / 252.0):
+        super().__init__(num_assets=1, mu=mu0, vol=vol, r=r, dt=dt)
+        self.mu0, self.prior_sd, self.est_sd = mu0, prior_sd, est_sd
+        self.shrink = prior_sd ** 2 / (prior_sd ** 2 + est_sd ** 2)   # posterior weight on mu_hat
+
+    def reset(self, B, rng):
+        mu = self.mu0 + self.prior_sd * rng.standard_normal(B)
+        mu_hat = mu + self.est_sd * rng.standard_normal(B)
+        return {"B": B, "mu": mu, "mu_hat": mu_hat}
+
+    def coeffs(self, state):
+        B = state["B"]
+        return state["mu"][:, None].copy(), np.broadcast_to(self.sig, (B, 1, 1)).copy()
+
+    def excess_drift(self, state):
+        return (state["mu_hat"] - self.r)[:, None]
+
+    def oracle_excess(self, state):
+        return (state["mu"] - self.r)[:, None]
+
+    def step(self, state, rng):
+        mu, sig = self.coeffs(state)
+        B = state["B"]
+        dZ = rng.standard_normal((B, 1)) * np.sqrt(self.dt)
+        logret = (mu - 0.5 * sig[:, :, 0] ** 2) * self.dt + sig[:, :, 0] * dZ
+        return np.expm1(logret), state
+
+
 def make_market(name, **kw):
-    return {"constant_bs": ConstantBS, "kim_omberg": KimOmberg, "heston": MultiHeston, "jump": JumpDiffusion}[name](**kw)
+    return {"constant_bs": ConstantBS, "kim_omberg": KimOmberg, "heston": MultiHeston, "jump": JumpDiffusion,
+            "estimated_bs": EstimatedDriftBS}[name](**kw)

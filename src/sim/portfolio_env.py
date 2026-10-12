@@ -68,6 +68,7 @@ class DrawdownPortfolioEnv:
             "ex": ex, "Sigma": Sigma, "vol": vol, "merton_dir": merton_dir,
             "mkt": self.m.features(self.state), "mkt_scale": getattr(self.m, "feature_scale", 1.0), "u_prev": self.u_prev.copy(),
             "alpha": self.alpha, "r": self.r,
+            "oracle_ex": self.m.oracle_excess(self.state) if hasattr(self.m, "oracle_excess") else ex,
         }
 
     def step(self, u):
