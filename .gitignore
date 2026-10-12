@@ -23,3 +23,6 @@ __pycache__/
 # Temporary outputs
 wandb/
 .system_generated/
+results/run.log
+results/chunk*.log
+__pycache__/

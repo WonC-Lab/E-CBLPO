@@ -1,0 +1,41 @@
+{
+  "alpha": 0.2,
+  "tc": 0.001,
+  "eta": 0.05,
+  "rho": 2.0,
+  "T": 252,
+  "B_eval": 4000,
+  "seeds": 5,
+  "pathwise": {
+    "iters": 200,
+    "batch": 512
+  },
+  "ppo": {
+    "iters": 150,
+    "batch": 64
+  },
+  "markets": {
+    "constant_bs": {
+      "kw": {
+        "num_assets": 1
+      },
+      "ell": 0.2
+    },
+    "kim_omberg": {
+      "kw": {},
+      "ell": 0.2
+    },
+    "heston": {
+      "kw": {
+        "num_assets": 5
+      },
+      "ell": 0.2
+    },
+    "jump": {
+      "kw": {
+        "num_assets": 1
+      },
+      "ell": 0.25
+    }
+  }
+}

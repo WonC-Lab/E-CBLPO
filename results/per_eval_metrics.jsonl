@@ -1,0 +1,255 @@
+{"market": "heston", "eval_set": 0, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.0606335401535034, "mean_W": 1.0735840797424316, "viol": 0.0, "mean_maxdd": 0.09413790702819824, "gross": 0.7770023345947266}
+{"market": "heston", "eval_set": 0, "strategy": "E-CBLPO", "CE": 1.060126781463623, "mean_W": 1.0729008913040161, "viol": 0.0, "mean_maxdd": 0.09379176795482635, "gross": 0.7780331969261169}
+{"market": "heston", "eval_set": 0, "strategy": "PPO", "CE": 1.0301979445932754, "mean_W": 1.031870124589957, "viol": 0.00025, "mean_maxdd": 0.036379210515559084, "gross": 0.2900957540550319}
+{"market": "heston", "eval_set": 0, "strategy": "PPO-Lagrangian", "CE": 1.0122795788947696, "mean_W": 1.012669969850015, "viol": 0.0, "mean_maxdd": 0.018174354198901545, "gross": 0.16809103516471435}
+{"market": "heston", "eval_set": 0, "strategy": "E-CBLPO (MLP)", "CE": 1.0586776733398438, "mean_W": 1.0710959434509277, "viol": 0.0, "mean_maxdd": 0.09317057579755783, "gross": 0.7797331809997559}
+{"market": "heston", "eval_set": 0, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.0391520269857997, "mean_W": 1.04457716815525, "viol": 0.0, "mean_maxdd": 0.0658531887257499, "gross": 0.7546430847660167}
+{"market": "heston", "eval_set": 1, "strategy": "E-CBLPO", "CE": 1.0630264282226562, "mean_W": 1.0761632919311523, "viol": 0.0, "mean_maxdd": 0.09470503777265549, "gross": 0.7780640125274658}
+{"market": "heston", "eval_set": 1, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.0627464056015015, "mean_W": 1.073879361152649, "viol": 0.0, "mean_maxdd": 0.08800376206636429, "gross": 0.74058997631073}
+{"market": "heston", "eval_set": 1, "strategy": "PPO", "CE": 1.0253718542332655, "mean_W": 1.0260384775102553, "viol": 0.0, "mean_maxdd": 0.022681847732888234, "gross": 0.17283936588881693}
+{"market": "heston", "eval_set": 1, "strategy": "E-CBLPO (MLP)", "CE": 1.0620639324188232, "mean_W": 1.0748817920684814, "viol": 0.0, "mean_maxdd": 0.09434931725263596, "gross": 0.7787578105926514}
+{"market": "heston", "eval_set": 1, "strategy": "PPO-Lagrangian", "CE": 1.0281475398292113, "mean_W": 1.0287855805668915, "viol": 0.0, "mean_maxdd": 0.02131715268657957, "gross": 0.18739860074092643}
+{"market": "heston", "eval_set": 1, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.0421350564406233, "mean_W": 1.0483223425685737, "viol": 0.0, "mean_maxdd": 0.07063970001566465, "gross": 0.775386854049794}
+{"market": "constant_bs", "eval_set": 1, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "constant_bs", "eval_set": 1, "strategy": "Constant mix (60% risky)", "CE": 1.0399294322589994, "mean_W": 1.0552516639861802, "viol": 0.05925, "mean_maxdd": 0.11556544079439048, "gross": 0.5999999999999973}
+{"market": "constant_bs", "eval_set": 1, "strategy": "Merton (unconstrained)", "CE": 1.0401807074763783, "mean_W": 1.06422550471235, "viol": 0.15675, "mean_maxdd": 0.1440275236958301, "gross": 0.7499999981249987}
+{"market": "constant_bs", "eval_set": 1, "strategy": "CPPI (m=3)", "CE": 1.0352617444007026, "mean_W": 1.0549307119136797, "viol": 0.04175, "mean_maxdd": 0.1262084266049733, "gross": 0.6401946857895534}
+{"market": "constant_bs", "eval_set": 1, "strategy": "TIPP (m=3)", "CE": 1.0353402679403574, "mean_W": 1.045998206434463, "viol": 0.0, "mean_maxdd": 0.09335161618999051, "gross": 0.4887139369452816}
+{"market": "constant_bs", "eval_set": 1, "strategy": "TIPP (m=5)", "CE": 1.0314704904463206, "mean_W": 1.0541071487064086, "viol": 0.0, "mean_maxdd": 0.13373747899424382, "gross": 0.6892295079130067}
+{"market": "constant_bs", "eval_set": 1, "strategy": "Grossman-Zhou", "CE": 1.0308135048412728, "mean_W": 1.033120259846808, "viol": 0.0, "mean_maxdd": 0.042185375410666526, "gross": 0.23264424944542114}
+{"market": "constant_bs", "eval_set": 1, "strategy": "HJB optimum (continuous-time)", "CE": 1.0387594421108353, "mean_W": 1.059452009505531, "viol": 0.07375, "mean_maxdd": 0.13135867838357462, "gross": 0.681041025843631}
+{"market": "constant_bs", "eval_set": 1, "strategy": "HJB optimum (certified class)", "CE": 1.037536312621853, "mean_W": 1.054631317862423, "viol": 0.0, "mean_maxdd": 0.11735260842582411, "gross": 0.6123912385861308}
+{"market": "constant_bs", "eval_set": 0, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "constant_bs", "eval_set": 0, "strategy": "Constant mix (60% risky)", "CE": 1.041636588761656, "mean_W": 1.0564883793317335, "viol": 0.05425, "mean_maxdd": 0.11489345021861644, "gross": 0.5999999999999973}
+{"market": "constant_bs", "eval_set": 0, "strategy": "Merton (unconstrained)", "CE": 1.0424102050065158, "mean_W": 1.065721580735611, "viol": 0.1535, "mean_maxdd": 0.1432240534361665, "gross": 0.7499999981249987}
+{"market": "constant_bs", "eval_set": 0, "strategy": "CPPI (m=3)", "CE": 1.036079491011826, "mean_W": 1.0558381701443669, "viol": 0.0365, "mean_maxdd": 0.1258166526924269, "gross": 0.6406302974834386}
+{"market": "constant_bs", "eval_set": 0, "strategy": "TIPP (m=3)", "CE": 1.036040510147735, "mean_W": 1.0466221872116235, "viol": 0.0, "mean_maxdd": 0.09310913286220221, "gross": 0.48918278948479643}
+{"market": "constant_bs", "eval_set": 0, "strategy": "TIPP (m=5)", "CE": 1.032033790108329, "mean_W": 1.0547139987330267, "viol": 0.0, "mean_maxdd": 0.13359003033060202, "gross": 0.6900805770060583}
+{"market": "constant_bs", "eval_set": 0, "strategy": "Grossman-Zhou", "CE": 1.0312959876881165, "mean_W": 1.033553967937508, "viol": 0.0, "mean_maxdd": 0.04197136737197811, "gross": 0.23275530934654937}
+{"market": "constant_bs", "eval_set": 0, "strategy": "HJB optimum (continuous-time)", "CE": 1.0396537576867617, "mean_W": 1.060174191150184, "viol": 0.06325, "mean_maxdd": 0.13100614075535588, "gross": 0.6823741501795709}
+{"market": "constant_bs", "eval_set": 0, "strategy": "HJB optimum (certified class)", "CE": 1.038238908119715, "mean_W": 1.0552693195528269, "viol": 0.0, "mean_maxdd": 0.11710141658106159, "gross": 0.6135518495782476}
+{"market": "constant_bs", "eval_set": 2, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "constant_bs", "eval_set": 2, "strategy": "Constant mix (60% risky)", "CE": 1.0419470363555408, "mean_W": 1.0570169682615336, "viol": 0.05075, "mean_maxdd": 0.11469742480058309, "gross": 0.5999999999999973}
+{"market": "constant_bs", "eval_set": 2, "strategy": "Merton (unconstrained)", "CE": 1.0427633730982422, "mean_W": 1.0664214614327896, "viol": 0.15125, "mean_maxdd": 0.14300535190906538, "gross": 0.7499999981249987}
+{"market": "constant_bs", "eval_set": 2, "strategy": "CPPI (m=3)", "CE": 1.0367624021168944, "mean_W": 1.0568972246084833, "viol": 0.04125, "mean_maxdd": 0.12638759705469838, "gross": 0.6424067016511879}
+{"market": "constant_bs", "eval_set": 2, "strategy": "TIPP (m=3)", "CE": 1.0364606965036793, "mean_W": 1.0472351229764345, "viol": 0.0, "mean_maxdd": 0.09302758379642131, "gross": 0.4894232772161968}
+{"market": "constant_bs", "eval_set": 2, "strategy": "TIPP (m=5)", "CE": 1.0327825508387338, "mean_W": 1.0560010666037702, "viol": 0.0, "mean_maxdd": 0.133594258704864, "gross": 0.6905306555209427}
+{"market": "constant_bs", "eval_set": 2, "strategy": "Grossman-Zhou", "CE": 1.0314701570472815, "mean_W": 1.0337620979080826, "viol": 0.0, "mean_maxdd": 0.0419078354376617, "gross": 0.23279181764517662}
+{"market": "constant_bs", "eval_set": 2, "strategy": "HJB optimum (continuous-time)", "CE": 1.0402857344236498, "mean_W": 1.0610156222802796, "viol": 0.07025, "mean_maxdd": 0.13108965484351942, "gross": 0.6828416062820056}
+{"market": "constant_bs", "eval_set": 2, "strategy": "HJB optimum (certified class)", "CE": 1.0385268955333704, "mean_W": 1.055767934445757, "viol": 0.0, "mean_maxdd": 0.11716383904116325, "gross": 0.613810693010548}
+{"market": "constant_bs", "eval_set": 3, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "constant_bs", "eval_set": 3, "strategy": "Constant mix (60% risky)", "CE": 1.0426973259986934, "mean_W": 1.0577586917118724, "viol": 0.0545, "mean_maxdd": 0.11456556045227959, "gross": 0.5999999999999973}
+{"market": "constant_bs", "eval_set": 3, "strategy": "Merton (unconstrained)", "CE": 1.0436994877977595, "mean_W": 1.0673498204037555, "viol": 0.152, "mean_maxdd": 0.1428111109999482, "gross": 0.7499999981249987}
+{"market": "constant_bs", "eval_set": 3, "strategy": "CPPI (m=3)", "CE": 1.0374496075985076, "mean_W": 1.0575749104549996, "viol": 0.04575, "mean_maxdd": 0.12659415817225778, "gross": 0.6452795361753939}
+{"market": "constant_bs", "eval_set": 3, "strategy": "TIPP (m=3)", "CE": 1.0375684915286085, "mean_W": 1.0482092389196476, "viol": 0.0, "mean_maxdd": 0.09284621057737825, "gross": 0.4900460152625875}
+{"market": "constant_bs", "eval_set": 3, "strategy": "TIPP (m=5)", "CE": 1.0346340005206838, "mean_W": 1.0575479904084508, "viol": 0.0, "mean_maxdd": 0.13327398425979886, "gross": 0.692511192906818}
+{"market": "constant_bs", "eval_set": 3, "strategy": "Grossman-Zhou", "CE": 1.0318403572982777, "mean_W": 1.0341161048657863, "viol": 0.0, "mean_maxdd": 0.041847305190727775, "gross": 0.2328677556442005}
+{"market": "constant_bs", "eval_set": 3, "strategy": "HJB optimum (continuous-time)", "CE": 1.0414982054600832, "mean_W": 1.0620582180792453, "viol": 0.06875, "mean_maxdd": 0.13066871023602375, "gross": 0.6830439750798378}
+{"market": "constant_bs", "eval_set": 3, "strategy": "HJB optimum (certified class)", "CE": 1.0401006567195235, "mean_W": 1.0571096894404595, "viol": 0.0, "mean_maxdd": 0.11689410453318434, "gross": 0.6145472795916705}
+{"market": "kim_omberg", "eval_set": 0, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "kim_omberg", "eval_set": 0, "strategy": "Constant mix (60% risky)", "CE": 1.041390453883189, "mean_W": 1.0551437736249634, "viol": 0.05075, "mean_maxdd": 0.11465114796111615, "gross": 0.5999999999999973}
+{"market": "kim_omberg", "eval_set": 0, "strategy": "Merton (unconstrained)", "CE": 1.040366153264669, "mean_W": 1.0635090311758162, "viol": 0.19575, "mean_maxdd": 0.14582850473135234, "gross": 0.753381221288534}
+{"market": "kim_omberg", "eval_set": 0, "strategy": "CPPI (m=3)", "CE": 1.0339342501905928, "mean_W": 1.0514686162108178, "viol": 0.0425, "mean_maxdd": 0.125764540945341, "gross": 0.6379893662544744}
+{"market": "kim_omberg", "eval_set": 0, "strategy": "TIPP (m=3)", "CE": 1.0353006155551, "mean_W": 1.0450534476579483, "viol": 0.0, "mean_maxdd": 0.09307080223762686, "gross": 0.4892765242578593}
+{"market": "kim_omberg", "eval_set": 0, "strategy": "TIPP (m=5)", "CE": 1.0305811393706037, "mean_W": 1.051414091096489, "viol": 0.0, "mean_maxdd": 0.1336448032529032, "gross": 0.6896503578135319}
+{"market": "kim_omberg", "eval_set": 0, "strategy": "Grossman-Zhou", "CE": 1.031405686126584, "mean_W": 1.0335623050359544, "viol": 0.0, "mean_maxdd": 0.04273302330587693, "gross": 0.2319067323778808}
+{"market": "kim_omberg", "eval_set": 1, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "kim_omberg", "eval_set": 1, "strategy": "Constant mix (60% risky)", "CE": 1.0436732484679772, "mean_W": 1.0581061220750594, "viol": 0.0485, "mean_maxdd": 0.11419358322544763, "gross": 0.5999999999999973}
+{"market": "kim_omberg", "eval_set": 1, "strategy": "Merton (unconstrained)", "CE": 1.0421767661409218, "mean_W": 1.065670197730767, "viol": 0.1905, "mean_maxdd": 0.14482627016811317, "gross": 0.7505786395149375}
+{"market": "kim_omberg", "eval_set": 1, "strategy": "CPPI (m=3)", "CE": 1.0373888609890352, "mean_W": 1.0567656771889056, "viol": 0.03925, "mean_maxdd": 0.12529659390074854, "gross": 0.6398278781513242}
+{"market": "kim_omberg", "eval_set": 1, "strategy": "TIPP (m=3)", "CE": 1.0373005005899678, "mean_W": 1.047604346319305, "viol": 0.0, "mean_maxdd": 0.09281287287956771, "gross": 0.4898078577053131}
+{"market": "kim_omberg", "eval_set": 1, "strategy": "TIPP (m=5)", "CE": 1.0333684275782238, "mean_W": 1.0555262890418926, "viol": 0.0, "mean_maxdd": 0.13336944914424956, "gross": 0.690901825967616}
+{"market": "kim_omberg", "eval_set": 1, "strategy": "Grossman-Zhou", "CE": 1.0319477385268536, "mean_W": 1.034146263616423, "viol": 0.0, "mean_maxdd": 0.0424239671469726, "gross": 0.23113302649934836}
+{"market": "constant_bs", "eval_set": 4, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "constant_bs", "eval_set": 4, "strategy": "Constant mix (60% risky)", "CE": 1.0413430229917249, "mean_W": 1.0564079139309026, "viol": 0.04975, "mean_maxdd": 0.1149710983357571, "gross": 0.5999999999999973}
+{"market": "constant_bs", "eval_set": 4, "strategy": "Merton (unconstrained)", "CE": 1.0420120550847523, "mean_W": 1.0656623686565307, "viol": 0.14525, "mean_maxdd": 0.14333358417132383, "gross": 0.7499999981249987}
+{"market": "constant_bs", "eval_set": 4, "strategy": "CPPI (m=3)", "CE": 1.0360333212883617, "mean_W": 1.0568405989482448, "viol": 0.04125, "mean_maxdd": 0.1256807394034183, "gross": 0.6401870417783798}
+{"market": "constant_bs", "eval_set": 4, "strategy": "TIPP (m=3)", "CE": 1.0354490823004838, "mean_W": 1.0462897965061553, "viol": 0.0, "mean_maxdd": 0.0932375444560938, "gross": 0.4890853657061446}
+{"market": "constant_bs", "eval_set": 4, "strategy": "TIPP (m=5)", "CE": 1.0308871562958581, "mean_W": 1.054346003562964, "viol": 0.0, "mean_maxdd": 0.13382547635642394, "gross": 0.6891702690582926}
+{"market": "constant_bs", "eval_set": 4, "strategy": "Grossman-Zhou", "CE": 1.0311459904461655, "mean_W": 1.0334424058401688, "viol": 0.0, "mean_maxdd": 0.04200843137768045, "gross": 0.23278404227636318}
+{"market": "constant_bs", "eval_set": 4, "strategy": "HJB optimum (continuous-time)", "CE": 1.039369278400796, "mean_W": 1.0601003422512953, "viol": 0.06275, "mean_maxdd": 0.13116271494165818, "gross": 0.6833344794789666}
+{"market": "constant_bs", "eval_set": 4, "strategy": "HJB optimum (certified class)", "CE": 1.037246948619865, "mean_W": 1.054590456985301, "viol": 0.0, "mean_maxdd": 0.1173183327213618, "gross": 0.6137509835977404}
+{"market": "kim_omberg", "eval_set": 2, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "kim_omberg", "eval_set": 2, "strategy": "Constant mix (60% risky)", "CE": 1.0427060029873207, "mean_W": 1.057152325366461, "viol": 0.046, "mean_maxdd": 0.11376516113920675, "gross": 0.5999999999999973}
+{"market": "kim_omberg", "eval_set": 2, "strategy": "Merton (unconstrained)", "CE": 1.0398127685945195, "mean_W": 1.0638321153963748, "viol": 0.18575, "mean_maxdd": 0.14379745433981503, "gross": 0.7464377247526485}
+{"market": "kim_omberg", "eval_set": 2, "strategy": "CPPI (m=3)", "CE": 1.0363584859364037, "mean_W": 1.0559428664213844, "viol": 0.04225, "mean_maxdd": 0.12546550991211486, "gross": 0.6419981651241534}
+{"market": "kim_omberg", "eval_set": 2, "strategy": "TIPP (m=3)", "CE": 1.0364769723038705, "mean_W": 1.0468707716774943, "viol": 0.0, "mean_maxdd": 0.09263974300250115, "gross": 0.49028615995286123}
+{"market": "kim_omberg", "eval_set": 2, "strategy": "TIPP (m=5)", "CE": 1.0323948991288026, "mean_W": 1.054793790318065, "viol": 0.0, "mean_maxdd": 0.13329256056003852, "gross": 0.6918062941685172}
+{"market": "kim_omberg", "eval_set": 2, "strategy": "Grossman-Zhou", "CE": 1.0313624928350225, "mean_W": 1.0336031267895842, "viol": 0.0, "mean_maxdd": 0.04211349593215041, "gross": 0.2299226034008454}
+{"market": "kim_omberg", "eval_set": 3, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "kim_omberg", "eval_set": 3, "strategy": "Constant mix (60% risky)", "CE": 1.038950774134206, "mean_W": 1.052957060281689, "viol": 0.051, "mean_maxdd": 0.11556341762029387, "gross": 0.5999999999999973}
+{"market": "kim_omberg", "eval_set": 3, "strategy": "Merton (unconstrained)", "CE": 1.0368794194921462, "mean_W": 1.0606513942340494, "viol": 0.2015, "mean_maxdd": 0.1474951821097593, "gross": 0.7571732960818783}
+{"market": "kim_omberg", "eval_set": 3, "strategy": "CPPI (m=3)", "CE": 1.0318685658693514, "mean_W": 1.04970419784338, "viol": 0.039, "mean_maxdd": 0.12642210025250097, "gross": 0.6374933042905961}
+{"market": "kim_omberg", "eval_set": 3, "strategy": "TIPP (m=3)", "CE": 1.0332729576651873, "mean_W": 1.0432137972087376, "viol": 0.0, "mean_maxdd": 0.0936233244654892, "gross": 0.48824632073564245}
+{"market": "kim_omberg", "eval_set": 3, "strategy": "TIPP (m=5)", "CE": 1.0280159902644597, "mean_W": 1.0491554254379112, "viol": 0.0, "mean_maxdd": 0.13426361578536536, "gross": 0.6872506168379108}
+{"market": "kim_omberg", "eval_set": 3, "strategy": "Grossman-Zhou", "CE": 1.0304102528021757, "mean_W": 1.0326363023924532, "viol": 0.0, "mean_maxdd": 0.04320175423989025, "gross": 0.23275649094195056}
+{"market": "kim_omberg", "eval_set": 4, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "kim_omberg", "eval_set": 4, "strategy": "Constant mix (60% risky)", "CE": 1.044425731631079, "mean_W": 1.0584596675913462, "viol": 0.04175, "mean_maxdd": 0.11269610972668212, "gross": 0.5999999999999973}
+{"market": "kim_omberg", "eval_set": 4, "strategy": "Merton (unconstrained)", "CE": 1.0441181516072704, "mean_W": 1.0674053843950706, "viol": 0.182, "mean_maxdd": 0.14217714676862078, "gross": 0.746806300585437}
+{"market": "kim_omberg", "eval_set": 4, "strategy": "CPPI (m=3)", "CE": 1.0374854177592137, "mean_W": 1.0562471953131085, "viol": 0.03925, "mean_maxdd": 0.12441833777562139, "gross": 0.6420383449316407}
+{"market": "kim_omberg", "eval_set": 4, "strategy": "TIPP (m=3)", "CE": 1.0373572218779732, "mean_W": 1.047548544360737, "viol": 0.0, "mean_maxdd": 0.09206529456563795, "gross": 0.4913643505487612}
+{"market": "kim_omberg", "eval_set": 4, "strategy": "TIPP (m=5)", "CE": 1.0330599901545365, "mean_W": 1.0551028013157044, "viol": 0.0, "mean_maxdd": 0.13271341755366933, "gross": 0.6943024155005391}
+{"market": "kim_omberg", "eval_set": 4, "strategy": "Grossman-Zhou", "CE": 1.0324036992345558, "mean_W": 1.034610972066372, "viol": 0.0, "mean_maxdd": 0.04174405861196767, "gross": 0.2305181290675681}
+{"market": "heston", "eval_set": 0, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "heston", "eval_set": 0, "strategy": "Constant mix (60% risky)", "CE": 1.0497311518830466, "mean_W": 1.055741034652398, "viol": 0.0055, "mean_maxdd": 0.07050973306447735, "gross": 0.5999999999999973}
+{"market": "heston", "eval_set": 0, "strategy": "Merton (unconstrained)", "CE": 1.0522460155134432, "mean_W": 1.0923471422914741, "viol": 0.348, "mean_maxdd": 0.18010393190347837, "gross": 1.949525684734355}
+{"market": "heston", "eval_set": 0, "strategy": "CPPI (m=3)", "CE": 1.0488243597957592, "mean_W": 1.0563017111401967, "viol": 0.00025, "mean_maxdd": 0.0751105844917592, "gross": 0.6547299888263888}
+{"market": "heston", "eval_set": 0, "strategy": "TIPP (m=3)", "CE": 1.044972319248128, "mean_W": 1.049887836030454, "viol": 0.0, "mean_maxdd": 0.061481297732186836, "gross": 0.5407089617898935}
+{"market": "heston", "eval_set": 0, "strategy": "TIPP (m=5)", "CE": 1.0516553848160268, "mean_W": 1.0635645638232163, "viol": 0.0, "mean_maxdd": 0.09427852617988158, "gross": 0.826833257163107}
+{"market": "heston", "eval_set": 0, "strategy": "Grossman-Zhou", "CE": 1.034095166397225, "mean_W": 1.0426349091040956, "viol": 0.0, "mean_maxdd": 0.08216875537033468, "gross": 1.053003926223822}
+{"market": "heston", "eval_set": 1, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "heston", "eval_set": 1, "strategy": "Constant mix (60% risky)", "CE": 1.051522618720407, "mean_W": 1.057560351753326, "viol": 0.00775, "mean_maxdd": 0.06929568930889352, "gross": 0.5999999999999973}
+{"market": "heston", "eval_set": 1, "strategy": "Merton (unconstrained)", "CE": 1.0560090259061046, "mean_W": 1.0953672961564411, "viol": 0.33425, "mean_maxdd": 0.1790947169153443, "gross": 1.9505642631019628}
+{"market": "heston", "eval_set": 1, "strategy": "CPPI (m=3)", "CE": 1.0510056476134717, "mean_W": 1.0585912670093451, "viol": 0.00025, "mean_maxdd": 0.07397765304350148, "gross": 0.6579825241927046}
+{"market": "heston", "eval_set": 1, "strategy": "TIPP (m=3)", "CE": 1.0466938598169822, "mean_W": 1.0516291169979104, "viol": 0.0, "mean_maxdd": 0.06050327261586941, "gross": 0.542172925525538}
+{"market": "heston", "eval_set": 1, "strategy": "TIPP (m=5)", "CE": 1.0543739346513497, "mean_W": 1.0664025488173003, "viol": 0.0, "mean_maxdd": 0.09292464546762001, "gross": 0.8309425928021648}
+{"market": "heston", "eval_set": 1, "strategy": "Grossman-Zhou", "CE": 1.0337425056876142, "mean_W": 1.0422871624739278, "viol": 0.0, "mean_maxdd": 0.08262436689807413, "gross": 1.0608309627132595}
+{"market": "heston", "eval_set": 2, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "heston", "eval_set": 2, "strategy": "Constant mix (60% risky)", "CE": 1.0493473628032757, "mean_W": 1.0551645201993296, "viol": 0.00525, "mean_maxdd": 0.06992204701620196, "gross": 0.5999999999999973}
+{"market": "heston", "eval_set": 2, "strategy": "Merton (unconstrained)", "CE": 1.0548193383531286, "mean_W": 1.0941486216814038, "viol": 0.34425, "mean_maxdd": 0.18026559546982934, "gross": 1.9509163526457973}
+{"market": "heston", "eval_set": 2, "strategy": "CPPI (m=3)", "CE": 1.0480848280986566, "mean_W": 1.0553493999432833, "viol": 0.00025, "mean_maxdd": 0.07445169969115849, "gross": 0.6532990781417282}
+{"market": "heston", "eval_set": 2, "strategy": "TIPP (m=3)", "CE": 1.0444943132160602, "mean_W": 1.0492731897854517, "viol": 0.0, "mean_maxdd": 0.06109532933071603, "gross": 0.5407606799301712}
+{"market": "heston", "eval_set": 2, "strategy": "TIPP (m=5)", "CE": 1.0508874318640866, "mean_W": 1.0624422057011302, "viol": 0.0, "mean_maxdd": 0.09388578753450436, "gross": 0.8268155397532623}
+{"market": "heston", "eval_set": 2, "strategy": "Grossman-Zhou", "CE": 1.0345964376304122, "mean_W": 1.043006345322696, "viol": 0.0, "mean_maxdd": 0.08270675405768063, "gross": 1.0572569055979868}
+{"market": "heston", "eval_set": 3, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "heston", "eval_set": 3, "strategy": "Constant mix (60% risky)", "CE": 1.049225676592554, "mean_W": 1.0552975124605446, "viol": 0.00725, "mean_maxdd": 0.07055110296758892, "gross": 0.5999999999999973}
+{"market": "heston", "eval_set": 3, "strategy": "Merton (unconstrained)", "CE": 1.0525730337655559, "mean_W": 1.0930397108446364, "viol": 0.343, "mean_maxdd": 0.17954530889813702, "gross": 1.9510854079786877}
+{"market": "heston", "eval_set": 3, "strategy": "CPPI (m=3)", "CE": 1.0484607903792396, "mean_W": 1.0559717627372442, "viol": 0.00025, "mean_maxdd": 0.07511127548527287, "gross": 0.6539640243589294}
+{"market": "heston", "eval_set": 3, "strategy": "TIPP (m=3)", "CE": 1.0447147259768232, "mean_W": 1.0496312015583926, "viol": 0.0, "mean_maxdd": 0.061439399878873674, "gross": 0.5404932113255779}
+{"market": "heston", "eval_set": 3, "strategy": "TIPP (m=5)", "CE": 1.051414148206313, "mean_W": 1.0632842500370334, "viol": 0.0, "mean_maxdd": 0.09420152163528059, "gross": 0.8263325625204211}
+{"market": "heston", "eval_set": 3, "strategy": "Grossman-Zhou", "CE": 1.0333656203278874, "mean_W": 1.042222077524151, "viol": 0.0, "mean_maxdd": 0.08253972446837093, "gross": 1.0575330191030734}
+{"market": "jump", "eval_set": 0, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "jump", "eval_set": 0, "strategy": "Constant mix (60% risky)", "CE": 1.0186716717733881, "mean_W": 1.0367220890669486, "viol": 0.12425, "mean_maxdd": 0.13175673163540794, "gross": 0.5999999999999973}
+{"market": "jump", "eval_set": 0, "strategy": "Merton (unconstrained)", "CE": 1.0239099490885684, "mean_W": 1.0283168204481299, "viol": 0.00075, "mean_maxdd": 0.06419200335961887, "gross": 0.29768910523559067}
+{"market": "jump", "eval_set": 0, "strategy": "CPPI (m=3)", "CE": 1.0141084368886604, "mean_W": 1.0341047147788303, "viol": 0.09225, "mean_maxdd": 0.13913966054577512, "gross": 0.6148555610165877}
+{"market": "jump", "eval_set": 0, "strategy": "TIPP (m=3)", "CE": 1.0194105022005229, "mean_W": 1.0309057271866937, "viol": 0.0, "mean_maxdd": 0.10361578685321436, "gross": 0.4705319835752888}
+{"market": "jump", "eval_set": 0, "strategy": "TIPP (m=5)", "CE": 1.0091800778591755, "mean_W": 1.0324019866546315, "viol": 0.00375, "mean_maxdd": 0.14508946116897212, "gross": 0.6419752304094299}
+{"market": "jump", "eval_set": 0, "strategy": "Grossman-Zhou", "CE": 1.0222895401329055, "mean_W": 1.0227522224372303, "viol": 0.0, "mean_maxdd": 0.01754978890926056, "gross": 0.09677930961011423}
+{"market": "jump", "eval_set": 1, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "jump", "eval_set": 1, "strategy": "Constant mix (60% risky)", "CE": 1.0197240313537987, "mean_W": 1.037681791310967, "viol": 0.1085, "mean_maxdd": 0.13000259224057212, "gross": 0.5999999999999973}
+{"market": "jump", "eval_set": 1, "strategy": "Merton (unconstrained)", "CE": 1.024414346003265, "mean_W": 1.028795704582714, "viol": 0.0005, "mean_maxdd": 0.06329930831614207, "gross": 0.29768910523559067}
+{"market": "jump", "eval_set": 1, "strategy": "CPPI (m=3)", "CE": 1.0145623700135808, "mean_W": 1.0357715179612588, "viol": 0.0865, "mean_maxdd": 0.1381951972379926, "gross": 0.6171090863717521}
+{"market": "jump", "eval_set": 1, "strategy": "TIPP (m=3)", "CE": 1.019612015495779, "mean_W": 1.031320736596898, "viol": 0.00025, "mean_maxdd": 0.10281720303081411, "gross": 0.47169308459002757}
+{"market": "jump", "eval_set": 1, "strategy": "TIPP (m=5)", "CE": 1.0094166452541753, "mean_W": 1.0332998215336546, "viol": 0.00475, "mean_maxdd": 0.14440604583336608, "gross": 0.6443826197632693}
+{"market": "jump", "eval_set": 1, "strategy": "Grossman-Zhou", "CE": 1.02243200717899, "mean_W": 1.0228934792119837, "viol": 0.0, "mean_maxdd": 0.017344198130910687, "gross": 0.0968256801015696}
+{"market": "jump", "eval_set": 2, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "jump", "eval_set": 2, "strategy": "Constant mix (60% risky)", "CE": 1.0150204381758907, "mean_W": 1.0323189725958815, "viol": 0.12125, "mean_maxdd": 0.1316876041994937, "gross": 0.5999999999999973}
+{"market": "jump", "eval_set": 2, "strategy": "Merton (unconstrained)", "CE": 1.021993950406387, "mean_W": 1.02622615740019, "viol": 0.00125, "mean_maxdd": 0.06406915982373894, "gross": 0.29768910523559067}
+{"market": "jump", "eval_set": 2, "strategy": "CPPI (m=3)", "CE": 1.0091107776067303, "mean_W": 1.0284959411382495, "viol": 0.0895, "mean_maxdd": 0.13914689128604799, "gross": 0.6113476647105501}
+{"market": "jump", "eval_set": 2, "strategy": "TIPP (m=3)", "CE": 1.0157119599808533, "mean_W": 1.0267551481670414, "viol": 0.0, "mean_maxdd": 0.10386326801812246, "gross": 0.46908896453493387}
+{"market": "jump", "eval_set": 2, "strategy": "TIPP (m=5)", "CE": 1.0037848939435647, "mean_W": 1.0261258729642415, "viol": 0.004, "mean_maxdd": 0.1456497786327724, "gross": 0.6375558888224676}
+{"market": "jump", "eval_set": 2, "strategy": "Grossman-Zhou", "CE": 1.021626545144751, "mean_W": 1.0220717991619634, "viol": 0.0, "mean_maxdd": 0.017458321796199383, "gross": 0.09677495923271809}
+{"market": "jump", "eval_set": 3, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "jump", "eval_set": 3, "strategy": "Constant mix (60% risky)", "CE": 1.0135194787946191, "mean_W": 1.0309085606859008, "viol": 0.12475, "mean_maxdd": 0.1309955539011102, "gross": 0.5999999999999973}
+{"market": "jump", "eval_set": 3, "strategy": "Merton (unconstrained)", "CE": 1.021268238558282, "mean_W": 1.0255226431541686, "viol": 0.00125, "mean_maxdd": 0.0637541176859875, "gross": 0.29768910523559067}
+{"market": "jump", "eval_set": 3, "strategy": "CPPI (m=3)", "CE": 1.007902749391134, "mean_W": 1.0272658574007505, "viol": 0.08375, "mean_maxdd": 0.13795958032968983, "gross": 0.6095036290093728}
+{"market": "jump", "eval_set": 3, "strategy": "TIPP (m=3)", "CE": 1.0144743305736068, "mean_W": 1.025490243668362, "viol": 0.0, "mean_maxdd": 0.10334185750249426, "gross": 0.4697047284605784}
+{"market": "jump", "eval_set": 3, "strategy": "TIPP (m=5)", "CE": 1.002135326307459, "mean_W": 1.024178713503156, "viol": 0.004, "mean_maxdd": 0.14494177456984042, "gross": 0.6391228842248899}
+{"market": "jump", "eval_set": 3, "strategy": "Grossman-Zhou", "CE": 1.0213901501431462, "mean_W": 1.021837672946811, "viol": 0.0, "mean_maxdd": 0.01744939865714615, "gross": 0.09678159219260482}
+{"market": "jump", "eval_set": 4, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "jump", "eval_set": 4, "strategy": "Constant mix (60% risky)", "CE": 1.0205991038443591, "mean_W": 1.0381461988483283, "viol": 0.1185, "mean_maxdd": 0.13035908794240397, "gross": 0.5999999999999973}
+{"market": "jump", "eval_set": 4, "strategy": "Merton (unconstrained)", "CE": 1.0247799309348864, "mean_W": 1.0290630265817804, "viol": 0.001, "mean_maxdd": 0.06347640516950942, "gross": 0.29768910523559067}
+{"market": "jump", "eval_set": 4, "strategy": "CPPI (m=3)", "CE": 1.0149044456542298, "mean_W": 1.0356213711133244, "viol": 0.087, "mean_maxdd": 0.13820738618307749, "gross": 0.614996114619048}
+{"market": "jump", "eval_set": 4, "strategy": "TIPP (m=3)", "CE": 1.019686755191632, "mean_W": 1.0312274510084893, "viol": 0.0, "mean_maxdd": 0.10299511113780854, "gross": 0.47112705963572277}
+{"market": "jump", "eval_set": 4, "strategy": "TIPP (m=5)", "CE": 1.0086855900681573, "mean_W": 1.0323219492292004, "viol": 0.003, "mean_maxdd": 0.14457243846830983, "gross": 0.6427211306793924}
+{"market": "jump", "eval_set": 4, "strategy": "Grossman-Zhou", "CE": 1.0225321917331935, "mean_W": 1.0229839074760745, "viol": 0.0, "mean_maxdd": 0.017394502034563466, "gross": 0.09681024343792975}
+{"market": "heston", "eval_set": 4, "strategy": "Cash", "CE": 1.0202005303863224, "mean_W": 1.0202005303863224, "viol": 0.0, "mean_maxdd": 0.0, "gross": 0.0}
+{"market": "heston", "eval_set": 4, "strategy": "Constant mix (60% risky)", "CE": 1.0502652116390339, "mean_W": 1.0562291836816444, "viol": 0.009, "mean_maxdd": 0.07003713088923394, "gross": 0.5999999999999973}
+{"market": "heston", "eval_set": 4, "strategy": "Merton (unconstrained)", "CE": 1.0579444580395885, "mean_W": 1.0963789151087011, "viol": 0.3355, "mean_maxdd": 0.178101754273732, "gross": 1.9509282763677274}
+{"market": "heston", "eval_set": 4, "strategy": "CPPI (m=3)", "CE": 1.0493846336280845, "mean_W": 1.0567128618041584, "viol": 0.0005, "mean_maxdd": 0.07495346091195917, "gross": 0.6573016100793067}
+{"market": "heston", "eval_set": 4, "strategy": "TIPP (m=3)", "CE": 1.0457245752220359, "mean_W": 1.0505360466750313, "viol": 0.0, "mean_maxdd": 0.061017059368393876, "gross": 0.5416493361199898}
+{"market": "heston", "eval_set": 4, "strategy": "TIPP (m=5)", "CE": 1.0531077286358665, "mean_W": 1.0647329905418097, "viol": 0.0, "mean_maxdd": 0.09360587232751359, "gross": 0.829568280730771}
+{"market": "heston", "eval_set": 4, "strategy": "Grossman-Zhou", "CE": 1.0349718334226141, "mean_W": 1.0434653220703984, "viol": 0.0, "mean_maxdd": 0.08218791290433347, "gross": 1.0632693619763485}
+{"market": "heston", "eval_set": 2, "strategy": "E-CBLPO", "CE": 1.0603687763214111, "mean_W": 1.072725772857666, "viol": 0.0, "mean_maxdd": 0.09396492689847946, "gross": 0.7785531878471375}
+{"market": "heston", "eval_set": 3, "strategy": "E-CBLPO", "CE": 1.060160756111145, "mean_W": 1.0726735591888428, "viol": 0.0, "mean_maxdd": 0.09296254813671112, "gross": 0.780224621295929}
+{"market": "constant_bs", "eval_set": 0, "strategy": "E-CBLPO", "CE": 1.0391603708267212, "mean_W": 1.054183840751648, "viol": 0.0, "mean_maxdd": 0.11112065613269806, "gross": 0.5815568566322327}
+{"market": "constant_bs", "eval_set": 1, "strategy": "E-CBLPO", "CE": 1.0384899377822876, "mean_W": 1.050748348236084, "viol": 0.0, "mean_maxdd": 0.1013573557138443, "gross": 0.5282595157623291}
+{"market": "heston", "eval_set": 4, "strategy": "E-CBLPO", "CE": 1.0626214742660522, "mean_W": 1.0748674869537354, "viol": 0.0, "mean_maxdd": 0.09289534389972687, "gross": 0.7830654382705688}
+{"market": "constant_bs", "eval_set": 3, "strategy": "E-CBLPO", "CE": 1.0408166646957397, "mean_W": 1.0524489879608154, "viol": 0.0, "mean_maxdd": 0.09899752587080002, "gross": 0.5203768014907837}
+{"market": "constant_bs", "eval_set": 2, "strategy": "E-CBLPO", "CE": 1.0398615598678589, "mean_W": 1.0513105392456055, "viol": 0.0, "mean_maxdd": 0.09810322523117065, "gross": 0.5146355032920837}
+{"market": "constant_bs", "eval_set": 4, "strategy": "E-CBLPO", "CE": 1.0380065441131592, "mean_W": 1.054123044013977, "viol": 0.0, "mean_maxdd": 0.11412318050861359, "gross": 0.5950607657432556}
+{"market": "kim_omberg", "eval_set": 0, "strategy": "E-CBLPO", "CE": 1.0391063690185547, "mean_W": 1.0510581731796265, "viol": 0.0, "mean_maxdd": 0.10384994745254517, "gross": 0.5455982685089111}
+{"market": "kim_omberg", "eval_set": 1, "strategy": "E-CBLPO", "CE": 1.0411169528961182, "mean_W": 1.0527222156524658, "viol": 0.0, "mean_maxdd": 0.10007753223180771, "gross": 0.5282812714576721}
+{"market": "kim_omberg", "eval_set": 2, "strategy": "E-CBLPO", "CE": 1.0401334762573242, "mean_W": 1.0512580871582031, "viol": 0.0, "mean_maxdd": 0.09776739776134491, "gross": 0.517347514629364}
+{"market": "kim_omberg", "eval_set": 3, "strategy": "E-CBLPO", "CE": 1.0364583730697632, "mean_W": 1.0493996143341064, "viol": 0.0, "mean_maxdd": 0.10716919600963593, "gross": 0.5577265620231628}
+{"market": "kim_omberg", "eval_set": 4, "strategy": "E-CBLPO", "CE": 1.0416640043258667, "mean_W": 1.0539971590042114, "viol": 0.0, "mean_maxdd": 0.10232458263635635, "gross": 0.5460293292999268}
+{"market": "jump", "eval_set": 1, "strategy": "E-CBLPO", "CE": 1.0238908529281616, "mean_W": 1.0257148742675781, "viol": 0.0, "mean_maxdd": 0.03923286125063896, "gross": 0.19235111773014069}
+{"market": "jump", "eval_set": 0, "strategy": "E-CBLPO", "CE": 1.0237534046173096, "mean_W": 1.0261391401290894, "viol": 0.0, "mean_maxdd": 0.045982491225004196, "gross": 0.21923516690731049}
+{"market": "jump", "eval_set": 2, "strategy": "E-CBLPO", "CE": 1.0222761631011963, "mean_W": 1.0243502855300903, "viol": 0.0, "mean_maxdd": 0.04341651871800423, "gross": 0.20855587720870972}
+{"market": "jump", "eval_set": 3, "strategy": "E-CBLPO", "CE": 1.02177095413208, "mean_W": 1.0240788459777832, "viol": 0.0, "mean_maxdd": 0.045712660998106, "gross": 0.2191552370786667}
+{"market": "jump", "eval_set": 4, "strategy": "E-CBLPO", "CE": 1.0245959758758545, "mean_W": 1.0287672281265259, "viol": 0.0, "mean_maxdd": 0.06218602880835533, "gross": 0.2926327586174011}
+{"market": "heston", "eval_set": 2, "strategy": "E-CBLPO (MLP)", "CE": 1.0592857599258423, "mean_W": 1.0713253021240234, "viol": 0.0, "mean_maxdd": 0.09347029030323029, "gross": 0.7795847654342651}
+{"market": "heston", "eval_set": 2, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.060801386833191, "mean_W": 1.0731406211853027, "viol": 0.0, "mean_maxdd": 0.09345442056655884, "gross": 0.7791502475738525}
+{"market": "heston", "eval_set": 2, "strategy": "PPO-Lagrangian", "CE": 1.0265514870062054, "mean_W": 1.027167832055073, "viol": 0.0, "mean_maxdd": 0.0204753702113604, "gross": 0.24564825347744}
+{"market": "heston", "eval_set": 2, "strategy": "PPO", "CE": 1.030144286296529, "mean_W": 1.0311779372924148, "viol": 0.0, "mean_maxdd": 0.029025883476487047, "gross": 0.24449449823905126}
+{"market": "heston", "eval_set": 2, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.0401251362712265, "mean_W": 1.045830578444352, "viol": 0.0, "mean_maxdd": 0.06936074716842282, "gross": 0.7751590171602908}
+{"market": "heston", "eval_set": 3, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.0616376399993896, "mean_W": 1.0742881298065186, "viol": 0.0, "mean_maxdd": 0.09321930259466171, "gross": 0.7636183500289917}
+{"market": "heston", "eval_set": 3, "strategy": "E-CBLPO (MLP)", "CE": 1.0588769912719727, "mean_W": 1.0715283155441284, "viol": 0.0, "mean_maxdd": 0.09430230408906937, "gross": 0.7767434120178223}
+{"market": "heston", "eval_set": 3, "strategy": "PPO", "CE": 1.029379741636962, "mean_W": 1.0308900885667116, "viol": 0.0, "mean_maxdd": 0.0349232660607844, "gross": 0.2813095696319619}
+{"market": "heston", "eval_set": 3, "strategy": "PPO-Lagrangian", "CE": 1.0147492702163978, "mean_W": 1.0150205737873077, "viol": 0.0, "mean_maxdd": 0.01442610492940676, "gross": 0.15561297871108917}
+{"market": "heston", "eval_set": 3, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.038359304794345, "mean_W": 1.0438627735873565, "viol": 0.0, "mean_maxdd": 0.06639455616044719, "gross": 0.7729787165498311}
+{"market": "heston", "eval_set": 4, "strategy": "E-CBLPO (MLP)", "CE": 1.0617038011550903, "mean_W": 1.0738543272018433, "viol": 0.0, "mean_maxdd": 0.09317533671855927, "gross": 0.7821181416511536}
+{"market": "heston", "eval_set": 4, "strategy": "PPO", "CE": 1.0257081523654774, "mean_W": 1.026551627864755, "viol": 0.0, "mean_maxdd": 0.02544658858896477, "gross": 0.2427813914330382}
+{"market": "heston", "eval_set": 4, "strategy": "PPO-Lagrangian", "CE": 1.0250429937228496, "mean_W": 1.0256231374712292, "viol": 0.0, "mean_maxdd": 0.020912348841445237, "gross": 0.18436893846073865}
+{"market": "heston", "eval_set": 4, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.0643256902694702, "mean_W": 1.0758775472640991, "viol": 0.0, "mean_maxdd": 0.09045753628015518, "gross": 0.7529792189598083}
+{"market": "heston", "eval_set": 4, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.0408827740933293, "mean_W": 1.0463805022176724, "viol": 0.0, "mean_maxdd": 0.06755761131694557, "gross": 0.7731849201404871}
+{"market": "constant_bs", "eval_set": 0, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.0384628772735596, "mean_W": 1.0519087314605713, "viol": 0.0, "mean_maxdd": 0.10508661717176437, "gross": 0.5509693622589111}
+{"market": "constant_bs", "eval_set": 0, "strategy": "PPO", "CE": 1.0345880487118353, "mean_W": 1.0383968061511906, "viol": 0.0, "mean_maxdd": 0.05747884513550188, "gross": 0.3046229777591569}
+{"market": "constant_bs", "eval_set": 0, "strategy": "PPO-Lagrangian", "CE": 1.0331263657033403, "mean_W": 1.0360128123725885, "viol": 0.0, "mean_maxdd": 0.049596599092270106, "gross": 0.2636179913046164}
+{"market": "constant_bs", "eval_set": 0, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.0314217556549647, "mean_W": 1.0336804799153883, "viol": 0.0, "mean_maxdd": 0.04208816305405825, "gross": 0.23328260243551188}
+{"market": "constant_bs", "eval_set": 1, "strategy": "PPO", "CE": 1.0347151600571358, "mean_W": 1.0397612394432896, "viol": 0.0, "mean_maxdd": 0.06518965224748102, "gross": 0.3407085259093622}
+{"market": "constant_bs", "eval_set": 1, "strategy": "PPO-Lagrangian", "CE": 1.0311503509852067, "mean_W": 1.0334146542114813, "viol": 0.0, "mean_maxdd": 0.04274622528801112, "gross": 0.22949381989746223}
+{"market": "constant_bs", "eval_set": 1, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.032002312506712, "mean_W": 1.035099849468736, "viol": 0.0, "mean_maxdd": 0.049520306172958516, "gross": 0.26905814975721276}
+{"market": "constant_bs", "eval_set": 1, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.036470890045166, "mean_W": 1.0483168363571167, "viol": 0.0, "mean_maxdd": 0.09847907721996307, "gross": 0.5154891610145569}
+{"market": "constant_bs", "eval_set": 2, "strategy": "PPO", "CE": 1.0278937202680367, "mean_W": 1.0287111832216156, "viol": 0.0, "mean_maxdd": 0.02396384169832461, "gross": 0.14096120772776122}
+{"market": "constant_bs", "eval_set": 2, "strategy": "PPO-Lagrangian", "CE": 1.0314254076188607, "mean_W": 1.0335497360234085, "viol": 0.0, "mean_maxdd": 0.04033379808690539, "gross": 0.2237847089483181}
+{"market": "constant_bs", "eval_set": 2, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.039835810661316, "mean_W": 1.0516880750656128, "viol": 0.0, "mean_maxdd": 0.09962911158800125, "gross": 0.5230678915977478}
+{"market": "constant_bs", "eval_set": 2, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.0322355257201052, "mean_W": 1.0349552672400082, "viol": 0.0, "mean_maxdd": 0.046047280212375655, "gross": 0.2530700866852146}
+{"market": "constant_bs", "eval_set": 3, "strategy": "PPO", "CE": 1.024647345789081, "mean_W": 1.0250926967315965, "viol": 0.0, "mean_maxdd": 0.019674176668121834, "gross": 0.08667594138502573}
+{"market": "constant_bs", "eval_set": 3, "strategy": "PPO-Lagrangian", "CE": 1.0240819729830477, "mean_W": 1.024314357201408, "viol": 0.0, "mean_maxdd": 0.012549749255570283, "gross": 0.07135080400872643}
+{"market": "constant_bs", "eval_set": 3, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.0406452417373657, "mean_W": 1.0515117645263672, "viol": 0.0, "mean_maxdd": 0.09584715217351913, "gross": 0.5048450827598572}
+{"market": "constant_bs", "eval_set": 3, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.032524082173752, "mean_W": 1.0351695327931691, "viol": 0.0, "mean_maxdd": 0.04543007931972826, "gross": 0.2507393382955496}
+{"market": "constant_bs", "eval_set": 4, "strategy": "PPO", "CE": 1.0319597612336275, "mean_W": 1.0342452334062804, "viol": 0.0, "mean_maxdd": 0.043280281972876936, "gross": 0.23613351796734486}
+{"market": "constant_bs", "eval_set": 4, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.0376954078674316, "mean_W": 1.0540908575057983, "viol": 0.0, "mean_maxdd": 0.11491792649030685, "gross": 0.5993763208389282}
+{"market": "constant_bs", "eval_set": 4, "strategy": "PPO-Lagrangian", "CE": 1.0345119962729794, "mean_W": 1.0384433739493137, "viol": 0.00075, "mean_maxdd": 0.05904451985340344, "gross": 0.3115990240527465}
+{"market": "constant_bs", "eval_set": 4, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.0313859845706235, "mean_W": 1.033852472816268, "viol": 0.0, "mean_maxdd": 0.04364007181506268, "gross": 0.24080419461586836}
+{"market": "kim_omberg", "eval_set": 0, "strategy": "PPO", "CE": 1.028893699789243, "mean_W": 1.0299127359357003, "viol": 0.0, "mean_maxdd": 0.028849209689277774, "gross": 0.16412230734783964}
+{"market": "kim_omberg", "eval_set": 0, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.0390779972076416, "mean_W": 1.0509575605392456, "viol": 0.0, "mean_maxdd": 0.10354787856340408, "gross": 0.5445452332496643}
+{"market": "kim_omberg", "eval_set": 0, "strategy": "PPO-Lagrangian", "CE": 1.0317229534446672, "mean_W": 1.0337018316013042, "viol": 0.0, "mean_maxdd": 0.0422740260500257, "gross": 0.23034991969824545}
+{"market": "kim_omberg", "eval_set": 0, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.0326841395380817, "mean_W": 1.0354661025584806, "viol": 0.0, "mean_maxdd": 0.048974932998590064, "gross": 0.26398519296658424}
+{"market": "kim_omberg", "eval_set": 1, "strategy": "PPO", "CE": 1.0293785314970192, "mean_W": 1.0304065069179609, "viol": 0.0, "mean_maxdd": 0.028401840087941103, "gross": 0.158760684206047}
+{"market": "kim_omberg", "eval_set": 1, "strategy": "PPO-Lagrangian", "CE": 1.0273197738648092, "mean_W": 1.0279104908607475, "viol": 0.0, "mean_maxdd": 0.02061604799198872, "gross": 0.11898403899262601}
+{"market": "kim_omberg", "eval_set": 1, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.0410641431808472, "mean_W": 1.0521818399429321, "viol": 0.0, "mean_maxdd": 0.09821733087301254, "gross": 0.5187033414840698}
+{"market": "kim_omberg", "eval_set": 1, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.032188509735273, "mean_W": 1.0345714952599825, "viol": 0.0, "mean_maxdd": 0.044422072241799136, "gross": 0.23859985003038423}
+{"market": "kim_omberg", "eval_set": 2, "strategy": "PPO", "CE": 1.0331614113767866, "mean_W": 1.0357335209817533, "viol": 0.00025, "mean_maxdd": 0.04820678021047944, "gross": 0.2574392830237436}
+{"market": "kim_omberg", "eval_set": 2, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.0402108430862427, "mean_W": 1.0509473085403442, "viol": 0.0, "mean_maxdd": 0.09610740840435028, "gross": 0.5090418457984924}
+{"market": "kim_omberg", "eval_set": 2, "strategy": "PPO-Lagrangian", "CE": 1.0331223927759705, "mean_W": 1.035775560654685, "viol": 0.0005, "mean_maxdd": 0.04988241289556738, "gross": 0.2598290439231473}
+{"market": "kim_omberg", "eval_set": 2, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.0319970913486594, "mean_W": 1.0346087964783293, "viol": 0.0, "mean_maxdd": 0.0461205476392349, "gross": 0.24733477740331636}
+{"market": "kim_omberg", "eval_set": 3, "strategy": "PPO", "CE": 1.030946785362755, "mean_W": 1.032986508288644, "viol": 0.0, "mean_maxdd": 0.0433842313702966, "gross": 0.23116016349880514}
+{"market": "kim_omberg", "eval_set": 3, "strategy": "PPO-Lagrangian", "CE": 1.0318925913062074, "mean_W": 1.0344610133217185, "viol": 0.00025, "mean_maxdd": 0.04942528747682116, "gross": 0.25725590879313043}
+{"market": "kim_omberg", "eval_set": 3, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.0308233406710634, "mean_W": 1.0332890660370673, "viol": 0.0, "mean_maxdd": 0.04562417190979631, "gross": 0.2450953428697842}
+{"market": "kim_omberg", "eval_set": 3, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.0365771055221558, "mean_W": 1.048740267753601, "viol": 0.0, "mean_maxdd": 0.10431408882141113, "gross": 0.543080747127533}
+{"market": "kim_omberg", "eval_set": 4, "strategy": "PPO", "CE": 1.0284702797224032, "mean_W": 1.0292123480152846, "viol": 0.0, "mean_maxdd": 0.023262472040900956, "gross": 0.1378887030519582}
+{"market": "kim_omberg", "eval_set": 4, "strategy": "PPO-Lagrangian", "CE": 1.0291011295038486, "mean_W": 1.0299705387715086, "viol": 0.0, "mean_maxdd": 0.025523410885526506, "gross": 0.15074757535064534}
+{"market": "kim_omberg", "eval_set": 4, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.0414539575576782, "mean_W": 1.0543420314788818, "viol": 0.0, "mean_maxdd": 0.10447640717029572, "gross": 0.5564592480659485}
+{"market": "kim_omberg", "eval_set": 4, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.0333790684418938, "mean_W": 1.0360321769779377, "viol": 0.0, "mean_maxdd": 0.04636750015748926, "gross": 0.25457335426531424}
+{"market": "jump", "eval_set": 0, "strategy": "PPO", "CE": 1.0226183537954188, "mean_W": 1.023558677643068, "viol": 0.0, "mean_maxdd": 0.027686106310833646, "gross": 0.13616646940625526}
+{"market": "jump", "eval_set": 0, "strategy": "PPO-Lagrangian", "CE": 1.0221718057353446, "mean_W": 1.0226166705942583, "viol": 0.0, "mean_maxdd": 0.017528580045801177, "gross": 0.09469434845831157}
+{"market": "jump", "eval_set": 0, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.0237414836883545, "mean_W": 1.0262395143508911, "viol": 0.0, "mean_maxdd": 0.047152139246463776, "gross": 0.22440166771411896}
+{"market": "jump", "eval_set": 0, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.0226846528439186, "mean_W": 1.023425313009245, "viol": 0.0, "mean_maxdd": 0.023446573037269807, "gross": 0.12230032429005233}
+{"market": "jump", "eval_set": 1, "strategy": "PPO", "CE": 1.0215154079432667, "mean_W": 1.0216804052816908, "viol": 0.0, "mean_maxdd": 0.009711832715958662, "gross": 0.0550494656096146}
+{"market": "jump", "eval_set": 1, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.0237691402435303, "mean_W": 1.0254069566726685, "viol": 0.0, "mean_maxdd": 0.036997437477111816, "gross": 0.18223881721496582}
+{"market": "jump", "eval_set": 1, "strategy": "PPO-Lagrangian", "CE": 1.0218335992133116, "mean_W": 1.0220973217474583, "viol": 0.0, "mean_maxdd": 0.012863265912303528, "gross": 0.07111105636020915}
+{"market": "jump", "eval_set": 1, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.022562082977272, "mean_W": 1.0230676784015864, "viol": 0.0, "mean_maxdd": 0.01841880583507517, "gross": 0.10140580195354408}
+{"market": "jump", "eval_set": 2, "strategy": "PPO", "CE": 1.0206600404541142, "mean_W": 1.020688977156206, "viol": 0.0, "mean_maxdd": 0.002730831543195875, "gross": 0.024686200445007883}
+{"market": "jump", "eval_set": 2, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.0223203897476196, "mean_W": 1.024855375289917, "viol": 0.0, "mean_maxdd": 0.04854395240545273, "gross": 0.23068147897720337}
+{"market": "jump", "eval_set": 2, "strategy": "PPO-Lagrangian", "CE": 1.0203284290817276, "mean_W": 1.0203305635864421, "viol": 0.0, "mean_maxdd": 0.0004367057187634096, "gross": 0.0065609737818548815}
+{"market": "jump", "eval_set": 2, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.0213079952607316, "mean_W": 1.021539197555463, "viol": 0.0, "mean_maxdd": 0.011726202221765793, "gross": 0.06960992873011748}
+{"market": "jump", "eval_set": 3, "strategy": "PPO", "CE": 1.021525195893418, "mean_W": 1.0229362858692184, "viol": 0.0, "mean_maxdd": 0.034281978948643, "gross": 0.16988306476454443}
+{"market": "jump", "eval_set": 3, "strategy": "PPO-Lagrangian", "CE": 1.0211360062029013, "mean_W": 1.0214043822127352, "viol": 0.0, "mean_maxdd": 0.013059156468855223, "gross": 0.07280155750305303}
+{"market": "jump", "eval_set": 3, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.0218108892440796, "mean_W": 1.0238279104232788, "viol": 0.0, "mean_maxdd": 0.04248255863785744, "gross": 0.20488497614860535}
+{"market": "jump", "eval_set": 3, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.0213329176234267, "mean_W": 1.021703972955731, "viol": 0.0, "mean_maxdd": 0.01552752097049694, "gross": 0.08815315897208129}
+{"market": "jump", "eval_set": 4, "strategy": "PPO", "CE": 1.0211102548799904, "mean_W": 1.0211602911345843, "viol": 0.0, "mean_maxdd": 0.004000288309292575, "gross": 0.032181204489995875}
+{"market": "jump", "eval_set": 4, "strategy": "E-CBLPO (no GZ prior)", "CE": 1.0246832370758057, "mean_W": 1.0286448001861572, "viol": 0.0, "mean_maxdd": 0.060696229338645935, "gross": 0.2858509421348572}
+{"market": "jump", "eval_set": 4, "strategy": "PPO-Lagrangian", "CE": 1.0220140721705526, "mean_W": 1.0249701691649378, "viol": 0.0145, "mean_maxdd": 0.051116546042727425, "gross": 0.22099697451938374}
+{"market": "jump", "eval_set": 4, "strategy": "E-CBLPO (PPO-trained)", "CE": 1.0227696113940614, "mean_W": 1.023386977880192, "viol": 0.0, "mean_maxdd": 0.021186285362399426, "gross": 0.11275825786243764}
