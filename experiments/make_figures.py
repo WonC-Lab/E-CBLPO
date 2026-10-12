@@ -161,10 +161,40 @@ def fig5():
     plt.close(fig)
 
 
+def fig6():
+    f = os.path.join(RES, "extensions", "price_of_safety.json")
+    if not os.path.exists(f):
+        return
+    d = json.load(open(f))
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(11, 4))
+    fits = {}
+    for (al, rows), c in zip(d.items(), ["#1f77b4", "#d62728"]):
+        rows_f = [r for r in rows if r["K"] != "inf"]
+        K = np.array([r["K"] for r in rows_f], float); gap = np.array([r["gap_bp"] for r in rows_f])
+        viol = np.array([r["viol"] for r in rows_f]) * 100
+        a1.loglog(K, gap, "o-", color=c, label=f"alpha = {float(al):.0%}")
+        sel = (K >= 3) & (K <= 15)
+        slope = np.polyfit(np.log(K[sel]), np.log(gap[sel]), 1)[0]; fits[al] = slope
+        a2.semilogx(K, viol, "o-", color=c, label=f"alpha = {float(al):.0%}")
+        inf_v = [r["viol"] for r in rows if r["K"] == "inf"][0] * 100
+        a2.axhline(inf_v, color=c, ls=":", lw=1)
+    for ax in (a1, a2):
+        ax.axvline(1.0, color="gray", ls="--", lw=1); ax.axvline(4.7, color="gray", ls=":", lw=1); ax.grid(alpha=0.3, which="both")
+    a1.set_xlabel("cushion-multiplier cap K"); a1.set_ylabel("CE loss vs. continuous-time optimum (bp)")
+    a1.set_title("Price of the certification constraint\n(fitted slope, K in [3,15]: " + ", ".join(f"{float(k):.0%}: {v:.2f}" for k, v in fits.items()) + ")", fontsize=10)
+    a2.set_xlabel("cushion-multiplier cap K"); a2.set_ylabel("paths violating under daily execution (%)")
+    a2.set_title("Violations of the K-capped optimum (dotted: K = inf)", fontsize=10)
+    a1.text(1.05, a1.get_ylim()[0] * 1.5, "robust class\n(K = 1)", fontsize=8, color="gray")
+    a1.legend(); a2.legend()
+    fig.tight_layout()
+    fig.savefig(os.path.join(FIG, "fig6_price_of_safety.pdf")); fig.savefig(os.path.join(FIG, "fig6_price_of_safety.png"), dpi=200)
+    plt.close(fig)
+
+
 def main():
     os.makedirs(FIG, exist_ok=True)
     summary = json.load(open(os.path.join(RES, "tables", "summary.json")))
-    fig1(summary); fig2(); fig3(); fig4(); fig5()
+    fig1(summary); fig2(); fig3(); fig4(); fig5(); fig6()
     print("figures written to", FIG)
 
 
