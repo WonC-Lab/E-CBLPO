@@ -267,4 +267,34 @@ check("rho=0 GZ over ECP (bp)", 99, 1e4 * (NS["N20_corr0"]["Grossman-Zhou"]["CE"
 check("cov err ECP loss (bp)", 16, 1e4 * (NS["N20"]["ECP"]["CE"] - NS["N20_coverr"]["ECP"]["CE"]), 0.55)
 check("cov err GZ loss (bp)", 40, 1e4 * (NS["N20"]["Grossman-Zhou"]["CE"] - NS["N20_coverr"]["Grossman-Zhou"]["CE"]), 0.55)
 
+# ---- item 11: ablations
+AB = json.load(open(os.path.join(ROOT, "results", "extensions", "ablation_summary.json")))
+h, j = AB["heston"], AB["jump"]
+check("abl GZ+proj heston", 1.0388, h["GZ + projection (no residual)"]["CE"], 0.00006)
+check("abl full heston", 1.0613, h["full"]["CE"], 0.00006)
+check("abl no residual gap (bp)", 225, 1e4 * (h["full"]["CE"] - h["GZ + projection (no residual)"]["CE"]), 0.55)
+check("abl GZ+proj jump", 1.0220, j["GZ + projection (no residual)"]["CE"], 0.00006); check("abl full jump", 1.0233, j["full"]["CE"], 0.00006)
+check("abl pen10", 1.0680, h["penalty, no projection (lam=10)"]["CE"], 0.00006); check("abl pen100", 1.0685, h["penalty, no projection (lam=100)"]["CE"], 0.00006)
+check("abl pen viol max (%)", 0.02, 100 * max(h[v]["viol"] for v in h if "penalty" in v), 0.0051)
+check("abl pen shift viol min (%)", 81, 100 * min(h[v]["shift_viol"] for v in h if "penalty" in v), 0.51)
+check("abl pen shift viol max (%)", 82, 100 * max(h[v]["shift_viol"] for v in h if "penalty" in v), 0.51)
+check("abl full shift viol", 0, h["full"]["shift_viol"], 0)
+check("abl shift CE loss (pp) min", 6, 100 * min(h["full"]["shift_CE"] - h[v]["shift_CE"] for v in h if "penalty" in v), 0.51)
+check("abl grad full", 11, h["full"]["max_grad_norm"], 0.5)
+check("abl grad pen min", 65, min(h[v]["max_grad_norm"] for v in h if "penalty" in v), 0.5)
+check("abl grad pen max", 93, max(h[v]["max_grad_norm"] for v in h if "penalty" in v), 0.5)
+check("abl sd pen10", 0.0046, h["penalty, no projection (lam=10)"]["CE_sd"], 0.00006); check("abl sd full", 0.0014, h["full"]["CE_sd"], 0.00006)
+check("abl jump identical", 0, max(abs(j[v]["CE"] - j["full"]["CE"]) for v in j if "penalty" in v), 1e-9)
+
+# ---- item 13: block vs iid bootstrap
+BC = json.load(open(os.path.join(ROOT, "results", "empirical", "bootstrap_comparison.json")))
+check("block turnover pre-1990", 10.0, BC["block20"]["turnover_pre1990"], 0.051); check("iid turnover pre-1990", 1.35, BC["iid"]["turnover_pre1990"], 0.0051)
+check("block-iid pre-1990 (bp)", -106, BC["block_minus_iid_pre1990_bp"], 0.55); check("block-iid post-1990 (bp)", -14, BC["block_minus_iid_post1990_bp"], 0.55)
+check("turnover post-1990 iid", 4.5, BC["iid"]["turnover_post1990"], 0.051); check("turnover post-1990 block", 4.5, BC["block20"]["turnover_post1990"], 0.051)
+for c, x in zip((-30, -103, 19), BC["block_minus_iid_bp"]):
+    check("block-iid all (bp)", c, x, 0.55)
+check("block viol", 0, BC["block20"]["viol"], 0)
+for k, c in [("1962-1981", 0.25), ("1970-1989", 0.20), ("1990-2009", -0.03)]:
+    check(f"autocorr {k}", c, BC["lag1_autocorr"][k], 0.0051)
+
 print("\nmismatches (total):", bad)
