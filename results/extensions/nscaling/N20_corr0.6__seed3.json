@@ -1,0 +1,27 @@
+{
+ "case": "N20_corr0.6",
+ "N": 20,
+ "corr": 0.6,
+ "cov_err": false,
+ "seed": 3,
+ "ECP": {
+  "CE": 1.0509376525878906,
+  "viol": 0.0,
+  "gross": 0.779630720615387
+ },
+ "ECP_sec_per_decision": 1.6834266602046905e-05,
+ "peak_rss_MB": 794.72265625,
+ "rss_before_rollout_MB": 455.1640625,
+ "TIPP (m=5)": {
+  "CE": 1.0415126437730158,
+  "viol": 0.0,
+  "gross": 0.7906524905012602
+ },
+ "TIPP (m=5)_sec_per_decision": 1.6369522563994875e-05,
+ "Grossman-Zhou": {
+  "CE": 1.0070493267231861,
+  "viol": 0.0,
+  "gross": 1.9761098258097989
+ },
+ "Grossman-Zhou_sec_per_decision": 1.632371119090489e-05
+}
