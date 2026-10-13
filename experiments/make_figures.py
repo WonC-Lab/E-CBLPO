@@ -7,6 +7,10 @@ run_extensions.py (and, for Fig. 2, from saved checkpoints evaluated on a grid).
   fig3_drawdown_paths.pdf      drawdown distribution over time (constant-coefficient market)
   fig4_zeroshot_N50.pdf        weights of the N=5-trained policy executed on N=50 assets
   fig5_alpha_sweep.pdf         CE and violation rate vs drawdown limit alpha
+  fig6_price_of_safety.pdf     CE loss and violations of the K-capped optimum
+  fig7_price_rate.pdf          rate of the price for large K (r > 0 vs r = 0)
+
+The learned method is labelled METHOD in the figures (the code calls it E-CBLPO).
 """
 import glob
 import json
@@ -32,11 +36,18 @@ STYLE = {
     "Merton (unconstrained)": ("#d62728", "v"), "CPPI (m=3)": ("#8c564b", "<"),
     "TIPP (m=3)": ("#e377c2", ">"), "TIPP (m=5)": ("#bcbd22", ">"),
     "Grossman-Zhou": ("#1f77b4", "o"), "HJB optimum (continuous-time)": ("#000000", "*"),
-    "HJB optimum (certified class)": ("#444444", "P"),
+    "HJB optimum (certified class)": ("#444444", "P"), "HJB optimum (robust class, K=1)": ("#7f7f7f", "X"),
     "PPO": ("#ff7f0e", "x"), "PPO-Lagrangian": ("#ffbb78", "x"),
     "E-CBLPO (PPO-trained)": ("#98df8a", "^"), "E-CBLPO (no GZ prior)": ("#17becf", "^"),
     "E-CBLPO (MLP)": ("#9467bd", "^"), "E-CBLPO": ("#2ca02c", "^"),
 }
+METHOD = os.environ.get("METHOD_LABEL", "ECP")
+
+
+def lab(name):
+    return name.replace("E-CBLPO", METHOD)
+
+
 TITLES = {"constant_bs": "Black–Scholes (1 asset)", "kim_omberg": "Kim–Omberg (1 asset)",
           "heston": "Heston (5 assets)", "jump": "Jump-diffusion (1 asset)"}
 
@@ -48,7 +59,7 @@ def fig1(summary):
         for name, r in summary[m].items():
             c, mk = STYLE.get(name, ("k", "."))
             ax.errorbar(100 * r["viol_rate"], r["CE"], yerr=1.96 * r["CE_se"], fmt=mk, color=c, ms=8 if name == "E-CBLPO" else 6,
-                        mec="k" if name == "E-CBLPO" else c, label=name, capsize=2)
+                        mec="k" if name == "E-CBLPO" else c, label=lab(name), capsize=2)
         ax.set_title(TITLES[m]); ax.set_xlabel("Paths violating the 20% limit (%)")
         ax.grid(alpha=0.3)
     axes[0][0].set_ylabel("Certainty equivalent of $W_T$")
@@ -89,7 +100,7 @@ def fig2():
         with torch.no_grad():
             m_raw = actor(feats, g).numpy()[:, 0] + md / (a + 2.0 * alpha)
         m_exec = np.minimum(m_raw, K)     # filter with u_prev = 0 caps the multiplier at K
-        ax.plot(x, m_exec, color="#2ca02c", lw=1.2, alpha=0.8, label="E-CBLPO (5 training seeds)" if i == 0 else None)
+        ax.plot(x, m_exec, color="#2ca02c", lw=1.2, alpha=0.8, label=lab("E-CBLPO (5 training seeds)") if i == 0 else None)
     ax.set_xlabel("$x = W_t/H_t$"); ax.set_ylabel(r"cushion multiplier $\pi_t W_t / h_t$")
     ax.set_ylim(0, 15); ax.set_xlim(a, 1.0); ax.grid(alpha=0.3); ax.legend(fontsize=8)
     ax.set_title("Optimal and learned cushion multipliers ($t=T/2$)")
@@ -112,7 +123,7 @@ def fig3():
             ax.plot(t, np.percentile(D, q, axis=1), color=STYLE[nm][0], alpha=al, label=f"{q}th pct")
         ax.plot(t, D.max(1), color=STYLE[nm][0], ls=":", label="max of 200 paths")
         ax.axhline(20, color="r", ls="--", lw=1)
-        ax.set_title(nm, fontsize=10); ax.set_xlabel("trading day"); ax.grid(alpha=0.3)
+        ax.set_title(lab(nm), fontsize=10); ax.set_xlabel("trading day"); ax.grid(alpha=0.3)
     axes[0].set_ylabel("drawdown $D_t$ (%)"); axes[0].legend(fontsize=7)
     fig.tight_layout()
     fig.savefig(os.path.join(FIG, "fig3_drawdown_paths.pdf")); fig.savefig(os.path.join(FIG, "fig3_drawdown_paths.png"), dpi=200)
@@ -131,7 +142,7 @@ def fig4():
     im = a1.imshow(Wt.T, aspect="auto", origin="lower", cmap="RdBu_r", vmin=-np.abs(Wt).max(), vmax=np.abs(Wt).max())
     fig.colorbar(im, ax=[a1, a2], label="weight (%)", shrink=0.75, anchor=(0, 1))
     a1.set_ylabel("asset index (sorted by base drift)")
-    a1.set_title("E-CBLPO trained on N=5, executed without retraining on N=50 (one evaluation path)")
+    a1.set_title(f"{METHOD} trained on N=5, executed without retraining on N=50 (one evaluation path)")
     a2.plot(D, color="#2ca02c"); a2.axhline(20, color="r", ls="--"); a2.set_xlim(-0.5, Wt.shape[0] - 0.5); a2.set_ylabel("$D_t$ (%)"); a2.set_xlabel("trading day"); a2.grid(alpha=0.3)
     fig.savefig(os.path.join(FIG, "fig4_zeroshot_N50.pdf")); fig.savefig(os.path.join(FIG, "fig4_zeroshot_N50.png"), dpi=200)
     plt.close(fig)
@@ -150,8 +161,8 @@ def fig5():
         c, mk = STYLE.get(nm, ("k", "."))
         ce = np.array([[v["CE"] for v in vs] for vs in vals]); vi = np.array([[v["viol"] for v in vs] for vs in vals]) * 100
         x = np.array(alphas) * 100
-        a1.errorbar(x, ce.mean(1), yerr=ce.std(1, ddof=1) / np.sqrt(ce.shape[1]) * 1.96, fmt=mk + "-", color=c, label=nm, capsize=2)
-        a2.plot(x, vi.mean(1), mk + "-", color=c, label=nm)
+        a1.errorbar(x, ce.mean(1), yerr=ce.std(1, ddof=1) / np.sqrt(ce.shape[1]) * 1.96, fmt=mk + "-", color=c, label=lab(nm), capsize=2)
+        a2.plot(x, vi.mean(1), mk + "-", color=c, label=lab(nm))
     a1.set_xlabel(r"drawdown limit $\alpha$ (%)"); a1.set_ylabel("certainty equivalent"); a1.grid(alpha=0.3)
     a2.set_xlabel(r"drawdown limit $\alpha$ (%)"); a2.set_ylabel("paths violating (%)"); a2.grid(alpha=0.3)
     a2.legend(fontsize=7, loc="upper right")
@@ -191,10 +202,39 @@ def fig6():
     plt.close(fig)
 
 
+def fig7():
+    """Price of certification for large K, time-step extrapolated (2 g_64 - g_32)."""
+    cases = [("r=0.02", "r = 2%", "#1f77b4"), ("r=0.005", "r = 0.5%", "#2ca02c"), ("r=0", "r = 0", "#d62728")]
+    data = {}
+    for c, _, _ in cases:
+        f32 = os.path.join(RES, "extensions", f"price_rate_spd32_{c}.json")
+        f64 = os.path.join(RES, "extensions", f"price_rate_spd64_{c}.json")
+        if not (os.path.exists(f32) and os.path.exists(f64)):
+            return
+        a, b = json.load(open(f32))[c], json.load(open(f64))[c]
+        data[c] = (np.array(b["K"], float), 2 * np.array(b["gap_bp"]) - np.array(a["gap_bp"]))
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(11, 4))
+    for c, nm, col in cases:
+        K, g = data[c]
+        a1.loglog(K, g, "o-", color=col, label=nm)
+    K = data["r=0"][0]
+    a1.loglog(K, 0.9 * data["r=0.02"][1][0] * (K / K[0]) ** -2, "k:", lw=1, label="slope −2")
+    a1.loglog(K, 0.9 * data["r=0"][1][0] * (K / K[0]) ** -3, "k--", lw=1, label="slope −3")
+    a1.set_xlabel("cushion-multiplier cap K"); a1.set_ylabel("CE(V) − CE(V_K) (bp)"); a1.grid(alpha=0.3, which="both")
+    a1.set_title("Price of certification (γ = 2, α = 20%, θ = 0.3)", fontsize=10); a1.legend(fontsize=8)
+    for c, nm, col in cases[:2]:
+        a2.semilogx(K, K ** 2 * (data[c][1] - data["r=0"][1]), "o-", color=col, label=nm)
+    a2.set_xlabel("cushion-multiplier cap K"); a2.set_ylabel("K² × [price(r) − price(0)] (bp)")
+    a2.set_title("Interest-rate component of the price", fontsize=10); a2.grid(alpha=0.3); a2.legend(fontsize=8)
+    fig.tight_layout()
+    fig.savefig(os.path.join(FIG, "fig7_price_rate.pdf")); fig.savefig(os.path.join(FIG, "fig7_price_rate.png"), dpi=200)
+    plt.close(fig)
+
+
 def main():
     os.makedirs(FIG, exist_ok=True)
     summary = json.load(open(os.path.join(RES, "tables", "summary.json")))
-    fig1(summary); fig2(); fig3(); fig4(); fig5(); fig6()
+    fig1(summary); fig2(); fig3(); fig4(); fig5(); fig6(); fig7()
     print("figures written to", FIG)
 
 

@@ -47,12 +47,14 @@ Tables: `results/tables/tables.md` · Figures: `results/figures/` · Configurati
 
 | Group | Contents |
 |---|---|
-| Exact / numerical optima | finite-horizon HJB, unrestricted and restricted to multiplier cap $K$: 1-D (Black–Scholes), 2-D (Kim–Omberg, incl. hedging demand) |
+| Exact / numerical optima | finite-horizon HJB, unrestricted, restricted to multiplier cap $K$, and the robust class ($K=1$): 1-D (Black–Scholes), 2-D (Kim–Omberg, incl. hedging demand) |
 | Analytical rules | Grossman–Zhou (plug-in), Merton (unconstrained) |
 | Portfolio insurance | CPPI (static floor), TIPP (ratcheting floor, m = 3, 5), 60% constant mix, cash |
 | Learned | E-CBLPO; ablations: MLP instead of DeepSets, no GZ prior, PPO-trained; PPO and PPO-Lagrangian baselines |
 | Markets | Black–Scholes (1 asset), Kim–Omberg (1), Heston (5; zero-shot to 50), Merton jump-diffusion (1) |
-| Extra studies | price of safety vs $K$; zero-cost optimality gap; drift-estimation risk; $\alpha$ sweep; risk aversion and horizon |
+| Extra studies | price of safety vs $K$ and its rate for large $K$ ($r>0$ vs $r=0$); boundary layer of the optimum near the floor; zero-cost optimality gap; drift-estimation risk; $\alpha$ sweep; risk aversion and horizon |
+
+In the paper and figures the learned method is called ECP (equivariant certified policy); the code keeps the name E-CBLPO.
 
 Main metric: certainty-equivalent terminal wealth on common random paths, with path-violation
 rates (Clopper–Pearson bounds) and gross exposure, to show that strategies are not simply holding cash.

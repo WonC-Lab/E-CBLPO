@@ -29,7 +29,7 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 RES = os.environ.get("RESULTS_DIR", os.path.join(ROOT, "results"))
 
 ORDER = ["Cash", "Constant mix (60% risky)", "Merton (unconstrained)", "CPPI (m=3)", "TIPP (m=3)", "TIPP (m=5)",
-         "Grossman-Zhou", "HJB optimum (continuous-time)", "HJB optimum (certified class)",
+         "Grossman-Zhou", "HJB optimum (robust class, K=1)", "HJB optimum (continuous-time)", "HJB optimum (certified class)",
          "PPO", "PPO-Lagrangian", "E-CBLPO (PPO-trained)", "E-CBLPO (no GZ prior)", "E-CBLPO (MLP)", "E-CBLPO"]
 MARKET_LABEL = {"constant_bs": "Black--Scholes, constant coefficients (1 asset)",
                 "kim_omberg": "Kim--Omberg stochastic risk premium (1 asset)",
