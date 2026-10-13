@@ -192,4 +192,40 @@ check("E3 GZ violating years", 2, r3["Grossman-Zhou"]["viol_n"], 0)
 check("E3 stress years", 10, EM["E3"]["stress_exceed_episodes"], 0)
 for c, x in zip((50, -151, 286), r3["ECP"]["d_vs_TIPP (m=3)"]):
     check("E3 ECP vs TIPP3", c, x, 0.55)
+# ---- items 3, 5, 7, 8, 9: uniform bound, r-scaling, localisation, solver checks, rate table
+X = os.path.join(ROOT, "results", "extensions")
+RS = json.load(open(os.path.join(X, "r_scaling.json")))
+for k, v, b in [("0.04", 0.70, 1.20), ("0.02", 0.81, 1.51), ("0.01", 0.92, 1.95), ("0.005", 1.01, 2.57),
+                ("0.0025", 1.10, 3.45), ("0.00125", 1.18, 4.69)]:
+    check(f"ln v_x(0,a+) r={k}", v, RS[k]["ln_vx_1e-7"], 0.0051)
+    check(f"uniform bound r={k}", b, RS[k]["bound_ln_vx"], 0.0051)
+ks = ["0.04", "0.02", "0.01", "0.005", "0.0025", "0.00125"]
+inc = [(RS[ks[i + 1]]["ln_vx_1e-7"] - RS[ks[i]]["ln_vx_1e-7"]) /
+       (np.sqrt(np.log(1 / float(ks[i + 1]))) - np.sqrt(np.log(1 / float(ks[i])))) for i in range(5)]
+check("sqrt-log increment min", 0.57, min(inc), 0.0051); check("sqrt-log increment max", 0.65, max(inc), 0.0051)
+SA = json.load(open(os.path.join(X, "solver_checks_A.json")))
+for j, lim in [(0, 0.1), (1, 0.3), (2, 3.9)]:
+    worst = max(100 * (max(SA[f"{c}|{v}"]["m"][j] for v in ("base", "M4000", "q3", "q4", "spd32", "howard2", "pimax4")) /
+                       min(SA[f"{c}|{v}"]["m"][j] for v in ("base", "M4000", "q3", "q4", "spd32", "howard2", "pimax4")) - 1)
+                for c in ("r=0.02", "r=0"))
+    check(f"multiplier spread across variants y-index {j} (%) <=", lim, max(worst, lim) if worst <= lim else worst, 0.0)
+check("m sqrt(y) at 1e-7, r=2%", 1.28, SA["r=0.02|base"]["m"][2] * np.sqrt(1e-7), 0.0051)
+check("v_x(0,a+) r=2% all variants", 2.259, np.mean([SA[f"r=0.02|{v}"]["vx_1e-9"] for v in ("base", "M4000", "q3", "q4", "spd32", "howard2", "pimax4")]), 0.0006)
+RT = json.load(open(os.path.join(X, "rate_table.json")))
+check("rate r=2% K^2 gap at 10", 155, RT["r=0.02"]["scaled"][0], 0.5); check("rate r=2% K^2 gap at 200", 80, RT["r=0.02"]["scaled"][-1], 0.5)
+check("rate r=0 K^3 gap/1e3 at 10", 1.5, RT["r=0"]["scaled"][0] / 1e3, 0.051); check("rate r=0 K^3 gap/1e3 at 200", 3.2, RT["r=0"]["scaled"][-1] / 1e3, 0.051)
+check("weakest resolution ratio", 3.9, min(g / e for d in RT.values() for g, e in zip(d["gap_R"], d["err"])), 0.051)
+i100 = RT["r=0.02"]["K"].index(100)
+check("interest component r=2% at K=100", 64, RT["r=0.02"]["rate_part"][i100], 0.5); check("... error", 4, RT["r=0.02"]["rate_part_err"][i100], 0.5)
+check("interest component r=0.5% at K=100", 26, RT["r=0.005"]["rate_part"][i100], 0.5); check("... error", 3, RT["r=0.005"]["rate_part_err"][i100], 0.5)
+c0 = np.mean(RT["r=0"]["scaled"][5:])
+check("c_0 (bp)", 3000, c0, 100); check("K_x r=2%", 50, c0 / 64, 4); check("K_x r=0.5%", 115, c0 / 26, 4)
+check("r=0.5% slope min", -2.47, min(x for x in RT["r=0.005"]["slope"] if x), 0.006); check("r=0.5% slope max", -2.36, max(x for x in RT["r=0.005"]["slope"] if x), 0.006)
+LO = json.load(open(os.path.join(X, "localisation.json")))
+rel = lambda k, j: 100 * abs(LO[k]["m_hjb"][j] / LO[k]["m_explicit"][j] - 1)
+long_ = [k for k in LO if "spd=32" in k and "tau=0.02" not in k]
+check("localisation max rel err to 1e-7, tau>=0.05 (%)", 0.5, max(rel(k, j) for k in long_ for j in range(6)), 0.051)
+check("localisation rel err to 1e-7, tau=0.02 (%)", 1.3, max(rel("mu=0.06,sigma=0.2,tau=0.02,spd=32", j) for j in range(6)), 0.051)
+check("localisation tau=0.02 1e-7 at 8 steps (%)", 8.9, rel("mu=0.06,sigma=0.2,tau=0.02,spd=8", 5), 0.051)
+
 print("\nmismatches (total):", bad)
