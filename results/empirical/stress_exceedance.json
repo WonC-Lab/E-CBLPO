@@ -1,0 +1,5664 @@
+{
+ "E2": {
+  "2019": {
+   "seed 0": {
+    "events": [
+     {
+      "episode": 11,
+      "day": 66,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.02542486973106861
+      ],
+      "gross": 0.6167614394798875,
+      "cushion_before": 0.12147067477920058,
+      "cushion_lost_frac": 0.2475462369445275,
+      "port_ret": -0.03263219249805083
+     },
+     {
+      "episode": 10,
+      "day": 86,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.025360722094774246
+      ],
+      "gross": 0.6166373426094651,
+      "cushion_before": 0.12144265389933911,
+      "cushion_lost_frac": 0.24769585386540527,
+      "port_ret": -0.0326453759503994
+     },
+     {
+      "episode": 9,
+      "day": 109,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.025285163894295692
+      ],
+      "gross": 0.6164907515048981,
+      "cushion_before": 0.12140936748801398,
+      "cushion_lost_frac": 0.24787689397646506,
+      "port_ret": -0.032661461858827456
+     },
+     {
+      "episode": 8,
+      "day": 129,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.025221839547157288
+      ],
+      "gross": 0.6163675645366311,
+      "cushion_before": 0.12138138779031324,
+      "cushion_lost_frac": 0.24803242589147245,
+      "port_ret": -0.03267541592511147
+     },
+     {
+      "episode": 7,
+      "day": 151,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.025147899985313416
+      ],
+      "gross": 0.6162226442247629,
+      "cushion_before": 0.12134851199921065,
+      "cushion_lost_frac": 0.24821825129104702,
+      "port_ret": -0.032692206101094246
+     },
+     {
+      "episode": 6,
+      "day": 173,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.02507893368601799
+      ],
+      "gross": 0.6160866990685463,
+      "cushion_before": 0.1213178241600772,
+      "cushion_lost_frac": 0.24839586757508025,
+      "port_ret": -0.032708415483045705
+     },
+     {
+      "episode": 5,
+      "day": 193,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.02503209002315998
+      ],
+      "gross": 0.6159944357350469,
+      "cushion_before": 0.12129691632881413,
+      "cushion_lost_frac": 0.2485209505216065,
+      "port_ret": -0.03271998897108852
+     },
+     {
+      "episode": 4,
+      "day": 215,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.024948064237833023
+      ],
+      "gross": 0.6158279487863183,
+      "cushion_before": 0.12125916739087048,
+      "cushion_lost_frac": 0.2487453322529164,
+      "port_ret": -0.032740680309080394
+     },
+     {
+      "episode": 3,
+      "day": 236,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.024891169741749763
+      ],
+      "gross": 0.6157152131199837,
+      "cushion_before": 0.121233583947569,
+      "cushion_lost_frac": 0.24890335559800192,
+      "port_ret": -0.0327554774180262
+     }
+    ],
+    "min_cushion_ratio": 0.5061177553989028,
+    "violated": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "seed 1": {
+    "events": [
+     {
+      "episode": 11,
+      "day": 66,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.0388554111123085
+      ],
+      "gross": 0.6409016322577372,
+      "cushion_before": 0.12697463366542305,
+      "cushion_lost_frac": 0.21949607280554262,
+      "port_ret": -0.030066015210446606
+     },
+     {
+      "episode": 10,
+      "day": 86,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.03885365277528763
+      ],
+      "gross": 0.640898488345556,
+      "cushion_before": 0.12697395353893193,
+      "cushion_lost_frac": 0.21949952627407687,
+      "port_ret": -0.030066349269620152
+     },
+     {
+      "episode": 9,
+      "day": 109,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.03885200247168541
+      ],
+      "gross": 0.6408959715627134,
+      "cushion_before": 0.12697334068850333,
+      "cushion_lost_frac": 0.21950293843847224,
+      "port_ret": -0.030066691415067792
+     },
+     {
+      "episode": 8,
+      "day": 129,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.03885074704885483
+      ],
+      "gross": 0.6408937857486308,
+      "cushion_before": 0.12697284497232844,
+      "cushion_lost_frac": 0.21950545098417484,
+      "port_ret": -0.030066934268421552
+     },
+     {
+      "episode": 7,
+      "day": 151,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.0388495996594429
+      ],
+      "gross": 0.6408918200759217,
+      "cushion_before": 0.12697243343652825,
+      "cushion_lost_frac": 0.21950769715002194,
+      "port_ret": -0.030067157835384717
+     },
+     {
+      "episode": 6,
+      "day": 173,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.03884861245751381
+      ],
+      "gross": 0.6408905501011759,
+      "cushion_before": 0.12697203799464968,
+      "cushion_lost_frac": 0.21950989826855993,
+      "port_ret": -0.030067378519262444
+     },
+     {
+      "episode": 5,
+      "day": 193,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.038847651332616806
+      ],
+      "gross": 0.6408887553261593,
+      "cushion_before": 0.12697167847845892,
+      "cushion_lost_frac": 0.21951173882551056,
+      "port_ret": -0.030067557155736613
+     },
+     {
+      "episode": 4,
+      "day": 215,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.03884706646203995
+      ],
+      "gross": 0.6408879529917613,
+      "cushion_before": 0.12697145974596846,
+      "cushion_lost_frac": 0.2195129914752223,
+      "port_ret": -0.03006768403468585
+     },
+     {
+      "episode": 3,
+      "day": 236,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.03884635865688324
+      ],
+      "gross": 0.6408865925623104,
+      "cushion_before": 0.1269711693203892,
+      "cushion_lost_frac": 0.21951436968290672,
+      "port_ret": -0.030067813459291548
+     }
+    ],
+    "min_cushion_ratio": 0.5290983549816226,
+    "violated": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "seed 2": {
+    "events": [
+     {
+      "episode": 11,
+      "day": 66,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.039932407438755035
+      ],
+      "gross": 0.6427967926138081,
+      "cushion_before": 0.12740952837461914,
+      "cushion_lost_frac": 0.21726039856102486,
+      "port_ret": -0.029847703811773263
+     },
+     {
+      "episode": 10,
+      "day": 86,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.03993123769760132
+      ],
+      "gross": 0.6427952057565562,
+      "cushion_before": 0.12740904685411136,
+      "cushion_lost_frac": 0.21726291529783825,
+      "port_ret": -0.02984795225875947
+     },
+     {
+      "episode": 9,
+      "day": 109,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.039930038154125214
+      ],
+      "gross": 0.6427929679630324,
+      "cushion_before": 0.12740863286168277,
+      "cushion_lost_frac": 0.21726508552275303,
+      "port_ret": -0.029848166745671256
+     },
+     {
+      "episode": 8,
+      "day": 129,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.03992913290858269
+      ],
+      "gross": 0.6427915692911483,
+      "cushion_before": 0.12740829193082312,
+      "cushion_lost_frac": 0.21726690270740656,
+      "port_ret": -0.029848347494736194
+     },
+     {
+      "episode": 7,
+      "day": 151,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.03992830961942673
+      ],
+      "gross": 0.642790429876186,
+      "cushion_before": 0.12740795408803837,
+      "cushion_lost_frac": 0.2172686547724657,
+      "port_ret": -0.029848519920492644
+     },
+     {
+      "episode": 6,
+      "day": 173,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.03992755711078644
+      ],
+      "gross": 0.6427893452928402,
+      "cushion_before": 0.12740763634605082,
+      "cushion_lost_frac": 0.2172702546973041,
+      "port_ret": -0.029848675506224498
+     },
+     {
+      "episode": 5,
+      "day": 193,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.039926789700984955
+      ],
+      "gross": 0.6427876185625792,
+      "cushion_before": 0.12740737033667396,
+      "cushion_lost_frac": 0.21727151487153995,
+      "port_ret": -0.029848794870801054
+     },
+     {
+      "episode": 4,
+      "day": 215,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.039926353842020035
+      ],
+      "gross": 0.6427871555788442,
+      "cushion_before": 0.12740719817323223,
+      "cushion_lost_frac": 0.21727248669944643,
+      "port_ret": -0.029848893587449354
+     },
+     {
+      "episode": 3,
+      "day": 236,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.03992580622434616
+      ],
+      "gross": 0.642786035547033,
+      "cushion_before": 0.12740701509333613,
+      "cushion_lost_frac": 0.21727342621342005,
+      "port_ret": -0.029848985658328275
+     }
+    ],
+    "min_cushion_ratio": 0.5307715933971554,
+    "violated": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "CPPI (m=3)": {
+    "events": [
+     {
+      "episode": 11,
+      "day": 66,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.05428283959801445
+      ],
+      "gross": 0.48854555638213004,
+      "cushion_before": 0.12168142666234906,
+      "cushion_lost_frac": 0.3218543359154128,
+      "port_ret": -0.042491574245422714
+     },
+     {
+      "episode": 10,
+      "day": 86,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.058249454169147494
+      ],
+      "gross": 0.5242450875223275,
+      "cushion_before": 0.11634804768170882,
+      "cushion_lost_frac": 0.3591687648216477,
+      "port_ret": -0.045603397836631476
+     },
+     {
+      "episode": 9,
+      "day": 109,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.05972253089495135
+      ],
+      "gross": 0.5375027780545621,
+      "cushion_before": 0.11438336372043148,
+      "cushion_lost_frac": 0.37379269594320663,
+      "port_ret": -0.046759015520742575
+     },
+     {
+      "episode": 8,
+      "day": 129,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.06360507344819893
+      ],
+      "gross": 0.5724456610337905,
+      "cushion_before": 0.10924596485619477,
+      "cushion_lost_frac": 0.41452160339627786,
+      "port_ret": -0.04980479899509416
+     },
+     {
+      "episode": 7,
+      "day": 151,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.060833327194894746
+      ],
+      "gross": 0.5474999447540527,
+      "cushion_before": 0.11290752636058847,
+      "cushion_lost_frac": 0.38511312128199193,
+      "port_ret": -0.04763042108580451
+     },
+     {
+      "episode": 6,
+      "day": 173,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.06196850072606105
+      ],
+      "gross": 0.5577165065345494,
+      "cushion_before": 0.111404303244451,
+      "cushion_lost_frac": 0.3969523338646209,
+      "port_ret": -0.04852094511516236
+     },
+     {
+      "episode": 5,
+      "day": 193,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.07297020791131525
+      ],
+      "gross": 0.6567318712018373,
+      "cushion_before": 0.0970924959978008,
+      "cushion_lost_frac": 0.5280534422444452,
+      "port_ret": -0.05715132715575566
+     },
+     {
+      "episode": 4,
+      "day": 215,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.06292655155087973
+      ],
+      "gross": 0.5663389639579175,
+      "cushion_before": 0.11013954624359325,
+      "cushion_lost_frac": 0.4071640598626419,
+      "port_ret": -0.049272515390698324
+     },
+     {
+      "episode": 3,
+      "day": 236,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.06772720368225503
+      ],
+      "gross": 0.6095448331402953,
+      "cushion_before": 0.10385547019494056,
+      "cushion_lost_frac": 0.4615944601739139,
+      "port_ret": -0.05303846829670922
+     }
+    ],
+    "min_cushion_ratio": -24.491267243886217,
+    "violated": [
+     false,
+     false,
+     false,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   "TIPP (m=3)": {
+    "events": [
+     {
+      "episode": 11,
+      "day": 66,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.04707019965808341
+      ],
+      "gross": 0.42363179692275066,
+      "cushion_before": 0.131543867500541,
+      "cushion_lost_frac": 0.2608378233288484,
+      "port_ret": -0.03683306526740637
+     },
+     {
+      "episode": 10,
+      "day": 86,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.04707019965808343
+      ],
+      "gross": 0.4236317969227509,
+      "cushion_before": 0.13154386750054106,
+      "cushion_lost_frac": 0.26083782332884853,
+      "port_ret": -0.03683306526740637
+     },
+     {
+      "episode": 9,
+      "day": 109,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.04707019965808347
+      ],
+      "gross": 0.4236317969227512,
+      "cushion_before": 0.13154386750054117,
+      "cushion_lost_frac": 0.2608378233288483,
+      "port_ret": -0.03683306526740637
+     },
+     {
+      "episode": 8,
+      "day": 129,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.047070199658083546
+      ],
+      "gross": 0.42363179692275194,
+      "cushion_before": 0.13154386750054145,
+      "cushion_lost_frac": 0.26083782332884875,
+      "port_ret": -0.036833065267406484
+     },
+     {
+      "episode": 7,
+      "day": 151,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.0470701996580834
+      ],
+      "gross": 0.4236317969227506,
+      "cushion_before": 0.13154386750054095,
+      "cushion_lost_frac": 0.26083782332884786,
+      "port_ret": -0.03683306526740626
+     },
+     {
+      "episode": 6,
+      "day": 173,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.047070199658083435
+      ],
+      "gross": 0.42363179692275094,
+      "cushion_before": 0.1315438675005411,
+      "cushion_lost_frac": 0.2608378233288481,
+      "port_ret": -0.03683306526740637
+     },
+     {
+      "episode": 5,
+      "day": 193,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.047070199658083345
+      ],
+      "gross": 0.4236317969227501,
+      "cushion_before": 0.13154386750054078,
+      "cushion_lost_frac": 0.26083782332884675,
+      "port_ret": -0.03683306526740604
+     },
+     {
+      "episode": 4,
+      "day": 215,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.04707019965808348
+      ],
+      "gross": 0.42363179692275127,
+      "cushion_before": 0.1315438675005412,
+      "cushion_lost_frac": 0.2608378233288481,
+      "port_ret": -0.03683306526740637
+     },
+     {
+      "episode": 3,
+      "day": 236,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.04707019965808349
+      ],
+      "gross": 0.42363179692275144,
+      "cushion_before": 0.13154386750054126,
+      "cushion_lost_frac": 0.2608378233288482,
+      "port_ret": -0.03683306526740637
+     }
+    ],
+    "min_cushion_ratio": 0.6530573089305927,
+    "violated": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "Grossman-Zhou": {
+    "events": [
+     {
+      "episode": 11,
+      "day": 66,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.290598970704336
+      ],
+      "gross": 2.0,
+      "cushion_before": 0.17302636625350734,
+      "cushion_lost_frac": -0.027908094549697227,
+      "port_ret": 0.004962698192430448
+     },
+     {
+      "episode": 10,
+      "day": 86,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.29059897070433605
+      ],
+      "gross": 1.9999999999999996,
+      "cushion_before": 0.17302636625350726,
+      "cushion_lost_frac": -0.02790809454969767,
+      "port_ret": 0.004962698192430448
+     },
+     {
+      "episode": 9,
+      "day": 109,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.29059897070433605
+      ],
+      "gross": 1.9999999999999996,
+      "cushion_before": 0.17302636625350729,
+      "cushion_lost_frac": -0.027908094549698337,
+      "port_ret": 0.00496269819243067
+     },
+     {
+      "episode": 8,
+      "day": 129,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.29059897070433616
+      ],
+      "gross": 2.0,
+      "cushion_before": 0.1730263662535072,
+      "cushion_lost_frac": -0.027908094549698115,
+      "port_ret": 0.00496269819243067
+     },
+     {
+      "episode": 7,
+      "day": 151,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.2905989707043363
+      ],
+      "gross": 1.9999999999999998,
+      "cushion_before": 0.17302636625350706,
+      "cushion_lost_frac": -0.027908094549697893,
+      "port_ret": 0.004962698192430448
+     },
+     {
+      "episode": 6,
+      "day": 173,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.29059897070433643
+      ],
+      "gross": 2.0,
+      "cushion_before": 0.17302636625350698,
+      "cushion_lost_frac": -0.02790809454969745,
+      "port_ret": 0.004962698192430448
+     },
+     {
+      "episode": 5,
+      "day": 193,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.290598970704336
+      ],
+      "gross": 2.0,
+      "cushion_before": 0.17302636625350737,
+      "cushion_lost_frac": -0.02790809454969745,
+      "port_ret": 0.004962698192430448
+     },
+     {
+      "episode": 4,
+      "day": 215,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.290598970704336
+      ],
+      "gross": 2.0,
+      "cushion_before": 0.1730263662535073,
+      "cushion_lost_frac": -0.027908094549698115,
+      "port_ret": 0.00496269819243067
+     },
+     {
+      "episode": 3,
+      "day": 236,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.29059897070433627
+      ],
+      "gross": 2.0,
+      "cushion_before": 0.17302636625350715,
+      "cushion_lost_frac": -0.02790809454969745,
+      "port_ret": 0.004962698192430448
+     }
+    ],
+    "min_cushion_ratio": 0.47281535202152014,
+    "violated": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "2020": {
+   "seed 0": {
+    "events": [
+     {
+      "episode": 2,
+      "day": 5,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.0018152351258322597
+      ],
+      "gross": 0.7851395223406143,
+      "cushion_before": 0.1613238613737025,
+      "cushion_lost_frac": 0.3037894530513998,
+      "port_ret": -0.05098020509011947
+     },
+     {
+      "episode": 1,
+      "day": 24,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.0013239503605291247
+      ],
+      "gross": 0.5721630039042793,
+      "cushion_before": 0.11146762510243936,
+      "cushion_lost_frac": 0.30357679552747197,
+      "port_ret": -0.03712582158894895
+     },
+     {
+      "episode": 0,
+      "day": 45,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.0013236227678135037
+      ],
+      "gross": 0.5721622331766412,
+      "cushion_before": 0.11146751686866671,
+      "cushion_lost_frac": 0.30357745288083227,
+      "port_ret": -0.03712587033950976
+     }
+    ],
+    "min_cushion_ratio": 0.47183250543195193,
+    "violated": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "seed 1": {
+    "events": [
+     {
+      "episode": 2,
+      "day": 5,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.0008989282068796456
+      ],
+      "gross": 0.7844560462399386,
+      "cushion_before": 0.16115556372946244,
+      "cushion_lost_frac": 0.3055576928940458,
+      "port_ret": -0.051232416591487584
+     },
+     {
+      "episode": 1,
+      "day": 24,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.0006545627256855369
+      ],
+      "gross": 0.5707584201591089,
+      "cushion_before": 0.11115630981554284,
+      "cushion_lost_frac": 0.30534504722216815,
+      "port_ret": -0.03725050060459989
+     },
+     {
+      "episode": 0,
+      "day": 45,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.000653793103992939
+      ],
+      "gross": 0.5707568338839337,
+      "cushion_before": 0.11115600312015808,
+      "cushion_lost_frac": 0.3053468095954236,
+      "port_ret": -0.03725062536370438
+     }
+    ],
+    "min_cushion_ratio": 0.4704678622531,
+    "violated": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "seed 2": {
+    "events": [
+     {
+      "episode": 2,
+      "day": 5,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.002195532899349928
+      ],
+      "gross": 0.7854226836934686,
+      "cushion_before": 0.16139360840025663,
+      "cushion_lost_frac": 0.30305689673578406,
+      "port_ret": -0.050875568224506895
+     },
+     {
+      "episode": 1,
+      "day": 24,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.001601886237040162
+      ],
+      "gross": 0.5727448747202288,
+      "cushion_before": 0.1115966542818885,
+      "cushion_lost_frac": 0.3028454136376457,
+      "port_ret": -0.03707400062059152
+     },
+     {
+      "episode": 0,
+      "day": 45,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.001601552008651197
+      ],
+      "gross": 0.5727441057679243,
+      "cushion_before": 0.11159652680892948,
+      "cushion_lost_frac": 0.30284610775626974,
+      "port_ret": -0.03707404842963635
+     }
+    ],
+    "min_cushion_ratio": 0.4723952483301879,
+    "violated": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "CPPI (m=3)": {
+    "events": [
+     {
+      "episode": 2,
+      "day": 5,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.06712346662780226
+      ],
+      "gross": 0.6041111996502203,
+      "cushion_before": 0.1650442191614353,
+      "cushion_lost_frac": 0.3073565137426487,
+      "port_ret": -0.05256486159661722
+     },
+     {
+      "episode": 1,
+      "day": 24,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.052092259005414095
+      ],
+      "gross": 0.46883033104872684,
+      "cushion_before": 0.12465399412967536,
+      "cushion_lost_frac": 0.3024447269827276,
+      "port_ret": -0.0407730280312496
+     },
+     {
+      "episode": 0,
+      "day": 45,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.0502767334870208
+      ],
+      "gross": 0.4524906013831872,
+      "cushion_before": 0.12713245707534834,
+      "cushion_lost_frac": 0.28695630575574016,
+      "port_ret": -0.039348703570440624
+     }
+    ],
+    "min_cushion_ratio": 0.5416447165762359,
+    "violated": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "TIPP (m=3)": {
+    "events": [
+     {
+      "episode": 2,
+      "day": 5,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.058291463917198555
+      ],
+      "gross": 0.524623175254787,
+      "cushion_before": 0.1695493534593581,
+      "cushion_lost_frac": 0.2609664782993869,
+      "port_ret": -0.04563635416016132
+     },
+     {
+      "episode": 1,
+      "day": 24,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.047070199658083456
+      ],
+      "gross": 0.4236317969227511,
+      "cushion_before": 0.13154386750054115,
+      "cushion_lost_frac": 0.2608378233288481,
+      "port_ret": -0.03683306526740637
+     },
+     {
+      "episode": 0,
+      "day": 45,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       0.047070199658083484
+      ],
+      "gross": 0.4236317969227513,
+      "cushion_before": 0.13154386750054123,
+      "cushion_lost_frac": 0.26083782332884786,
+      "port_ret": -0.03683306526740637
+     }
+    ],
+    "min_cushion_ratio": 0.6528555200896982,
+    "violated": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "Grossman-Zhou": {
+    "events": [
+     {
+      "episode": 2,
+      "day": 5,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.23926204634028259
+      ],
+      "gross": 1.9999999999999996,
+      "cushion_before": 0.18541744418560083,
+      "cushion_lost_frac": 0.028901964566927063,
+      "port_ret": -0.005438231719523956
+     },
+     {
+      "episode": 1,
+      "day": 24,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.25497565071831313
+      ],
+      "gross": 2.0,
+      "cushion_before": 0.16725625952805945,
+      "cushion_lost_frac": -0.004447757797231278,
+      "port_ret": 0.0007690984939343615
+     },
+     {
+      "episode": 0,
+      "day": 45,
+      "assets": [
+       1
+      ],
+      "excess": [
+       -0.201512
+      ],
+      "weights": [
+       -0.254975650718313
+      ],
+      "gross": 2.0000000000000004,
+      "cushion_before": 0.16725625952805953,
+      "cushion_lost_frac": -0.004447757797232166,
+      "port_ret": 0.0007690984939345835
+     }
+    ],
+    "min_cushion_ratio": 0.46325749583063347,
+    "violated": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   }
+  }
+ },
+ "E3": {
+  "2004": {
+   "seed 0": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 187,
+      "assets": [
+       16
+      ],
+      "excess": [
+       -0.267906
+      ],
+      "weights": [
+       -0.03552791103720665
+      ],
+      "gross": 0.9259440953028388,
+      "cushion_before": 0.1973429023834137,
+      "cushion_lost_frac": -0.05381248551519979,
+      "port_ret": 0.010647804331546107
+     }
+    ],
+    "min_cushion_ratio": 0.9766385872453422,
+    "violated": [
+     false
+    ]
+   },
+   "seed 1": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 187,
+      "assets": [
+       16
+      ],
+      "excess": [
+       -0.267906
+      ],
+      "weights": [
+       -0.030210789293050766
+      ],
+      "gross": 0.9174426019599196,
+      "cushion_before": 0.19508380526926947,
+      "cushion_lost_frac": -0.044457211015582754,
+      "port_ret": 0.008715730123084464
+     }
+    ],
+    "min_cushion_ratio": 0.9762627064368675,
+    "violated": [
+     false
+    ]
+   },
+   "seed 2": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 187,
+      "assets": [
+       16
+      ],
+      "excess": [
+       -0.267906
+      ],
+      "weights": [
+       -0.033762991428375244
+      ],
+      "gross": 0.9278733317332808,
+      "cushion_before": 0.1978535060563907,
+      "cushion_lost_frac": -0.04989312287707204,
+      "port_ret": 0.009892764047444436
+     }
+    ],
+    "min_cushion_ratio": 0.9767689358606815,
+    "violated": [
+     false
+    ]
+   }
+  },
+  "2005": {
+   "seed 0": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 48,
+      "assets": [
+       43
+      ],
+      "excess": [
+       0.24763100000000002
+      ],
+      "weights": [
+       0.030248278751969337
+      ],
+      "gross": 0.8411642366554588,
+      "cushion_before": 0.17532436209998215,
+      "cushion_lost_frac": -0.04866696588683661,
+      "port_ret": 0.008748376520688828
+     },
+     {
+      "episode": 0,
+      "day": 138,
+      "assets": [
+       27
+      ],
+      "excess": [
+       0.207242
+      ],
+      "weights": [
+       0.04732115566730499
+      ],
+      "gross": 0.9203292066813447,
+      "cushion_before": 0.19584115601313865,
+      "cushion_lost_frac": -0.043026943758329494,
+      "port_ret": 0.00846163703363989
+     }
+    ],
+    "min_cushion_ratio": 0.9184356819848083,
+    "violated": [
+     false
+    ]
+   },
+   "seed 1": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 48,
+      "assets": [
+       43
+      ],
+      "excess": [
+       0.24763100000000002
+      ],
+      "weights": [
+       0.025933565571904182
+      ],
+      "gross": 0.8528215861879289,
+      "cushion_before": 0.17829518534788236,
+      "cushion_lost_frac": -0.042366128422679505,
+      "port_ret": 0.007721265352959694
+     },
+     {
+      "episode": 0,
+      "day": 138,
+      "assets": [
+       27
+      ],
+      "excess": [
+       0.207242
+      ],
+      "weights": [
+       0.04365846514701843
+      ],
+      "gross": 0.921927028659411,
+      "cushion_before": 0.1962608543165337,
+      "cushion_lost_frac": -0.03611711004380602,
+      "port_ret": 0.007114978814965589
+     }
+    ],
+    "min_cushion_ratio": 0.9275632786058621,
+    "violated": [
+     false
+    ]
+   },
+   "seed 2": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 48,
+      "assets": [
+       43
+      ],
+      "excess": [
+       0.24763100000000002
+      ],
+      "weights": [
+       0.033052437007427216
+      ],
+      "gross": 0.8247778044606093,
+      "cushion_before": 0.17117998609322982,
+      "cushion_lost_frac": -0.05235562008681893,
+      "port_ret": 0.009228190908686651
+     },
+     {
+      "episode": 0,
+      "day": 138,
+      "assets": [
+       27
+      ],
+      "excess": [
+       0.207242
+      ],
+      "weights": [
+       0.051704924553632736
+      ],
+      "gross": 0.9214504247429431,
+      "cushion_before": 0.1961406183739821,
+      "cushion_lost_frac": -0.04790625780894198,
+      "port_ret": 0.009432767680899401
+     }
+    ],
+    "min_cushion_ratio": 0.9097078511310923,
+    "violated": [
+     false
+    ]
+   }
+  },
+  "2007": {
+   "seed 0": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 223,
+      "assets": [
+       49
+      ],
+      "excess": [
+       -0.24847
+      ],
+      "weights": [
+       -0.00291729299351573
+      ],
+      "gross": 0.7127168940060074,
+      "cushion_before": 0.1437723118667387,
+      "cushion_lost_frac": -0.050532697109947344,
+      "port_ret": 0.007698046019159577
+     }
+    ],
+    "min_cushion_ratio": 0.8525133799639559,
+    "violated": [
+     false
+    ]
+   },
+   "seed 1": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 223,
+      "assets": [
+       49
+      ],
+      "excess": [
+       -0.24847
+      ],
+      "weights": [
+       0.0015900706639513373
+      ],
+      "gross": 0.7002894215402193,
+      "cushion_before": 0.14083145645543702,
+      "cushion_lost_frac": -0.038120783693916804,
+      "port_ret": 0.005706235109381952
+     }
+    ],
+    "min_cushion_ratio": 0.8414073036338879,
+    "violated": [
+     false
+    ]
+   },
+   "seed 2": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 223,
+      "assets": [
+       49
+      ],
+      "excess": [
+       -0.24847
+      ],
+      "weights": [
+       0.0004810924583580345
+      ],
+      "gross": 0.7015992582018953,
+      "cushion_before": 0.14114235574180456,
+      "cushion_lost_frac": -0.03727206665717908,
+      "port_ret": 0.005589661605670093
+     }
+    ],
+    "min_cushion_ratio": 0.8427413340464792,
+    "violated": [
+     false
+    ]
+   }
+  },
+  "2008": {
+   "seed 0": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 135,
+      "assets": [
+       8,
+       27
+      ],
+      "excess": [
+       0.22398200000000001,
+       0.32754500000000003
+      ],
+      "weights": [
+       -0.0019932007417082787,
+       0.0018359569367021322
+      ],
+      "gross": 0.5421983950946014,
+      "cushion_before": 0.10485562547945382,
+      "cushion_lost_frac": -0.05072631183877818,
+      "port_ret": 0.005878218586863104
+     },
+     {
+      "episode": 0,
+      "day": 136,
+      "assets": [
+       31
+      ],
+      "excess": [
+       0.275042
+      ],
+      "weights": [
+       -0.0040816315449774265
+      ],
+      "gross": 0.5665995580493473,
+      "cushion_before": 0.11017456463557473,
+      "cushion_lost_frac": -0.00196098397172495,
+      "port_ret": 0.0002373726576601065
+     },
+     {
+      "episode": 0,
+      "day": 139,
+      "assets": [
+       31
+      ],
+      "excess": [
+       0.2738
+      ],
+      "weights": [
+       -0.00399763835594058
+      ],
+      "gross": 0.5526788738352479,
+      "cushion_before": 0.10712835301915147,
+      "cushion_lost_frac": 0.0047939512686443475,
+      "port_ret": -0.0005661471192633938
+     },
+     {
+      "episode": 0,
+      "day": 176,
+      "assets": [
+       17
+      ],
+      "excess": [
+       -0.30836199999999997
+      ],
+      "weights": [
+       -0.002305074129253626
+      ],
+      "gross": 0.49986532826005714,
+      "cushion_before": 0.09563610818928392,
+      "cushion_lost_frac": -0.0410230833498213,
+      "port_ret": 0.004380448713075413
+     },
+     {
+      "episode": 0,
+      "day": 177,
+      "assets": [
+       8,
+       17,
+       31
+      ],
+      "excess": [
+       -0.2132,
+       -0.608008,
+       -0.249574
+      ],
+      "weights": [
+       -0.0019531568977981806,
+       -0.0023522996343672276,
+       -0.0037913452833890915
+      ],
+      "gross": 0.5180299263738561,
+      "cushion_before": 0.09955939622678545,
+      "cushion_lost_frac": 0.14436220408617617,
+      "port_ret": -0.015977392862632334
+     },
+     {
+      "episode": 0,
+      "day": 178,
+      "assets": [
+       17
+      ],
+      "excess": [
+       -0.212285
+      ],
+      "weights": [
+       -0.002127014333382249
+      ],
+      "gross": 0.45003018789429916,
+      "cushion_before": 0.08518678234999777,
+      "cushion_lost_frac": -0.07220680471297314,
+      "port_ret": 0.006948889748379372
+     },
+     {
+      "episode": 0,
+      "day": 179,
+      "assets": [
+       17,
+       31,
+       48
+      ],
+      "excess": [
+       -0.453433,
+       -0.207746,
+       -0.24225999999999998
+      ],
+      "weights": [
+       -0.002245987532660365,
+       -0.0035769199021160603,
+       0.004251083824783564
+      ],
+      "gross": 0.4796984984059236,
+      "cushion_before": 0.0913378477072706,
+      "cushion_lost_frac": 0.19295637310470914,
+      "port_ret": -0.01977277175665637
+     },
+     {
+      "episode": 0,
+      "day": 180,
+      "assets": [
+       17,
+       31
+      ],
+      "excess": [
+       0.312095,
+       0.589812
+      ],
+      "weights": [
+       -0.0019362657330930233,
+       -0.003039643634110689
+      ],
+      "gross": 0.3944061482507095,
+      "cushion_before": 0.07371362788648539,
+      "cushion_lost_frac": -0.07454912521597823,
+      "port_ret": 0.0062895739519672755
+     },
+     {
+      "episode": 0,
+      "day": 181,
+      "assets": [
+       8,
+       17,
+       18,
+       29,
+       31,
+       48
+      ],
+      "excess": [
+       0.22553800000000002,
+       0.43112700000000004,
+       0.24014000000000002,
+       0.20175200000000001,
+       0.293003,
+       0.206552
+      ],
+      "weights": [
+       -0.0017389761051163077,
+       -0.0020620597060769796,
+       -0.00594176584854722,
+       0.020023740828037262,
+       -0.0032360688783228397,
+       0.00369482790119946
+      ],
+      "gross": 0.42174326907479553,
+      "cushion_before": 0.07920891436191901,
+      "cushion_lost_frac": -0.19717461321007557,
+      "port_ret": 0.017763681415168486
+     },
+     {
+      "episode": 0,
+      "day": 182,
+      "assets": [
+       17,
+       31
+      ],
+      "excess": [
+       0.22587400000000002,
+       -0.21023299999999998
+      ],
+      "weights": [
+       -0.0023132222704589367,
+       -0.0036888427566736937
+      ],
+      "gross": 0.49629678266501287,
+      "cushion_before": 0.09482690141402039,
+      "cushion_lost_frac": 0.13564061334352362,
+      "port_ret": -0.014374153312711302
+     },
+     {
+      "episode": 0,
+      "day": 184,
+      "assets": [
+       17
+      ],
+      "excess": [
+       -0.3381
+      ],
+      "weights": [
+       -0.001988522708415985
+      ],
+      "gross": 0.4051229339220299,
+      "cushion_before": 0.07584795466969319,
+      "cushion_lost_frac": -0.04370182565451697,
+      "port_ret": 0.0037845542408976307
+     },
+     {
+      "episode": 0,
+      "day": 186,
+      "assets": [
+       31
+      ],
+      "excess": [
+       -0.270173
+      ],
+      "weights": [
+       -0.0034198754001408815
+      ],
+      "gross": 0.45190623408416286,
+      "cushion_before": 0.08547804431719008,
+      "cushion_lost_frac": -0.008807053404045417,
+      "port_ret": 0.00085017319854086
+     },
+     {
+      "episode": 0,
+      "day": 187,
+      "assets": [
+       17,
+       31,
+       49
+      ],
+      "excess": [
+       -0.206449,
+       -0.8160999999999999,
+       -0.271678
+      ],
+      "weights": [
+       -0.0021654986776411533,
+       -0.003432448720559478,
+       0.010407550260424614
+      ],
+      "gross": 0.45536477426139754,
+      "cushion_before": 0.08623085401836494,
+      "cushion_lost_frac": 0.3570699452808249,
+      "port_ret": -0.03474314416638258
+     },
+     {
+      "episode": 0,
+      "day": 188,
+      "assets": [
+       17,
+       31,
+       32,
+       49
+      ],
+      "excess": [
+       0.33190000000000003,
+       0.902074,
+       0.20894800000000002,
+       0.229334
+      ],
+      "weights": [
+       -0.0015733983600512147,
+       -0.002433204324916005,
+       0.00366045325063169,
+       0.006867580581456423
+      ],
+      "gross": 0.30254122952828766,
+      "cushion_before": 0.055440407692508575,
+      "cushion_lost_frac": -0.16236248027694034,
+      "port_ret": 0.010522582309153705
+     },
+     {
+      "episode": 0,
+      "day": 191,
+      "assets": [
+       31
+      ],
+      "excess": [
+       0.588235
+      ],
+      "weights": [
+       -0.0023084008134901524
+      ],
+      "gross": 0.2817346542215091,
+      "cushion_before": 0.05130826280716638,
+      "cushion_lost_frac": 0.0385045072706518,
+      "port_ret": -0.00232066275474474
+     },
+     {
+      "episode": 0,
+      "day": 193,
+      "assets": [
+       8,
+       48
+      ],
+      "excess": [
+       -0.262259,
+       -0.248936
+      ],
+      "weights": [
+       -0.001062439288944006,
+       0.00188113481272012
+      ],
+      "gross": 0.22534965434169862,
+      "cushion_before": 0.04051498489256766,
+      "cushion_lost_frac": 0.2199903179422401,
+      "port_ret": -0.01060409935354123
+     },
+     {
+      "episode": 0,
+      "day": 195,
+      "assets": [
+       17,
+       31,
+       48
+      ],
+      "excess": [
+       -0.250784,
+       -0.288538,
+       -0.258929
+      ],
+      "weights": [
+       -0.0010365545749664307,
+       -0.0015685227699577808,
+       0.001458066632039845
+      ],
+      "gross": 0.17879524154704995,
+      "cushion_before": 0.03177765746369188,
+      "cushion_lost_frac": 0.22216757543654098,
+      "port_ret": -0.008487803258973137
+     },
+     {
+      "episode": 0,
+      "day": 196,
+      "assets": [
+       31,
+       48
+      ],
+      "excess": [
+       0.430556,
+       -0.22249
+      ],
+      "weights": [
+       -0.0012486176565289497,
+       0.001133257756009698
+      ],
+      "gross": 0.1400680022270535,
+      "cushion_before": 0.024717692351930554,
+      "cushion_lost_frac": 0.10474674538718787,
+      "port_ret": -0.003139374662816996
+     },
+     {
+      "episode": 0,
+      "day": 197,
+      "assets": [
+       5,
+       29,
+       32,
+       48
+      ],
+      "excess": [
+       0.208542,
+       0.25,
+       0.34755,
+       0.869835
+      ],
+      "weights": [
+       0.004073056858032942,
+       0.005945736076682806,
+       0.001495438627898693,
+       0.0010084417881444097
+      ],
+      "gross": 0.12589270535681862,
+      "cushion_before": 0.022128594524584044,
+      "cushion_lost_frac": -0.6040930643652223,
+      "port_ret": 0.016259902119304837
+     },
+     {
+      "episode": 0,
+      "day": 198,
+      "assets": [
+       48
+      ],
+      "excess": [
+       0.212155
+      ],
+      "weights": [
+       0.0016127346316352487
+      ],
+      "gross": 0.19918377748399507,
+      "cushion_before": 0.0354963250010355,
+      "cushion_lost_frac": 0.08936679558831884,
+      "port_ret": -0.003796776509459976
+     },
+     {
+      "episode": 0,
+      "day": 207,
+      "assets": [
+       17
+      ],
+      "excess": [
+       -0.205882
+      ],
+      "weights": [
+       -0.0006738035008311272
+      ],
+      "gross": 0.11126704559137579,
+      "cushion_before": 0.019501094034434674,
+      "cushion_lost_frac": 0.16923295961458584,
+      "port_ret": -0.00402711830794833
+     },
+     {
+      "episode": 0,
+      "day": 208,
+      "assets": [
+       17
+      ],
+      "excess": [
+       0.355556
+      ],
+      "weights": [
+       -0.0005688403616659343
+      ],
+      "gross": 0.09279884175703046,
+      "cushion_before": 0.01620086617526495,
+      "cushion_lost_frac": -0.43148215102247245,
+      "port_ret": 0.008564539533617133
+     },
+     {
+      "episode": 0,
+      "day": 224,
+      "assets": [
+       18
+      ],
+      "excess": [
+       -0.23445
+      ],
+      "weights": [
+       -0.001342565636150539
+      ],
+      "gross": 0.08428219163397443,
+      "cushion_before": 0.01466533234931211,
+      "cushion_lost_frac": 0.20288469914099272,
+      "port_ret": -0.0036522623749222216
+     },
+     {
+      "episode": 0,
+      "day": 225,
+      "assets": [
+       18
+      ],
+      "excess": [
+       -0.264062
+      ],
+      "weights": [
+       -0.0010763165773823857
+      ],
+      "gross": 0.0673149518588616,
+      "cushion_before": 0.011689960807819255,
+      "cushion_lost_frac": 0.2307492025494423,
+      "port_ret": -0.0033232505814830837
+     },
+     {
+      "episode": 0,
+      "day": 227,
+      "assets": [
+       8,
+       18,
+       19,
+       29,
+       31,
+       48,
+       49
+      ],
+      "excess": [
+       0.272014,
+       0.578249,
+       0.213908,
+       0.264678,
+       0.280872,
+       0.331343,
+       0.248065
+      ],
+      "weights": [
+       -0.0003431999066378921,
+       -0.0010563535615801811,
+       0.00037171549047343433,
+       0.0031102045904845,
+       -0.0006263592513278127,
+       0.0005015490460209548,
+       0.0014685848727822304
+      ],
+      "gross": 0.065753781780586,
+      "cushion_before": 0.01138867268869903,
+      "cushion_lost_frac": -0.20065115622150476,
+      "port_ret": 0.002816344890844258
+     },
+     {
+      "episode": 0,
+      "day": 231,
+      "assets": [
+       8,
+       18,
+       31,
+       48
+      ],
+      "excess": [
+       -0.209231,
+       -0.221954,
+       -0.234875,
+       -0.230508
+      ],
+      "weights": [
+       -0.000491405779030174,
+       -0.0015178474131971598,
+       -0.0008948341710492969,
+       0.0007388025987893343
+      ],
+      "gross": 0.095664289456181,
+      "cushion_before": 0.016693379404865816,
+      "cushion_lost_frac": 0.30627978825066315,
+      "port_ret": -0.006260421399566174
+     }
+    ],
+    "min_cushion_ratio": 0.6429300547191751,
+    "violated": [
+     false
+    ]
+   },
+   "seed 1": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 135,
+      "assets": [
+       8,
+       27
+      ],
+      "excess": [
+       0.22398200000000001,
+       0.32754500000000003
+      ],
+      "weights": [
+       0.0012026706244796515,
+       0.0011914066271856427
+      ],
+      "gross": 0.4724228462728206,
+      "cushion_before": 0.08984908766138933,
+      "cushion_lost_frac": -0.07962130518338761,
+      "port_ret": 0.008039454923685518
+     },
+     {
+      "episode": 0,
+      "day": 136,
+      "assets": [
+       31
+      ],
+      "excess": [
+       0.275042
+      ],
+      "weights": [
+       -0.0006342267733998597
+      ],
+      "gross": 0.5062461238121614,
+      "cushion_before": 0.09700298929052575,
+      "cushion_lost_frac": -0.026909144316207056,
+      "port_ret": 0.0029099874460694064
+     },
+     {
+      "episode": 0,
+      "day": 139,
+      "assets": [
+       31
+      ],
+      "excess": [
+       0.2738
+      ],
+      "weights": [
+       -0.0006601883796975017
+      ],
+      "gross": 0.5065270706545562,
+      "cushion_before": 0.09709660372055129,
+      "cushion_lost_frac": -0.014916109827244561,
+      "port_ret": 0.0016144343863766508
+     },
+     {
+      "episode": 0,
+      "day": 176,
+      "assets": [
+       17
+      ],
+      "excess": [
+       -0.30836199999999997
+      ],
+      "weights": [
+       0.001021684380248189
+      ],
+      "gross": 0.4619159188150661,
+      "cushion_before": 0.08757990845162267,
+      "cushion_lost_frac": -0.026473068287100165,
+      "port_ret": 0.0026121691973204353
+     },
+     {
+      "episode": 0,
+      "day": 177,
+      "assets": [
+       8,
+       17,
+       31
+      ],
+      "excess": [
+       -0.2132,
+       -0.608008,
+       -0.249574
+      ],
+      "weights": [
+       0.0013360378798097372,
+       0.0010293921222910285,
+       -0.0006075197597965598
+      ],
+      "gross": 0.4728119514838909,
+      "cushion_before": 0.08989841734864046,
+      "cushion_lost_frac": 0.19113941532493406,
+      "port_ret": -0.019309092583680965
+     },
+     {
+      "episode": 0,
+      "day": 178,
+      "assets": [
+       17
+      ],
+      "excess": [
+       -0.212285
+      ],
+      "weights": [
+       0.0008205252233892679
+      ],
+      "gross": 0.3895142928522546,
+      "cushion_before": 0.07271528641798441,
+      "cushion_lost_frac": -0.06807287845003618,
+      "port_ret": 0.005671882836048248
+     },
+     {
+      "episode": 0,
+      "day": 179,
+      "assets": [
+       17,
+       31,
+       48
+      ],
+      "excess": [
+       -0.453433,
+       -0.207746,
+       -0.24225999999999998
+      ],
+      "weights": [
+       0.0009305590647272766,
+       -0.0005045519792474806,
+       0.0049419105052948
+      ],
+      "gross": 0.41424080714477896,
+      "cushion_before": 0.07766522527177544,
+      "cushion_lost_frac": 0.23313232854902477,
+      "port_ret": -0.020630046962709314
+     },
+     {
+      "episode": 0,
+      "day": 180,
+      "assets": [
+       17,
+       31
+      ],
+      "excess": [
+       0.312095,
+       0.589812
+      ],
+      "weights": [
+       0.0006926590576767921,
+       -0.00043923803605139256
+      ],
+      "gross": 0.32381861091562314,
+      "cushion_before": 0.059558950456881865,
+      "cushion_lost_frac": -0.12682023215335225,
+      "port_ret": 0.008787390230462933
+     },
+     {
+      "episode": 0,
+      "day": 181,
+      "assets": [
+       8,
+       17,
+       18,
+       29,
+       31,
+       48
+      ],
+      "excess": [
+       0.22553800000000002,
+       0.43112700000000004,
+       0.24014000000000002,
+       0.20175200000000001,
+       0.293003,
+       0.206552
+      ],
+      "weights": [
+       0.0010931864380836487,
+       0.0008312970749102533,
+       -0.002358733443543315,
+       0.015926027670502663,
+       -0.0004260791465640068,
+       0.004305961076170206
+      ],
+      "gross": 0.3623944555693015,
+      "cushion_before": 0.06711223038063363,
+      "cushion_lost_frac": -0.24148729958354398,
+      "port_ret": 0.018690488630904945
+     },
+     {
+      "episode": 0,
+      "day": 182,
+      "assets": [
+       17,
+       31
+      ],
+      "excess": [
+       0.22587400000000002,
+       -0.21023299999999998
+      ],
+      "weights": [
+       0.001016286900267005,
+       -0.0005139341810718179
+      ],
+      "gross": 0.44181305095753487,
+      "cushion_before": 0.08331898166428153,
+      "cushion_lost_frac": 0.147429928062909,
+      "port_ret": -0.013906314398334119
+     },
+     {
+      "episode": 0,
+      "day": 184,
+      "assets": [
+       17
+      ],
+      "excess": [
+       -0.3381
+      ],
+      "weights": [
+       0.0007902187644504011
+      ],
+      "gross": 0.35565535205751075,
+      "cushion_before": 0.06582425815820558,
+      "cushion_lost_frac": -0.023987174889823937,
+      "port_ret": 0.001823624110269817
+     },
+     {
+      "episode": 0,
+      "day": 186,
+      "assets": [
+       31
+      ],
+      "excess": [
+       -0.270173
+      ],
+      "weights": [
+       -0.0004748959618154913
+      ],
+      "gross": 0.3932885987269401,
+      "cushion_before": 0.07337044289177397,
+      "cushion_lost_frac": -0.010487275066678015,
+      "port_ret": 0.000881019071154121
+     },
+     {
+      "episode": 0,
+      "day": 187,
+      "assets": [
+       17,
+       31,
+       49
+      ],
+      "excess": [
+       -0.206449,
+       -0.8160999999999999,
+       -0.271678
+      ],
+      "weights": [
+       0.0008900865796022117,
+       -0.000496110413223505,
+       0.009459382854402065
+      ],
+      "gross": 0.396933924388577,
+      "cushion_before": 0.07413989890814399,
+      "cushion_lost_frac": 0.41770043056332673,
+      "port_ret": -0.03542712983875307
+     },
+     {
+      "episode": 0,
+      "day": 188,
+      "assets": [
+       17,
+       31,
+       32,
+       49
+      ],
+      "excess": [
+       0.33190000000000003,
+       0.902074,
+       0.20894800000000002,
+       0.229334
+      ],
+      "weights": [
+       0.0004965548287145793,
+       -0.00034874488483183086,
+       0.003649528371170163,
+       0.00566581217572093
+      ],
+      "gross": 0.23883406988170464,
+      "cushion_before": 0.04317163121229073,
+      "cushion_lost_frac": -0.2303058286953239,
+      "port_ret": 0.011791998134686121
+     },
+     {
+      "episode": 0,
+      "day": 191,
+      "assets": [
+       31
+      ],
+      "excess": [
+       0.588235
+      ],
+      "weights": [
+       -0.00030786925344727933
+      ],
+      "gross": 0.237449697451666,
+      "cushion_before": 0.04281280210216043,
+      "cushion_lost_frac": 0.03319015526702418,
+      "port_ret": -0.0016859776520277148
+     },
+     {
+      "episode": 0,
+      "day": 193,
+      "assets": [
+       8,
+       48
+      ],
+      "excess": [
+       -0.262259,
+       -0.248936
+      ],
+      "weights": [
+       0.0005756504833698273,
+       0.0021669664420187473
+      ],
+      "gross": 0.1863641542440746,
+      "cushion_before": 0.03321979646277218,
+      "cushion_lost_frac": 0.2606488472849129,
+      "port_ret": -0.010391857816892225
+     },
+     {
+      "episode": 0,
+      "day": 195,
+      "assets": [
+       17,
+       31,
+       48
+      ],
+      "excess": [
+       -0.250784,
+       -0.288538,
+       -0.258929
+      ],
+      "weights": [
+       0.0003116246953140944,
+       -0.00017551027121953666,
+       0.001588802901096642
+      ],
+      "gross": 0.1374507084256038,
+      "cushion_before": 0.02420938788957938,
+      "cushion_lost_frac": 0.28227487793975115,
+      "port_ret": -0.008291220789203857
+     },
+     {
+      "episode": 0,
+      "day": 196,
+      "assets": [
+       31,
+       48
+      ],
+      "excess": [
+       0.430556,
+       -0.22249
+      ],
+      "weights": [
+       -0.00013325501640792936,
+       0.001142005668953061
+      ],
+      "gross": 0.09929458767874166,
+      "cushion_before": 0.01737568587805227,
+      "cushion_lost_frac": 0.09167920640098215,
+      "port_ret": -0.0019489068729287018
+     },
+     {
+      "episode": 0,
+      "day": 197,
+      "assets": [
+       5,
+       29,
+       32,
+       48
+      ],
+      "excess": [
+       0.208542,
+       0.25,
+       0.34755,
+       0.869835
+      ],
+      "weights": [
+       0.002840196480974555,
+       0.003948225174099207,
+       0.0014022074174135923,
+       0.001039257855154574
+      ],
+      "gross": 0.09049545873858733,
+      "cushion_before": 0.015782696786079686,
+      "cushion_lost_frac": -0.6669468925326671,
+      "port_ret": 0.01290321628385982
+     },
+     {
+      "episode": 0,
+      "day": 198,
+      "assets": [
+       48
+      ],
+      "excess": [
+       0.212155
+      ],
+      "weights": [
+       0.001725585083477199
+      ],
+      "gross": 0.14929012407083064,
+      "cushion_before": 0.026308917363340845,
+      "cushion_lost_frac": 0.06506637970464735,
+      "port_ret": -0.0020716537977631955
+     },
+     {
+      "episode": 0,
+      "day": 207,
+      "assets": [
+       17
+      ],
+      "excess": [
+       -0.205882
+      ],
+      "weights": [
+       0.00017028680304065347
+      ],
+      "gross": 0.07589537843887229,
+      "cushion_before": 0.013201966368317164,
+      "cushion_lost_frac": 0.18863060273581422,
+      "port_ret": -0.0030623325770779974
+     },
+     {
+      "episode": 0,
+      "day": 208,
+      "assets": [
+       17
+      ],
+      "excess": [
+       0.355556
+      ],
+      "weights": [
+       0.00013814959675073624
+      ],
+      "gross": 0.06176308554131538,
+      "cushion_before": 0.010711671494963548,
+      "cushion_lost_frac": -0.49856022002446276,
+      "port_ret": 0.006587315176443731
+     },
+     {
+      "episode": 0,
+      "day": 224,
+      "assets": [
+       18
+      ],
+      "excess": [
+       -0.23445
+      ],
+      "weights": [
+       -0.00033748827991075814
+      ],
+      "gross": 0.052103003898082534,
+      "cushion_before": 0.009003113387729522,
+      "cushion_lost_frac": 0.2540937577846072,
+      "port_ret": -0.002827720777080267
+     },
+     {
+      "episode": 0,
+      "day": 225,
+      "assets": [
+       18
+      ],
+      "excess": [
+       -0.264062
+      ],
+      "weights": [
+       -0.00025296665262430906
+      ],
+      "gross": 0.03889178729150444,
+      "cushion_before": 0.006715478475280423,
+      "cushion_lost_frac": 0.28023361779887435,
+      "port_ret": -0.0023327962318699935
+     },
+     {
+      "episode": 0,
+      "day": 227,
+      "assets": [
+       8,
+       18,
+       19,
+       29,
+       31,
+       48,
+       49
+      ],
+      "excess": [
+       0.272014,
+       0.578249,
+       0.213908,
+       0.264678,
+       0.280872,
+       0.331343,
+       0.248065
+      ],
+      "weights": [
+       0.00012223655357956886,
+       -0.00023522489937022328,
+       0.0003910063533112407,
+       0.001576306764036417,
+       -5.034366768086329e-05,
+       0.0004087730485480279,
+       0.0008591763908043504
+      ],
+      "gross": 0.036273899087973405,
+      "cushion_before": 0.006242373434482751,
+      "cushion_lost_frac": -0.27415111281034243,
+      "port_ret": 0.0021226292242009226
+     },
+     {
+      "episode": 0,
+      "day": 231,
+      "assets": [
+       8,
+       18,
+       31,
+       48
+      ],
+      "excess": [
+       -0.209231,
+       -0.221954,
+       -0.234875,
+       -0.230508
+      ],
+      "weights": [
+       0.00019784612231887877,
+       -0.00037935966975055635,
+       -8.043624256970361e-05,
+       0.000660120917018503
+      ],
+      "gross": 0.058513807260169415,
+      "cushion_before": 0.01012748364550009,
+      "cushion_lost_frac": 0.374527668812661,
+      "port_ret": -0.004682007359655627
+     }
+    ],
+    "min_cushion_ratio": 0.5822995694366733,
+    "violated": [
+     false
+    ]
+   },
+   "seed 2": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 135,
+      "assets": [
+       8,
+       27
+      ],
+      "excess": [
+       0.22398200000000001,
+       0.32754500000000003
+      ],
+      "weights": [
+       0.0010975041659548879,
+       0.002147273626178503
+      ],
+      "gross": 0.47293357862872654,
+      "cushion_before": 0.08995565993594434,
+      "cushion_lost_frac": -0.08279658006990642,
+      "port_ret": 0.008368979867113602
+     },
+     {
+      "episode": 0,
+      "day": 136,
+      "assets": [
+       31
+      ],
+      "excess": [
+       0.275042
+      ],
+      "weights": [
+       -0.0008275355794467032
+      ],
+      "gross": 0.5081163034046767,
+      "cushion_before": 0.09740368093657203,
+      "cushion_lost_frac": -0.02654631223189652,
+      "port_ret": 0.0028813215073730802
+     },
+     {
+      "episode": 0,
+      "day": 139,
+      "assets": [
+       31
+      ],
+      "excess": [
+       0.2738
+      ],
+      "weights": [
+       -0.0008174304966814816
+      ],
+      "gross": 0.5084669062016474,
+      "cushion_before": 0.09751510371981653,
+      "cushion_lost_frac": -0.017969773797887,
+      "port_ret": 0.0019524176790561842
+     },
+     {
+      "episode": 0,
+      "day": 176,
+      "assets": [
+       17
+      ],
+      "excess": [
+       -0.30836199999999997
+      ],
+      "weights": [
+       0.000787223398219794
+      ],
+      "gross": 0.4704897136980435,
+      "cushion_before": 0.08938736237697598,
+      "cushion_lost_frac": -0.02575689851981866,
+      "port_ret": 0.002588682186291491
+     },
+     {
+      "episode": 0,
+      "day": 177,
+      "assets": [
+       8,
+       17,
+       31
+      ],
+      "excess": [
+       -0.2132,
+       -0.608008,
+       -0.249574
+      ],
+      "weights": [
+       0.0012739020166918635,
+       0.0007990142330527306,
+       -0.0006817211979068816
+      ],
+      "gross": 0.48126276564289583,
+      "cushion_before": 0.09168970359867401,
+      "cushion_lost_frac": 0.18728547390720907,
+      "port_ret": -0.019257987976743496
+     },
+     {
+      "episode": 0,
+      "day": 178,
+      "assets": [
+       17
+      ],
+      "excess": [
+       -0.212285
+      ],
+      "weights": [
+       0.0006771822227165103
+      ],
+      "gross": 0.3983571063072304,
+      "cushion_before": 0.07451755400778481,
+      "cushion_lost_frac": -0.0671191462001619,
+      "port_ret": 0.005719215788185794
+     },
+     {
+      "episode": 0,
+      "day": 179,
+      "assets": [
+       17,
+       31,
+       48
+      ],
+      "excess": [
+       -0.453433,
+       -0.207746,
+       -0.24225999999999998
+      ],
+      "weights": [
+       0.0007346115889959037,
+       -0.0005977631080895662,
+       0.004424282815307379
+      ],
+      "gross": 0.4232329542574007,
+      "cushion_before": 0.07951910860971179,
+      "cushion_lost_frac": 0.23042742654673165,
+      "port_ret": -0.020833411552809156
+     },
+     {
+      "episode": 0,
+      "day": 180,
+      "assets": [
+       17,
+       31
+      ],
+      "excess": [
+       0.312095,
+       0.589812
+      ],
+      "weights": [
+       0.0005832176539115608,
+       -0.0004705901083070785
+      ],
+      "gross": 0.33209327919757925,
+      "cushion_before": 0.06119572505148585,
+      "cushion_lost_frac": -0.12334401007275009,
+      "port_ret": 0.008764704593382078
+     },
+     {
+      "episode": 0,
+      "day": 181,
+      "assets": [
+       8,
+       17,
+       18,
+       29,
+       31,
+       48
+      ],
+      "excess": [
+       0.22553800000000002,
+       0.43112700000000004,
+       0.24014000000000002,
+       0.20175200000000001,
+       0.293003,
+       0.206552
+      ],
+      "weights": [
+       0.001066514290869236,
+       0.0006650796276517212,
+       -0.002253121230751276,
+       0.016988584771752357,
+       -0.0005271477857604623,
+       0.003875646973028779
+      ],
+      "gross": 0.3705026809257106,
+      "cushion_before": 0.06874385117864557,
+      "cushion_lost_frac": -0.23783723390375822,
+      "port_ret": 0.01882010144882007
+     },
+     {
+      "episode": 0,
+      "day": 182,
+      "assets": [
+       17,
+       31
+      ],
+      "excess": [
+       0.22587400000000002,
+       -0.21023299999999998
+      ],
+      "weights": [
+       0.0007892600842751563,
+       -0.0006354744546115398
+      ],
+      "gross": 0.45031352345540654,
+      "cushion_before": 0.08509369859086624,
+      "cushion_lost_frac": 0.14898378449990957,
+      "port_ret": -0.014323434087651354
+     },
+     {
+      "episode": 0,
+      "day": 184,
+      "assets": [
+       17
+      ],
+      "excess": [
+       -0.3381
+      ],
+      "weights": [
+       0.0006507182260975242
+      ],
+      "gross": 0.3624532609755988,
+      "cushion_before": 0.0671875953756712,
+      "cushion_lost_frac": -0.025915958534461048,
+      "port_ret": 0.0020079057231345843
+     },
+     {
+      "episode": 0,
+      "day": 186,
+      "assets": [
+       31
+      ],
+      "excess": [
+       -0.270173
+      ],
+      "weights": [
+       -0.0005578004056587815
+      ],
+      "gross": 0.40176129317842424,
+      "cushion_before": 0.07509925014347207,
+      "cushion_lost_frac": -0.014696310135727142,
+      "port_ret": 0.0012612076526039573
+     },
+     {
+      "episode": 0,
+      "day": 187,
+      "assets": [
+       17,
+       31,
+       49
+      ],
+      "excess": [
+       -0.206449,
+       -0.8160999999999999,
+       -0.271678
+      ],
+      "weights": [
+       0.0007307465421035886,
+       -0.0005603445461019874,
+       0.010010253638029099
+      ],
+      "gross": 0.40702604968100786,
+      "cushion_before": 0.07620293201454109,
+      "cushion_lost_frac": 0.40980098213844296,
+      "port_ret": -0.0356401870393076
+     },
+     {
+      "episode": 0,
+      "day": 188,
+      "assets": [
+       17,
+       31,
+       32,
+       49
+      ],
+      "excess": [
+       0.33190000000000003,
+       0.902074,
+       0.20894800000000002,
+       0.229334
+      ],
+      "weights": [
+       0.0004512793093454093,
+       -0.00035430840216577053,
+       0.00387283181771636,
+       0.0060790772549808025
+      ],
+      "gross": 0.2483065728956717,
+      "cushion_before": 0.044974895633153156,
+      "cushion_lost_frac": -0.22944958005125793,
+      "port_ret": 0.012212754448927887
+     },
+     {
+      "episode": 0,
+      "day": 191,
+      "assets": [
+       31
+      ],
+      "excess": [
+       0.588235
+      ],
+      "weights": [
+       -0.0003568152023945004
+      ],
+      "gross": 0.24954745138529688,
+      "cushion_before": 0.045114485916261104,
+      "cushion_lost_frac": 0.03452894527162642,
+      "port_ret": -0.001843248034579914
+     },
+     {
+      "episode": 0,
+      "day": 193,
+      "assets": [
+       8,
+       48
+      ],
+      "excess": [
+       -0.262259,
+       -0.248936
+      ],
+      "weights": [
+       0.000619937782175839,
+       0.0020227734930813313
+      ],
+      "gross": 0.19540253376908367,
+      "cushion_before": 0.03490147303951596,
+      "cushion_lost_frac": 0.25857082843791823,
+      "port_ret": -0.010809063211587144
+     },
+     {
+      "episode": 0,
+      "day": 195,
+      "assets": [
+       17,
+       31,
+       48
+      ],
+      "excess": [
+       -0.250784,
+       -0.288538,
+       -0.258929
+      ],
+      "weights": [
+       0.00028040315373800695,
+       -0.00022237622761167586,
+       0.0014925842406228185
+      ],
+      "gross": 0.14412821416408406,
+      "cushion_before": 0.025423288224097118,
+      "cushion_lost_frac": 0.2821743865088365,
+      "port_ret": -0.008691056891678484
+     },
+     {
+      "episode": 0,
+      "day": 196,
+      "assets": [
+       31,
+       48
+      ],
+      "excess": [
+       0.430556,
+       -0.22249
+      ],
+      "weights": [
+       -0.00016437683370895684,
+       0.001073414459824562
+      ],
+      "gross": 0.10417703538405476,
+      "cushion_before": 0.018249487466425185,
+      "cushion_lost_frac": 0.08946039741885492,
+      "port_ret": -0.0019952428036245085
+     },
+     {
+      "episode": 0,
+      "day": 197,
+      "assets": [
+       5,
+       29,
+       32,
+       48
+      ],
+      "excess": [
+       0.208542,
+       0.25,
+       0.34755,
+       0.869835
+      ],
+      "weights": [
+       0.002893307013437152,
+       0.004299669526517391,
+       0.0014947870513424277,
+       0.0009823013097047806
+      ],
+      "gross": 0.09518238584860228,
+      "cushion_before": 0.016616881064988376,
+      "cushion_lost_frac": -0.657701038601878,
+      "port_ret": 0.013383191295915697
+     },
+     {
+      "episode": 0,
+      "day": 198,
+      "assets": [
+       48
+      ],
+      "excess": [
+       0.212155
+      ],
+      "weights": [
+       0.001624876051209867
+      ],
+      "gross": 0.15607253550115274,
+      "cushion_before": 0.02754582099975511,
+      "cushion_lost_frac": 0.06286650257155668,
+      "port_ret": -0.002092584341281123
+     },
+     {
+      "episode": 0,
+      "day": 207,
+      "assets": [
+       17
+      ],
+      "excess": [
+       -0.205882
+      ],
+      "weights": [
+       0.00016206841974053532
+      ],
+      "gross": 0.0804327540063241,
+      "cushion_before": 0.014004990991632438,
+      "cushion_lost_frac": 0.18664966496203894,
+      "port_ret": -0.003211315538987236
+     },
+     {
+      "episode": 0,
+      "day": 208,
+      "assets": [
+       17
+      ],
+      "excess": [
+       0.355556
+      ],
+      "weights": [
+       0.000132449742523022
+      ],
+      "gross": 0.06562569514971983,
+      "cushion_before": 0.01139096411524787,
+      "cushion_lost_frac": -0.49335965600051024,
+      "port_ret": 0.006926182797143632
+     },
+     {
+      "episode": 0,
+      "day": 224,
+      "assets": [
+       18
+      ],
+      "excess": [
+       -0.23445
+      ],
+      "weights": [
+       -0.00034251785837113857
+      ],
+      "gross": 0.05532769190358522,
+      "cushion_before": 0.009567095757646693,
+      "cushion_lost_frac": 0.25439546413480185,
+      "port_ret": -0.0030063298995753884
+     },
+     {
+      "episode": 0,
+      "day": 225,
+      "assets": [
+       18
+      ],
+      "excess": [
+       -0.264062
+      ],
+      "weights": [
+       -0.0002556518593337387
+      ],
+      "gross": 0.04128979152847023,
+      "cushion_before": 0.007133269991958069,
+      "cushion_lost_frac": 0.2794892843401211,
+      "port_ret": -0.002470066095871748
+     },
+     {
+      "episode": 0,
+      "day": 227,
+      "assets": [
+       8,
+       18,
+       19,
+       29,
+       31,
+       48,
+       49
+      ],
+      "excess": [
+       0.272014,
+       0.578249,
+       0.213908,
+       0.264678,
+       0.280872,
+       0.331343,
+       0.248065
+      ],
+      "weights": [
+       0.00013951169967185706,
+       -0.0002389901055721566,
+       0.0004626806767191738,
+       0.0017251839162781835,
+       -6.047706483514048e-05,
+       0.00039736588951200247,
+       0.0009283405379392207
+      ],
+      "gross": 0.038470352801596164,
+      "cushion_before": 0.006623546705166072,
+      "cushion_lost_frac": -0.2744485926877853,
+      "port_ret": 0.0022536201419607327
+     },
+     {
+      "episode": 0,
+      "day": 231,
+      "assets": [
+       8,
+       18,
+       31,
+       48
+      ],
+      "excess": [
+       -0.209231,
+       -0.221954,
+       -0.234875,
+       -0.230508
+      ],
+      "weights": [
+       0.0002254917926620692,
+       -0.0003811377682723105,
+       -9.41458492889069e-05,
+       0.0006420338759198785
+      ],
+      "gross": 0.062039307471422944,
+      "cushion_before": 0.010745699844799783,
+      "cushion_lost_frac": 0.37307466223191044,
+      "port_ret": -0.004944766701582948
+     }
+    ],
+    "min_cushion_ratio": 0.590199017861557,
+    "violated": [
+     false
+    ]
+   }
+  },
+  "2009": {
+   "seed 0": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 8,
+      "assets": [
+       48
+      ],
+      "excess": [
+       -0.232203
+      ],
+      "weights": [
+       -0.024999314919114113
+      ],
+      "gross": 0.9061759945761878,
+      "cushion_before": 0.19207273980214,
+      "cushion_lost_frac": -0.010724615691126482,
+      "port_ret": 0.0020763662143670203
+     },
+     {
+      "episode": 0,
+      "day": 11,
+      "assets": [
+       9,
+       11,
+       26
+      ],
+      "excess": [
+       -0.207274,
+       -0.238223,
+       -0.289694
+      ],
+      "weights": [
+       0.030316580086946487,
+       0.05120277404785156,
+       -0.025339577347040176
+      ],
+      "gross": 0.9173095168080181,
+      "cushion_before": 0.19504840396043832,
+      "cushion_lost_frac": 0.024886933410512402,
+      "port_ret": -0.004878312071925239
+     },
+     {
+      "episode": 0,
+      "day": 12,
+      "assets": [
+       9,
+       26,
+       48
+      ],
+      "excess": [
+       0.250967,
+       0.309804,
+       0.310714
+      ],
+      "weights": [
+       0.029769299551844597,
+       -0.02478882484138012,
+       -0.024759668856859207
+      ],
+      "gross": 0.8987944952677935,
+      "cushion_before": 0.19019424731924817,
+      "cushion_lost_frac": -0.057360288950246474,
+      "port_ret": 0.011017633168888041
+     },
+     {
+      "episode": 0,
+      "day": 17,
+      "assets": [
+       11
+      ],
+      "excess": [
+       0.308833
+      ],
+      "weights": [
+       0.0513010136783123
+      ],
+      "gross": 0.9183252393850125,
+      "cushion_before": 0.19533464602521736,
+      "cushion_lost_frac": -0.07538801570970088,
+      "port_ret": 0.014794914878131227
+     },
+     {
+      "episode": 0,
+      "day": 24,
+      "assets": [
+       26
+      ],
+      "excess": [
+       0.266529
+      ],
+      "weights": [
+       -0.025687001645565033
+      ],
+      "gross": 0.9315906908013858,
+      "cushion_before": 0.19883994232613716,
+      "cushion_lost_frac": -0.016009044804839334,
+      "port_ret": 0.0031869345735990873
+     },
+     {
+      "episode": 0,
+      "day": 33,
+      "assets": [
+       48
+      ],
+      "excess": [
+       -0.223108
+      ],
+      "weights": [
+       -0.02397080324590206
+      ],
+      "gross": 0.8741875765408622,
+      "cushion_before": 0.18375926387195862,
+      "cushion_lost_frac": -0.029886556615608573,
+      "port_ret": 0.005582597130253442
+     },
+     {
+      "episode": 0,
+      "day": 35,
+      "assets": [
+       26,
+       48
+      ],
+      "excess": [
+       0.209719,
+       0.214953
+      ],
+      "weights": [
+       -0.02368566207587719,
+       -0.023718828335404396
+      ],
+      "gross": 0.8657613600953482,
+      "cushion_before": 0.1816321440302986,
+      "cushion_lost_frac": -0.020512806312338983,
+      "port_ret": 0.003795500191437595
+     },
+     {
+      "episode": 0,
+      "day": 38,
+      "assets": [
+       26,
+       48
+      ],
+      "excess": [
+       -0.257519,
+       -0.390244
+      ],
+      "weights": [
+       -0.024917544797062874,
+       -0.02491244114935398
+      ],
+      "gross": 0.9089419435040327,
+      "cushion_before": 0.19280051728035977,
+      "cushion_lost_frac": -0.0338337984930277,
+      "port_ret": 0.0065704778930661956
+     },
+     {
+      "episode": 0,
+      "day": 45,
+      "assets": [
+       9,
+       26,
+       48
+      ],
+      "excess": [
+       0.226415,
+       0.277333,
+       0.380952
+      ],
+      "weights": [
+       0.02951638028025627,
+       -0.02424592897295952,
+       -0.024258777499198914
+      ],
+      "gross": 0.8871285978966625,
+      "cushion_before": 0.1871296152199163,
+      "cushion_lost_frac": 0.027848682420692827,
+      "port_ret": -0.005279259324627694
+     },
+     {
+      "episode": 0,
+      "day": 49,
+      "assets": [
+       48
+      ],
+      "excess": [
+       0.308989
+      ],
+      "weights": [
+       -0.023806186392903328
+      ],
+      "gross": 0.8718188851053128,
+      "cushion_before": 0.18317406223891836,
+      "cushion_lost_frac": 0.06216847702074879,
+      "port_ret": -0.011582539569000683
+     },
+     {
+      "episode": 0,
+      "day": 51,
+      "assets": [
+       26,
+       48
+      ],
+      "excess": [
+       0.223285,
+       0.227092
+      ],
+      "weights": [
+       -0.023221096023917198,
+       -0.02328903041779995
+      ],
+      "gross": 0.8535288085404318,
+      "cushion_before": 0.17842292409853097,
+      "cushion_lost_frac": -0.00820965511459204,
+      "port_ret": 0.0014970935730431734
+     },
+     {
+      "episode": 0,
+      "day": 54,
+      "assets": [
+       9,
+       11,
+       26
+      ],
+      "excess": [
+       0.246652,
+       0.238742,
+       0.260097
+      ],
+      "weights": [
+       0.028346724808216095,
+       0.04769554361701012,
+       -0.023060398176312447
+      ],
+      "gross": 0.8479714556451654,
+      "cushion_before": 0.17708093881743106,
+      "cushion_lost_frac": -0.06394204390220071,
+      "port_ret": 0.011588515049542725
+     },
+     {
+      "episode": 0,
+      "day": 58,
+      "assets": [
+       49
+      ],
+      "excess": [
+       0.201378
+      ],
+      "weights": [
+       -0.027313273400068283
+      ],
+      "gross": 0.8628019297975698,
+      "cushion_before": 0.180837616344254,
+      "cushion_lost_frac": 0.040907228427682574,
+      "port_ret": -0.007542090104255994
+     },
+     {
+      "episode": 0,
+      "day": 59,
+      "assets": [
+       49
+      ],
+      "excess": [
+       -0.279169
+      ],
+      "weights": [
+       -0.026336340233683586
+      ],
+      "gross": 0.8336681500004488,
+      "cushion_before": 0.17344005066414195,
+      "cushion_lost_frac": -0.037299995000555475,
+      "port_ret": 0.006645825819735718
+     },
+     {
+      "episode": 0,
+      "day": 67,
+      "assets": [
+       11,
+       26,
+       38
+      ],
+      "excess": [
+       0.316991,
+       0.352691,
+       0.228412
+      ],
+      "weights": [
+       0.047519613057374954,
+       -0.022823767736554146,
+       0.00015997762966435403
+      ],
+      "gross": 0.8428024882305181,
+      "cushion_before": 0.17571249860580052,
+      "cushion_lost_frac": -0.06064206510862813,
+      "port_ret": 0.010920807918396447
+     },
+     {
+      "episode": 0,
+      "day": 68,
+      "assets": [
+       48
+      ],
+      "excess": [
+       0.25
+      ],
+      "weights": [
+       -0.024040549993515015
+      ],
+      "gross": 0.8844248537352541,
+      "cushion_before": 0.18636806738665318,
+      "cushion_lost_frac": 0.06154698587584406,
+      "port_ret": -0.011628917429925667
+     },
+     {
+      "episode": 0,
+      "day": 73,
+      "assets": [
+       26
+      ],
+      "excess": [
+       -0.243396
+      ],
+      "weights": [
+       -0.02221294865012169
+      ],
+      "gross": 0.8229120260948548,
+      "cushion_before": 0.1706577841116042,
+      "cushion_lost_frac": -0.0005868217868745251,
+      "port_ret": 0.00010317303117091114
+     },
+     {
+      "episode": 0,
+      "day": 74,
+      "assets": [
+       38
+      ],
+      "excess": [
+       0.208908
+      ],
+      "weights": [
+       0.00023035588674247265
+      ],
+      "gross": 0.8231868969742209,
+      "cushion_before": 0.1707579298174206,
+      "cushion_lost_frac": -0.012374207796677306,
+      "port_ret": 0.002176643673555745
+     },
+     {
+      "episode": 0,
+      "day": 83,
+      "assets": [
+       11
+      ],
+      "excess": [
+       0.236614
+      ],
+      "weights": [
+       0.04665660858154297
+      ],
+      "gross": 0.8255166464077774,
+      "cushion_before": 0.17135076457991616,
+      "cushion_lost_frac": -0.04298868389082888,
+      "port_ret": 0.007583402537561623
+     },
+     {
+      "episode": 0,
+      "day": 213,
+      "assets": [
+       40
+      ],
+      "excess": [
+       -0.201383
+      ],
+      "weights": [
+       0.005340715404599905
+      ],
+      "gross": 0.8258810075640213,
+      "cushion_before": 0.17143103279679708,
+      "cushion_lost_frac": -0.0077201623635712036,
+      "port_ret": 0.001362397702630247
+     }
+    ],
+    "min_cushion_ratio": 0.9378315229792512,
+    "violated": [
+     false
+    ]
+   },
+   "seed 1": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 8,
+      "assets": [
+       48
+      ],
+      "excess": [
+       -0.232203
+      ],
+      "weights": [
+       -0.019032930955290794
+      ],
+      "gross": 0.8782472054590471,
+      "cushion_before": 0.18478485831199273,
+      "cushion_lost_frac": 0.011939711823451105,
+      "port_ret": -0.002240365435110525
+     },
+     {
+      "episode": 0,
+      "day": 11,
+      "assets": [
+       9,
+       11,
+       26
+      ],
+      "excess": [
+       -0.207274,
+       -0.238223,
+       -0.289694
+      ],
+      "weights": [
+       0.02812337316572666,
+       0.044979777187108994,
+       -0.019275562837719917
+      ],
+      "gross": 0.8687756190774962,
+      "cushion_before": 0.1823756902655941,
+      "cushion_lost_frac": 0.062495510385021436,
+      "port_ret": -0.011602141581788739
+     },
+     {
+      "episode": 0,
+      "day": 12,
+      "assets": [
+       9,
+       26,
+       48
+      ],
+      "excess": [
+       0.250967,
+       0.309804,
+       0.310714
+      ],
+      "weights": [
+       0.026691144332289696,
+       -0.018303515389561653,
+       -0.017949910834431648
+      ],
+      "gross": 0.8238373878994025,
+      "cushion_before": 0.17097802842062523,
+      "cushion_lost_frac": -0.09378759286542904,
+      "port_ret": 0.016514913055788227
+     },
+     {
+      "episode": 0,
+      "day": 17,
+      "assets": [
+       11
+      ],
+      "excess": [
+       0.308833
+      ],
+      "weights": [
+       0.047302164137363434
+      ],
+      "gross": 0.9126720545464195,
+      "cushion_before": 0.19383210496768097,
+      "cushion_lost_frac": -0.09507275803400095,
+      "port_ret": 0.01854252113883237
+     },
+     {
+      "episode": 0,
+      "day": 24,
+      "assets": [
+       26
+      ],
+      "excess": [
+       0.266529
+      ],
+      "weights": [
+       -0.020693253725767136
+      ],
+      "gross": 0.9359604401979595,
+      "cushion_before": 0.19999999999999993,
+      "cushion_lost_frac": -0.03849242465082403,
+      "port_ret": 0.007698484930164673
+     },
+     {
+      "episode": 0,
+      "day": 33,
+      "assets": [
+       48
+      ],
+      "excess": [
+       -0.223108
+      ],
+      "weights": [
+       -0.017789620906114578
+      ],
+      "gross": 0.8245767909684218,
+      "cushion_before": 0.17110828615287121,
+      "cushion_lost_frac": -0.01862674962794708,
+      "port_ret": 0.0032820142211564818
+     },
+     {
+      "episode": 0,
+      "day": 35,
+      "assets": [
+       26,
+       48
+      ],
+      "excess": [
+       0.209719,
+       0.214953
+      ],
+      "weights": [
+       -0.01761711575090885,
+       -0.0173032209277153
+      ],
+      "gross": 0.7998626163462177,
+      "cushion_before": 0.16496855620645942,
+      "cushion_lost_frac": -0.051358496230692996,
+      "port_ret": 0.008780117152645817
+     },
+     {
+      "episode": 0,
+      "day": 38,
+      "assets": [
+       26,
+       48
+      ],
+      "excess": [
+       -0.257519,
+       -0.390244
+      ],
+      "weights": [
+       -0.018752744421362877,
+       -0.01835116557776928
+      ],
+      "gross": 0.8546054112375714,
+      "cushion_before": 0.17870486274619296,
+      "cushion_lost_frac": -0.008466384429000051,
+      "port_ret": 0.0015459043118428717
+     },
+     {
+      "episode": 0,
+      "day": 45,
+      "assets": [
+       9,
+       26,
+       48
+      ],
+      "excess": [
+       0.226415,
+       0.277333,
+       0.380952
+      ],
+      "weights": [
+       0.025847380980849266,
+       -0.0173813384026289,
+       -0.017081404104828835
+      ],
+      "gross": 0.7929974127328023,
+      "cushion_before": 0.1632246857844506,
+      "cushion_lost_frac": -0.02051621981661933,
+      "port_ret": 0.0034766068420735152
+     },
+     {
+      "episode": 0,
+      "day": 49,
+      "assets": [
+       48
+      ],
+      "excess": [
+       0.308989
+      ],
+      "weights": [
+       -0.017876936122775078
+      ],
+      "gross": 0.8331008377135731,
+      "cushion_before": 0.17327477394606813,
+      "cushion_lost_frac": 0.05572868520767926,
+      "port_ret": -0.009921530476456497
+     },
+     {
+      "episode": 0,
+      "day": 51,
+      "assets": [
+       26,
+       48
+      ],
+      "excess": [
+       0.223285,
+       0.227092
+      ],
+      "weights": [
+       -0.018158618360757828,
+       -0.017796918749809265
+      ],
+      "gross": 0.831679962167982,
+      "cushion_before": 0.17285456408926,
+      "cushion_lost_frac": -0.024077482683418028,
+      "port_ret": 0.004278031811985272
+     },
+     {
+      "episode": 0,
+      "day": 54,
+      "assets": [
+       9,
+       11,
+       26
+      ],
+      "excess": [
+       0.246652,
+       0.238742,
+       0.260097
+      ],
+      "weights": [
+       0.026833511888980865,
+       0.04291291534900665,
+       -0.018032314255833626
+      ],
+      "gross": 0.8231195228290744,
+      "cushion_before": 0.17079110138649164,
+      "cushion_lost_frac": -0.10450877071470632,
+      "port_ret": 0.018386208968562467
+     },
+     {
+      "episode": 0,
+      "day": 58,
+      "assets": [
+       49
+      ],
+      "excess": [
+       0.201378
+      ],
+      "weights": [
+       -0.025019219145178795
+      ],
+      "gross": 0.8661862250883132,
+      "cushion_before": 0.18169829166500046,
+      "cushion_lost_frac": 0.04823128596028059,
+      "port_ret": -0.008926920152754647
+     },
+     {
+      "episode": 0,
+      "day": 59,
+      "assets": [
+       49
+      ],
+      "excess": [
+       -0.279169
+      ],
+      "weights": [
+       -0.02406289055943489
+      ],
+      "gross": 0.8316429897095077,
+      "cushion_before": 0.17293474940121137,
+      "cushion_lost_frac": -0.014484342147639717,
+      "port_ret": 0.0025745262784426792
+     },
+     {
+      "episode": 0,
+      "day": 67,
+      "assets": [
+       11,
+       26,
+       38
+      ],
+      "excess": [
+       0.316991,
+       0.352691,
+       0.228412
+      ],
+      "weights": [
+       0.044159092009067535,
+       -0.0183861143887043,
+       0.0038337502628564835
+      ],
+      "gross": 0.8444970757700503,
+      "cushion_before": 0.17614227165731522,
+      "cushion_lost_frac": -0.08186212356264444,
+      "port_ret": 0.014771802047394589
+     },
+     {
+      "episode": 0,
+      "day": 68,
+      "assets": [
+       48
+      ],
+      "excess": [
+       0.25
+      ],
+      "weights": [
+       -0.019059404730796814
+      ],
+      "gross": 0.9005642328411341,
+      "cushion_before": 0.19056165206433126,
+      "cushion_lost_frac": 0.05034501933683133,
+      "port_ret": -0.009685242748943224
+     },
+     {
+      "episode": 0,
+      "day": 73,
+      "assets": [
+       26
+      ],
+      "excess": [
+       -0.243396
+      ],
+      "weights": [
+       -0.01834016479551792
+      ],
+      "gross": 0.8444923149072565,
+      "cushion_before": 0.17612168889508031,
+      "cushion_lost_frac": 0.024420150084280223,
+      "port_ret": -0.004406128994821512
+     },
+     {
+      "episode": 0,
+      "day": 74,
+      "assets": [
+       38
+      ],
+      "excess": [
+       0.208908
+      ],
+      "weights": [
+       0.003775401273742318
+      ],
+      "gross": 0.8273179410025477,
+      "cushion_before": 0.17182077081916552,
+      "cushion_lost_frac": -0.02536676125292625,
+      "port_ret": 0.004484918003954119
+     },
+     {
+      "episode": 0,
+      "day": 83,
+      "assets": [
+       11
+      ],
+      "excess": [
+       0.236614
+      ],
+      "weights": [
+       0.04439442232251167
+      ],
+      "gross": 0.8473213295801543,
+      "cushion_before": 0.17687544352505621,
+      "cushion_lost_frac": -0.05582121462889722,
+      "port_ret": 0.010107124875578188
+     },
+     {
+      "episode": 0,
+      "day": 213,
+      "assets": [
+       40
+      ],
+      "excess": [
+       -0.201383
+      ],
+      "weights": [
+       0.007135330233722925
+      ],
+      "gross": 0.8920208244817331,
+      "cushion_before": 0.18839235719184258,
+      "cushion_lost_frac": -0.0132858754235059,
+      "port_ret": 0.0025323520261757437
+     }
+    ],
+    "min_cushion_ratio": 0.9152743639718515,
+    "violated": [
+     false
+    ]
+   },
+   "seed 2": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 8,
+      "assets": [
+       48
+      ],
+      "excess": [
+       -0.232203
+      ],
+      "weights": [
+       -0.022634655237197876
+      ],
+      "gross": 0.8985362958046608,
+      "cushion_before": 0.19006966039463336,
+      "cushion_lost_frac": -0.0071417615496078835,
+      "port_ret": 0.001371047156229821
+     },
+     {
+      "episode": 0,
+      "day": 11,
+      "assets": [
+       9,
+       11,
+       26
+      ],
+      "excess": [
+       -0.207274,
+       -0.238223,
+       -0.289694
+      ],
+      "weights": [
+       0.03071247600018978,
+       0.04521575942635536,
+       -0.019894806668162346
+      ],
+      "gross": 0.8982233407150488,
+      "cushion_before": 0.19003034998977664,
+      "cushion_lost_frac": 0.040574650084229225,
+      "port_ret": -0.007788059180507401
+     },
+     {
+      "episode": 0,
+      "day": 12,
+      "assets": [
+       9,
+       26,
+       48
+      ],
+      "excess": [
+       0.250967,
+       0.309804,
+       0.310714
+      ],
+      "weights": [
+       0.029726356267929077,
+       -0.01920940913259983,
+       -0.02188899926841259
+      ],
+      "gross": 0.868431313225301,
+      "cushion_before": 0.18231993503355784,
+      "cushion_lost_frac": -0.07355232734977246,
+      "port_ret": 0.0136514134201291
+     },
+     {
+      "episode": 0,
+      "day": 17,
+      "assets": [
+       11
+      ],
+      "excess": [
+       0.308833
+      ],
+      "weights": [
+       0.04643489047884941
+      ],
+      "gross": 0.9222788632760057,
+      "cushion_before": 0.19637679582407486,
+      "cushion_lost_frac": -0.08055319130258409,
+      "port_ret": 0.015876300680328415
+     },
+     {
+      "episode": 0,
+      "day": 24,
+      "assets": [
+       26
+      ],
+      "excess": [
+       0.266529
+      ],
+      "weights": [
+       -0.0207954291254282
+      ],
+      "gross": 0.9359605093341088,
+      "cushion_before": 0.1999999999999999,
+      "cushion_lost_frac": -0.02748465016903312,
+      "port_ret": 0.00549693003380658
+     },
+     {
+      "episode": 0,
+      "day": 33,
+      "assets": [
+       48
+      ],
+      "excess": [
+       -0.223108
+      ],
+      "weights": [
+       -0.02165914513170719
+      ],
+      "gross": 0.8585575372271705,
+      "cushion_before": 0.17973886071530745,
+      "cushion_lost_frac": -0.02738332949794109,
+      "port_ret": 0.005023632973952141
+     },
+     {
+      "episode": 0,
+      "day": 35,
+      "assets": [
+       26,
+       48
+      ],
+      "excess": [
+       0.209719,
+       0.214953
+      ],
+      "weights": [
+       -0.018772045150399208,
+       -0.021432895213365555
+      ],
+      "gross": 0.849368252849672,
+      "cushion_before": 0.17742932969933795,
+      "cushion_lost_frac": -0.029850360108943708,
+      "port_ret": 0.0054186315311848254
+     },
+     {
+      "episode": 0,
+      "day": 38,
+      "assets": [
+       26,
+       48
+      ],
+      "excess": [
+       -0.257519,
+       -0.390244
+      ],
+      "weights": [
+       -0.0199667289853096,
+       -0.02274591289460659
+      ],
+      "gross": 0.9021137713571079,
+      "cushion_before": 0.1910035991444674,
+      "cushion_lost_frac": -0.02650592314818767,
+      "port_ret": 0.0051086865116545255
+     },
+     {
+      "episode": 0,
+      "day": 45,
+      "assets": [
+       9,
+       26,
+       48
+      ],
+      "excess": [
+       0.226415,
+       0.277333,
+       0.380952
+      ],
+      "weights": [
+       0.029835602268576622,
+       -0.019250206649303436,
+       -0.021974308416247368
+      ],
+      "gross": 0.8708021960337646,
+      "cushion_before": 0.1828999412176033,
+      "cushion_lost_frac": 0.015957874492259383,
+      "port_ret": -0.002969472460214506
+     },
+     {
+      "episode": 0,
+      "day": 49,
+      "assets": [
+       48
+      ],
+      "excess": [
+       0.308989
+      ],
+      "weights": [
+       -0.022014422342181206
+      ],
+      "gross": 0.8722456349059939,
+      "cushion_before": 0.18328323215500594,
+      "cushion_lost_frac": 0.059648193963755314,
+      "port_ret": -0.011118377110861166
+     },
+     {
+      "episode": 0,
+      "day": 51,
+      "assets": [
+       26,
+       48
+      ],
+      "excess": [
+       0.223285,
+       0.227092
+      ],
+      "weights": [
+       -0.01890450343489647,
+       -0.021637581288814545
+      ],
+      "gross": 0.8569830094638746,
+      "cushion_before": 0.17930559791225822,
+      "cushion_lost_frac": -0.01421597355503823,
+      "port_ret": 0.0026028684443599737
+     },
+     {
+      "episode": 0,
+      "day": 54,
+      "assets": [
+       9,
+       11,
+       26
+      ],
+      "excess": [
+       0.246652,
+       0.238742,
+       0.260097
+      ],
+      "weights": [
+       0.029238684102892876,
+       0.04306812956929207,
+       -0.018843328580260277
+      ],
+      "gross": 0.8526595486910082,
+      "cushion_before": 0.17827848180076852,
+      "cushion_lost_frac": -0.07435237798707117,
+      "port_ret": 0.013549750211628853
+     },
+     {
+      "episode": 0,
+      "day": 58,
+      "assets": [
+       49
+      ],
+      "excess": [
+       0.201378
+      ],
+      "weights": [
+       -0.028362693265080452
+      ],
+      "gross": 0.8751224627048941,
+      "cushion_before": 0.18401381332812405,
+      "cushion_lost_frac": 0.04349521202866424,
+      "port_ret": -0.008133747431694704
+     },
+     {
+      "episode": 0,
+      "day": 59,
+      "assets": [
+       49
+      ],
+      "excess": [
+       -0.279169
+      ],
+      "weights": [
+       -0.027308516204357147
+      ],
+      "gross": 0.8437841043487424,
+      "cushion_before": 0.17601009350121424,
+      "cushion_lost_frac": -0.0323557472662932,
+      "port_ret": 0.005834917220182145
+     },
+     {
+      "episode": 0,
+      "day": 67,
+      "assets": [
+       11,
+       26,
+       38
+      ],
+      "excess": [
+       0.316991,
+       0.352691,
+       0.228412
+      ],
+      "weights": [
+       0.0433390773832798,
+       -0.01891971565783024,
+       0.004047477152198553
+      ],
+      "gross": 0.8571835086622741,
+      "cushion_before": 0.1793861350730743,
+      "cushion_lost_frac": -0.06769585581943716,
+      "port_ret": 0.012399295335140614
+     },
+     {
+      "episode": 0,
+      "day": 68,
+      "assets": [
+       48
+      ],
+      "excess": [
+       0.25
+      ],
+      "weights": [
+       -0.022832723334431648
+      ],
+      "gross": 0.9042100361257326,
+      "cushion_before": 0.1915298330089872,
+      "cushion_lost_frac": 0.054503110345593186,
+      "port_ret": -0.010528146784331005
+     },
+     {
+      "episode": 0,
+      "day": 73,
+      "assets": [
+       26
+      ],
+      "excess": [
+       -0.243396
+      ],
+      "weights": [
+       -0.018618615344166756
+      ],
+      "gross": 0.8447437576251104,
+      "cushion_before": 0.17618466029384194,
+      "cushion_lost_frac": 0.004624337464705586,
+      "port_ret": -0.0008346139398031083
+     },
+     {
+      "episode": 0,
+      "day": 74,
+      "assets": [
+       38
+      ],
+      "excess": [
+       0.208908
+      ],
+      "weights": [
+       0.004001940600574017
+      ],
+      "gross": 0.8414041682990501,
+      "cushion_before": 0.1753699229685387,
+      "cushion_lost_frac": -0.01749583959147194,
+      "port_ret": 0.0031457234523781796
+     },
+     {
+      "episode": 0,
+      "day": 83,
+      "assets": [
+       11
+      ],
+      "excess": [
+       0.236614
+      ],
+      "weights": [
+       0.04305761307477951
+      ],
+      "gross": 0.8507537385303294,
+      "cushion_before": 0.1777522935246308,
+      "cushion_lost_frac": -0.042069213133159256,
+      "port_ret": 0.007648050708466192
+     },
+     {
+      "episode": 0,
+      "day": 213,
+      "assets": [
+       40
+      ],
+      "excess": [
+       -0.201383
+      ],
+      "weights": [
+       0.007103288546204567
+      ],
+      "gross": 0.8538761940671975,
+      "cushion_before": 0.17853918306852817,
+      "cushion_lost_frac": -0.0024445991703598846,
+      "port_ret": 0.0004460288830105963
+     }
+    ],
+    "min_cushion_ratio": 0.934643805601891,
+    "violated": [
+     false
+    ]
+   }
+  },
+  "2011": {
+   "seed 0": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 150,
+      "assets": [
+       17
+      ],
+      "excess": [
+       -0.203182
+      ],
+      "weights": [
+       -0.0052977874875068665
+      ],
+      "gross": 0.6501482831081375,
+      "cushion_before": 0.12905935388350753,
+      "cushion_lost_frac": 0.2144786074193744,
+      "port_ret": -0.029794081917020043
+     },
+     {
+      "episode": 0,
+      "day": 159,
+      "assets": [
+       26
+      ],
+      "excess": [
+       -0.200271
+      ],
+      "weights": [
+       -0.00022264235303737223
+      ],
+      "gross": 0.5197867696551839,
+      "cushion_before": 0.10005095208889926,
+      "cushion_lost_frac": 0.10332136154912186,
+      "port_ret": -0.011485350435016195
+     }
+    ],
+    "min_cushion_ratio": 0.7855213925806256,
+    "violated": [
+     false
+    ]
+   },
+   "seed 1": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 150,
+      "assets": [
+       17
+      ],
+      "excess": [
+       -0.203182
+      ],
+      "weights": [
+       -0.0069622257724404335
+      ],
+      "gross": 0.6415302148816409,
+      "cushion_before": 0.1270762996264644,
+      "cushion_lost_frac": 0.2240667939623947,
+      "port_ret": -0.030713307046441596
+     },
+     {
+      "episode": 0,
+      "day": 159,
+      "assets": [
+       26
+      ],
+      "excess": [
+       -0.200271
+      ],
+      "weights": [
+       0.0006401969003491104
+      ],
+      "gross": 0.5088349131983705,
+      "cushion_before": 0.09768896894036944,
+      "cushion_lost_frac": 0.09816066837772741,
+      "port_ret": -0.010682112419891698
+     }
+    ],
+    "min_cushion_ratio": 0.7759332060376053,
+    "violated": [
+     false
+    ]
+   },
+   "seed 2": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 150,
+      "assets": [
+       17
+      ],
+      "excess": [
+       -0.203182
+      ],
+      "weights": [
+       -0.004651917144656181
+      ],
+      "gross": 0.6373016764991917,
+      "cushion_before": 0.12610607807713123,
+      "cushion_lost_frac": 0.230253277508491,
+      "port_ret": -0.03135314461091665
+     },
+     {
+      "episode": 0,
+      "day": 159,
+      "assets": [
+       26
+      ],
+      "excess": [
+       -0.200271
+      ],
+      "weights": [
+       0.0016643025446683168
+      ],
+      "gross": 0.5005466651928145,
+      "cushion_before": 0.09590818900340516,
+      "cushion_lost_frac": 0.10212226178416273,
+      "port_ret": -0.010932326888925759
+     }
+    ],
+    "min_cushion_ratio": 0.769746722491509,
+    "violated": [
+     false
+    ]
+   }
+  },
+  "2020": {
+   "seed 0": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 49,
+      "assets": [
+       32
+      ],
+      "excess": [
+       0.20417100000000002
+      ],
+      "weights": [
+       0.003738824976608157
+      ],
+      "gross": 0.23121871176044806,
+      "cushion_before": 0.04172377026328529,
+      "cushion_lost_frac": -0.4635803643041987,
+      "port_ret": 0.02297941593445607
+     },
+     {
+      "episode": 0,
+      "day": 50,
+      "assets": [
+       30
+      ],
+      "excess": [
+       -0.238584
+      ],
+      "weights": [
+       0.008457822725176811
+      ],
+      "gross": 0.33238602470373735,
+      "cushion_before": 0.061066090882083784,
+      "cushion_lost_frac": 0.5356066520687961,
+      "port_ret": -0.03798477821693802
+     },
+     {
+      "episode": 0,
+      "day": 52,
+      "assets": [
+       24
+      ],
+      "excess": [
+       -0.221348
+      ],
+      "weights": [
+       0.004780449904501438
+      ],
+      "gross": 0.20013909343470004,
+      "cushion_before": 0.035704352173997436,
+      "cushion_lost_frac": 0.22329954566299115,
+      "port_ret": -0.009540174821280667
+     },
+     {
+      "episode": 0,
+      "day": 56,
+      "assets": [
+       24,
+       30
+      ],
+      "excess": [
+       0.227307,
+       0.208762
+      ],
+      "weights": [
+       0.002670485759153962,
+       0.002844927366822958
+      ],
+      "gross": 0.1118030418510898,
+      "cushion_before": 0.01959300062750282,
+      "cushion_lost_frac": -0.4348704996933652,
+      "port_ret": 0.010395913541051627
+     },
+     {
+      "episode": 0,
+      "day": 57,
+      "assets": [
+       30
+      ],
+      "excess": [
+       0.24308600000000002
+      ],
+      "weights": [
+       0.004048600327223539
+      ],
+      "gross": 0.1591064048516273,
+      "cushion_before": 0.028113418600877387,
+      "cushion_lost_frac": -0.059377033203804386,
+      "port_ret": 0.0020157762840711246
+     },
+     {
+      "episode": 0,
+      "day": 164,
+      "assets": [
+       37
+      ],
+      "excess": [
+       0.260449
+      ],
+      "weights": [
+       0.006740450393408537
+      ],
+      "gross": 0.4950014212736278,
+      "cushion_before": 0.09461860170885167,
+      "cushion_lost_frac": -0.0573773562262434,
+      "port_ret": 0.006068468960412465
+     }
+    ],
+    "min_cushion_ratio": 0.46439334793120385,
+    "violated": [
+     false
+    ]
+   },
+   "seed 1": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 49,
+      "assets": [
+       32
+      ],
+      "excess": [
+       0.20417100000000002
+      ],
+      "weights": [
+       0.0037428790237754583
+      ],
+      "gross": 0.23058501925311248,
+      "cushion_before": 0.04160374727708567,
+      "cushion_lost_frac": -0.464003491813868,
+      "port_ret": 0.02293749769005471
+     },
+     {
+      "episode": 0,
+      "day": 50,
+      "assets": [
+       30
+      ],
+      "excess": [
+       -0.238584
+      ],
+      "weights": [
+       0.008423402905464172
+      ],
+      "gross": 0.33158723192264006,
+      "cushion_before": 0.06090803128619513,
+      "cushion_lost_frac": 0.5362108736467508,
+      "port_ret": -0.03793616446960191
+     },
+     {
+      "episode": 0,
+      "day": 52,
+      "assets": [
+       24
+      ],
+      "excess": [
+       -0.221348
+      ],
+      "weights": [
+       0.004758787341415882
+      ],
+      "gross": 0.19943997243467493,
+      "cushion_before": 0.03557398019403592,
+      "cushion_lost_frac": 0.22355810189350023,
+      "port_ret": -0.009517830470413657
+     },
+     {
+      "episode": 0,
+      "day": 56,
+      "assets": [
+       24,
+       30
+      ],
+      "excess": [
+       0.227307,
+       0.208762
+      ],
+      "weights": [
+       0.0026572169736027718,
+       0.0028290085028856993
+      ],
+      "gross": 0.11136352686662576,
+      "cushion_before": 0.01951408554367982,
+      "cushion_lost_frac": -0.4354134978411037,
+      "port_ret": 0.01036796852382027
+     },
+     {
+      "episode": 0,
+      "day": 57,
+      "assets": [
+       30
+      ],
+      "excess": [
+       0.24308600000000002
+      ],
+      "weights": [
+       0.004027585964649916
+      ],
+      "gross": 0.15854549230039083,
+      "cushion_before": 0.028010781787423965,
+      "cushion_lost_frac": -0.059293786081387356,
+      "port_ret": 0.0020058498510016065
+     },
+     {
+      "episode": 0,
+      "day": 164,
+      "assets": [
+       37
+      ],
+      "excess": [
+       0.260449
+      ],
+      "weights": [
+       0.006766197271645069
+      ],
+      "gross": 0.4935992616301519,
+      "cushion_before": 0.09431894526092478,
+      "cushion_lost_frac": -0.057526534597696743,
+      "port_ret": 0.006067010093572245
+     }
+    ],
+    "min_cushion_ratio": 0.46378912635324926,
+    "violated": [
+     false
+    ]
+   },
+   "seed 2": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 49,
+      "assets": [
+       32
+      ],
+      "excess": [
+       0.20417100000000002
+      ],
+      "weights": [
+       0.003737169550731778
+      ],
+      "gross": 0.23148907854192657,
+      "cushion_before": 0.04177491766995074,
+      "cushion_lost_frac": -0.46339921889145996,
+      "port_ret": 0.02299719772013975
+     },
+     {
+      "episode": 0,
+      "day": 50,
+      "assets": [
+       30
+      ],
+      "excess": [
+       -0.238584
+      ],
+      "weights": [
+       0.008472257293760777
+      ],
+      "gross": 0.33272604180820053,
+      "cushion_before": 0.061133381887460966,
+      "cushion_lost_frac": 0.5353480131038,
+      "port_ret": -0.038005302333111946
+     },
+     {
+      "episode": 0,
+      "day": 52,
+      "assets": [
+       24
+      ],
+      "excess": [
+       -0.221348
+      ],
+      "weights": [
+       0.004789573606103659
+      ],
+      "gross": 0.20043779067054857,
+      "cushion_before": 0.03576000783995255,
+      "cushion_lost_frac": 0.22318924441464816,
+      "port_ret": -0.009549690168459635
+     },
+     {
+      "episode": 0,
+      "day": 56,
+      "assets": [
+       24,
+       30
+      ],
+      "excess": [
+       0.227307,
+       0.208762
+      ],
+      "weights": [
+       0.0026760967448353767,
+       0.002851667581126094
+      ],
+      "gross": 0.11199139780728729,
+      "cushion_before": 0.0196268093291999,
+      "cushion_lost_frac": -0.43463859170959585,
+      "port_ret": 0.010407869373596723
+     },
+     {
+      "episode": 0,
+      "day": 57,
+      "assets": [
+       30
+      ],
+      "excess": [
+       0.24308600000000002
+      ],
+      "weights": [
+       0.004057484213262796
+      ],
+      "gross": 0.1593465654332249,
+      "cushion_before": 0.0281573780957961,
+      "cushion_lost_frac": -0.05941070715695451,
+      "port_ret": 0.00201996599752996
+     },
+     {
+      "episode": 0,
+      "day": 164,
+      "assets": [
+       37
+      ],
+      "excess": [
+       0.260449
+      ],
+      "weights": [
+       0.006729805842041969
+      ],
+      "gross": 0.4955982310784748,
+      "cushion_before": 0.09474615584231542,
+      "cushion_lost_frac": -0.0573147409743755,
+      "port_ret": 0.006069153072032929
+     }
+    ],
+    "min_cushion_ratio": 0.4646519868962001,
+    "violated": [
+     false
+    ]
+   }
+  },
+  "2022": {
+   "seed 0": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 13,
+      "assets": [
+       23
+      ],
+      "excess": [
+       -0.217905
+      ],
+      "weights": [
+       0.01282264944165945
+      ],
+      "gross": 0.6217832955589984,
+      "cushion_before": 0.12260639993620132,
+      "cushion_lost_frac": 0.09287228945015924,
+      "port_ret": -0.01234192290895042
+     },
+     {
+      "episode": 0,
+      "day": 21,
+      "assets": [
+       38
+      ],
+      "excess": [
+       -0.245904
+      ],
+      "weights": [
+       0.0032978742383420467
+      ],
+      "gross": 0.6580064557492733,
+      "cushion_before": 0.13086770518375998,
+      "cushion_lost_frac": -0.051690153620290946,
+      "port_ret": 0.0072669529163096325
+     },
+     {
+      "episode": 0,
+      "day": 22,
+      "assets": [
+       6
+      ],
+      "excess": [
+       -0.263901
+      ],
+      "weights": [
+       0.013773918151855469
+      ],
+      "gross": 0.6870775439601857,
+      "cushion_before": 0.1376322769686435,
+      "cushion_lost_frac": 0.11175717731559065,
+      "port_ret": -0.01640450649935077
+     },
+     {
+      "episode": 0,
+      "day": 74,
+      "assets": [
+       23
+      ],
+      "excess": [
+       -0.351166
+      ],
+      "weights": [
+       0.011408108286559582
+      ],
+      "gross": 0.5487063550681341,
+      "cushion_before": 0.1062263220356626,
+      "cushion_lost_frac": 0.054839134422822844,
+      "port_ret": -0.006428150906354402
+     },
+     {
+      "episode": 0,
+      "day": 206,
+      "assets": [
+       6
+      ],
+      "excess": [
+       -0.245671
+      ],
+      "weights": [
+       0.00452779047191143
+      ],
+      "gross": 0.2179362345050322,
+      "cushion_before": 0.03908263983184359,
+      "cushion_lost_frac": 0.04923946909001575,
+      "port_ret": -0.0022934671087248004
+     }
+    ],
+    "min_cushion_ratio": 0.7793887327667651,
+    "violated": [
+     false
+    ]
+   },
+   "seed 1": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 13,
+      "assets": [
+       23
+      ],
+      "excess": [
+       -0.217905
+      ],
+      "weights": [
+       0.013772089965641499
+      ],
+      "gross": 0.6317638831824297,
+      "cushion_before": 0.12487987170389409,
+      "cushion_lost_frac": 0.09199102122424985,
+      "port_ret": -0.012420885435889817
+     },
+     {
+      "episode": 0,
+      "day": 21,
+      "assets": [
+       38
+      ],
+      "excess": [
+       -0.245904
+      ],
+      "weights": [
+       0.004263374488800764
+      ],
+      "gross": 0.6670813447562978,
+      "cushion_before": 0.13297292879286565,
+      "cushion_lost_frac": -0.04884507200268362,
+      "port_ret": 0.006961694258051931
+     },
+     {
+      "episode": 0,
+      "day": 22,
+      "assets": [
+       6
+      ],
+      "excess": [
+       -0.263901
+      ],
+      "weights": [
+       0.01543507818132639
+      ],
+      "gross": 0.6948733050958253,
+      "cushion_before": 0.13946800107416088,
+      "cushion_lost_frac": 0.11281360601328883,
+      "port_ret": -0.016747657298228025
+     },
+     {
+      "episode": 0,
+      "day": 74,
+      "assets": [
+       23
+      ],
+      "excess": [
+       -0.351166
+      ],
+      "weights": [
+       0.01199058536440134
+      ],
+      "gross": 0.553214781510178,
+      "cushion_before": 0.10721637541014094,
+      "cushion_lost_frac": 0.05571632170998775,
+      "port_ret": -0.00658464973389572
+     },
+     {
+      "episode": 0,
+      "day": 206,
+      "assets": [
+       6
+      ],
+      "excess": [
+       -0.245671
+      ],
+      "weights": [
+       0.005108185112476349
+      ],
+      "gross": 0.23224692290750681,
+      "cushion_before": 0.04178392260917728,
+      "cushion_lost_frac": 0.04953574871025479,
+      "port_ret": -0.002458823262009413
+     }
+    ],
+    "min_cushion_ratio": 0.7920330323512088,
+    "violated": [
+     false
+    ]
+   },
+   "seed 2": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 13,
+      "assets": [
+       23
+      ],
+      "excess": [
+       -0.217905
+      ],
+      "weights": [
+       0.012257442809641361
+      ],
+      "gross": 0.6353326671087416,
+      "cushion_before": 0.12569423754899026,
+      "cushion_lost_frac": 0.087491861880857,
+      "port_ret": -0.011879973348406958
+     },
+     {
+      "episode": 0,
+      "day": 21,
+      "assets": [
+       38
+      ],
+      "excess": [
+       -0.245904
+      ],
+      "weights": [
+       0.0026519857347011566
+      ],
+      "gross": 0.6661959118646337,
+      "cushion_before": 0.13276884630120858,
+      "cushion_lost_frac": -0.04521482914124797,
+      "port_ret": 0.0064358074614032645
+     },
+     {
+      "episode": 0,
+      "day": 22,
+      "assets": [
+       6
+      ],
+      "excess": [
+       -0.263901
+      ],
+      "weights": [
+       0.01320362277328968
+      ],
+      "gross": 0.6919088068825658,
+      "cushion_before": 0.13877196700199834,
+      "cushion_lost_frac": 0.10083950537384245,
+      "port_ret": -0.014906385154348056
+     },
+     {
+      "episode": 0,
+      "day": 74,
+      "assets": [
+       23
+      ],
+      "excess": [
+       -0.351166
+      ],
+      "weights": [
+       0.01134705264121294
+      ],
+      "gross": 0.57768863394449,
+      "cushion_before": 0.11262897583561453,
+      "cushion_lost_frac": 0.05580285260327922,
+      "port_ret": -0.006886717717524249
+     },
+     {
+      "episode": 0,
+      "day": 206,
+      "assets": [
+       6
+      ],
+      "excess": [
+       -0.245671
+      ],
+      "weights": [
+       0.0049774497747421265
+      ],
+      "gross": 0.24248033385083545,
+      "cushion_before": 0.04372425726030585,
+      "cushion_lost_frac": 0.044705598063256136,
+      "port_ret": -0.002316774768383323
+     }
+    ],
+    "min_cushion_ratio": 0.7921505637573292,
+    "violated": [
+     false
+    ]
+   }
+  },
+  "2023": {
+   "seed 0": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 21,
+      "assets": [
+       24
+      ],
+      "excess": [
+       0.232624
+      ],
+      "weights": [
+       0.014056007377803326
+      ],
+      "gross": 0.935959589201957,
+      "cushion_before": 0.19999999999999993,
+      "cushion_lost_frac": -0.02903655299720964,
+      "port_ret": 0.0058073105994418395
+     },
+     {
+      "episode": 0,
+      "day": 99,
+      "assets": [
+       13
+      ],
+      "excess": [
+       0.243496
+      ],
+      "weights": [
+       0.0202651247382164
+      ],
+      "gross": 0.8738568366970867,
+      "cushion_before": 0.1837137057626235,
+      "cushion_lost_frac": -0.03936515548778341,
+      "port_ret": 0.007351649723103204
+     }
+    ],
+    "min_cushion_ratio": 0.908265744461648,
+    "violated": [
+     false
+    ]
+   },
+   "seed 1": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 21,
+      "assets": [
+       24
+      ],
+      "excess": [
+       0.232624
+      ],
+      "weights": [
+       -0.004494674503803253
+      ],
+      "gross": 0.9359595061032451,
+      "cushion_before": 0.19999999999999993,
+      "cushion_lost_frac": 0.024097052789339823,
+      "port_ret": -0.0048194105578679425
+     },
+     {
+      "episode": 0,
+      "day": 99,
+      "assets": [
+       13
+      ],
+      "excess": [
+       0.243496
+      ],
+      "weights": [
+       0.02863788977265358
+      ],
+      "gross": 0.9007492787568481,
+      "cushion_before": 0.1907016864491778,
+      "cushion_lost_frac": -0.04773888776959678,
+      "port_ret": 0.009189331694286151
+     }
+    ],
+    "min_cushion_ratio": 0.9398050710856289,
+    "violated": [
+     false
+    ]
+   },
+   "seed 2": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 21,
+      "assets": [
+       24
+      ],
+      "excess": [
+       0.232624
+      ],
+      "weights": [
+       0.013709540478885174
+      ],
+      "gross": 0.9359595736605115,
+      "cushion_before": 0.19999999999999993,
+      "cushion_lost_frac": -0.02785794156852428,
+      "port_ret": 0.005571588313704856
+     },
+     {
+      "episode": 0,
+      "day": 99,
+      "assets": [
+       13
+      ],
+      "excess": [
+       0.243496
+      ],
+      "weights": [
+       0.02039041742682457
+      ],
+      "gross": 0.8742023731174413,
+      "cushion_before": 0.18380301918495956,
+      "cushion_lost_frac": -0.03966971731507685,
+      "port_ret": 0.00741145704021684
+     }
+    ],
+    "min_cushion_ratio": 0.9084248301804445,
+    "violated": [
+     false
+    ]
+   }
+  },
+  "2024": {
+   "seed 0": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 22,
+      "assets": [
+       7
+      ],
+      "excess": [
+       0.202976
+      ],
+      "weights": [
+       0.020335230976343155
+      ],
+      "gross": 0.9180020694038831,
+      "cushion_before": 0.19517793484419768,
+      "cushion_lost_frac": -0.06713029935484238,
+      "port_ret": 0.013165839730562512
+     },
+     {
+      "episode": 0,
+      "day": 147,
+      "assets": [
+       33
+      ],
+      "excess": [
+       -0.260785
+      ],
+      "weights": [
+       0.006427304353564978
+      ],
+      "gross": 0.7527167919324711,
+      "cushion_before": 0.15341335259848837,
+      "cushion_lost_frac": 0.06605892235192223,
+      "port_ret": -0.010629514176019206
+     },
+     {
+      "episode": 0,
+      "day": 205,
+      "assets": [
+       6
+      ],
+      "excess": [
+       0.21899
+      ],
+      "weights": [
+       0.02159963920712471
+      ],
+      "gross": 0.8772606197162531,
+      "cushion_before": 0.18462547425804268,
+      "cushion_lost_frac": -0.018814728590623275,
+      "port_ret": 0.0035279182591714253
+     },
+     {
+      "episode": 0,
+      "day": 240,
+      "assets": [
+       9
+      ],
+      "excess": [
+       0.24412599999999998
+      ],
+      "weights": [
+       0.08306477963924408
+      ],
+      "gross": 0.882641009229701,
+      "cushion_before": 0.18598923068668785,
+      "cushion_lost_frac": -0.08955558930954655,
+      "port_ret": 0.016893059924980358
+     }
+    ],
+    "min_cushion_ratio": 0.8755407895654551,
+    "violated": [
+     false
+    ]
+   },
+   "seed 1": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 22,
+      "assets": [
+       7
+      ],
+      "excess": [
+       0.202976
+      ],
+      "weights": [
+       0.021017584949731827
+      ],
+      "gross": 0.9172427580924705,
+      "cushion_before": 0.19498989953643042,
+      "cushion_lost_frac": -0.07169925136193123,
+      "port_ret": 0.014051026876166217
+     },
+     {
+      "episode": 0,
+      "day": 147,
+      "assets": [
+       33
+      ],
+      "excess": [
+       -0.260785
+      ],
+      "weights": [
+       0.0006185375386849046
+      ],
+      "gross": 0.7395515739335679,
+      "cushion_before": 0.1502266021055676,
+      "cushion_lost_frac": 0.04264226060615017,
+      "port_ret": -0.006741551860121819
+     },
+     {
+      "episode": 0,
+      "day": 205,
+      "assets": [
+       6
+      ],
+      "excess": [
+       0.21899
+      ],
+      "weights": [
+       0.022441310808062553
+      ],
+      "gross": 0.8845096021614154,
+      "cushion_before": 0.1865057707150618,
+      "cushion_lost_frac": -0.01978929964433762,
+      "port_ret": 0.0037413046042327203
+     },
+     {
+      "episode": 0,
+      "day": 240,
+      "assets": [
+       9
+      ],
+      "excess": [
+       0.24412599999999998
+      ],
+      "weights": [
+       0.09597330540418625
+      ],
+      "gross": 0.8844781951702316,
+      "cushion_before": 0.18646483331150884,
+      "cushion_lost_frac": -0.11114058295372264,
+      "port_ret": 0.021008159211353794
+     }
+    ],
+    "min_cushion_ratio": 0.8830952696775611,
+    "violated": [
+     false
+    ]
+   },
+   "seed 2": {
+    "events": [
+     {
+      "episode": 0,
+      "day": 22,
+      "assets": [
+       7
+      ],
+      "excess": [
+       0.202976
+      ],
+      "weights": [
+       0.016579974442720413
+      ],
+      "gross": 0.9152144982945174,
+      "cushion_before": 0.1944532139901105,
+      "cushion_lost_frac": -0.06708868537595292,
+      "port_ret": 0.01311837531439175
+     },
+     {
+      "episode": 0,
+      "day": 147,
+      "assets": [
+       33
+      ],
+      "excess": [
+       -0.260785
+      ],
+      "weights": [
+       0.0019909690599888563
+      ],
+      "gross": 0.7518591057450976,
+      "cushion_before": 0.15320580740678,
+      "cushion_lost_frac": 0.0466820159379473,
+      "port_ret": -0.007503055360737365
+     },
+     {
+      "episode": 0,
+      "day": 205,
+      "assets": [
+       6
+      ],
+      "excess": [
+       0.21899
+      ],
+      "weights": [
+       0.020401455461978912
+      ],
+      "gross": 0.8815953459707089,
+      "cushion_before": 0.18575276077261554,
+      "cushion_lost_frac": -0.019263428802557936,
+      "port_ret": 0.003629951874765558
+     },
+     {
+      "episode": 0,
+      "day": 240,
+      "assets": [
+       9
+      ],
+      "excess": [
+       0.24412599999999998
+      ],
+      "weights": [
+       0.08458111435174942
+      ],
+      "gross": 0.8867581974955101,
+      "cushion_before": 0.1870596258310679,
+      "cushion_lost_frac": -0.09387367423664972,
+      "port_ret": 0.017790186042013767
+     }
+    ],
+    "min_cushion_ratio": 0.8840104818739922,
+    "violated": [
+     false
+    ]
+   }
+  }
+ }
+}

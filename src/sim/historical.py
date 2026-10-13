@@ -6,7 +6,9 @@ HistoricalPaths   evaluation on realised paths: B one-year episodes, each a bloc
                   coefficients are fixed estimates (plug-in), the cash leg earns the
                   realised daily risk-free rate (period_rf).
 BootstrapMarket   training: stationary block bootstrap (Politis-Romano) of daily excess
-                  returns from an estimation window; cash earns the constant rate r.
+                  returns from an estimation window, with mean block length mean_block;
+                  mean_block = 1 is the i.i.d. bootstrap used in the paper (run_empirical.py,
+                  EMP_BLOCK=1); cash earns the constant rate r.
 
 Both expose the estimated annualised excess drift and covariance through coeffs(), so that
 plug-in rules (Grossman-Zhou, Merton), HJB policies and the learned policy see exactly the

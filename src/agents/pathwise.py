@@ -42,7 +42,8 @@ def simulate_exogenous(market, B, T, seed, alpha):
 class PathwisePolicy:
     def __init__(self, num_assets, f_dim, g_dim=5, equivariant=True, gz_prior=True, safety=True,
                  alpha=0.2, ell=0.2, tc=0.001, eta=0.05, rho=2.0, r=0.02, dt=1 / 252, gross_max=2.0,
-                 w_min=-0.5, w_max=2.0, lr=3e-3, seed=0, name="E-CBLPO", detach_prev=False):
+                 w_min=-0.5, w_max=2.0, lr=3e-3, seed=0, name="E-CBLPO", detach_prev=False,
+                 residual=True, penalty=0.0):
         torch.manual_seed(seed)
         self.name = name
         self.actor = EquivariantActor(f_dim, g_dim) if equivariant else MLPActor(num_assets, f_dim, g_dim)
@@ -57,6 +58,9 @@ class PathwisePolicy:
         # exogenous input (no gradient through the position recurrence u_{t-1} -> u_t).  The
         # recurrence can amplify gradients over 252 steps; used in the empirical study.
         self.detach_prev = detach_prev
+        # ablations: residual=False drops the network (Grossman-Zhou direction only);
+        # penalty > 0 adds penalty * E[(maxDD - alpha)_+] to the loss (used with safety=False)
+        self.residual, self.penalty = residual, penalty
 
     # ----------------------------------------------------------------- policy map
     def weights(self, ex, vol, md, mkt, W, H, u_prev, t_frac):
@@ -70,7 +74,7 @@ class PathwisePolicy:
         if mkt.shape[-1] > 0:
             x = torch.cat([x, mkt], -1)
         g = torch.stack([D / alpha, (h / W) / alpha, torch.full_like(W, t_frac), torch.log(W), u_prev.abs().sum(1)], 1)
-        a = self.actor(x, g)
+        a = self.actor(x, g) if self.residual else torch.zeros_like(md)
         if self.gz_prior:
             a = a + md / self.rho_eff
         u = a * (torch.clamp(h, min=0) / W)[:, None]
@@ -132,6 +136,8 @@ class PathwisePolicy:
             E = simulate_exogenous(market, B, T, int(rng.integers(1 << 31)), self.alpha)
             out = self.rollout(E)
             loss = -self.utility(out["W_T"]).mean() * 100
+            if self.penalty > 0:
+                loss = loss + self.penalty * 100 * torch.relu(out["max_dd"] - self.alpha).mean()
             self.opt.zero_grad(); loss.backward()
             gn = torch.nn.utils.clip_grad_norm_(self.actor.parameters(), 1.0)
             skipped = guard and (not torch.isfinite(loss) or not torch.isfinite(gn) or float(gn) > max_grad)
