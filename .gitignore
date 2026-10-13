@@ -26,3 +26,8 @@ wandb/
 results/run.log
 results/chunk*.log
 __pycache__/
+
+# Licensed WRDS/CRSP data (never commit)
+wrds_export/
+wrds_export.zip
+data/raw/
