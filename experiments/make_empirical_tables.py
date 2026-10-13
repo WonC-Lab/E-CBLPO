@@ -144,7 +144,7 @@ def main():
     summary = {}
     caps = {"E1": "US equity market (CRSP value-weighted, 1 asset), out of sample, evaluation years {y0}--{y1}: "
                   "{n} one-year episodes starting each month, $\\alpha=20\\%$, 10\\,bp costs, $\\gamma=2$. Plug-in "
-                  "coefficients from the previous 20 years; ECP trained on a block bootstrap of the same window "
+                  "coefficients from the previous 20 years; ECP trained on an i.i.d. bootstrap of the daily excess returns of the same window "
                   "(mean of 3 seeds). Viol.: share of episodes with maximum drawdown above $\\alpha$.",
             "E2": "Nine Select Sector SPDR ETFs, out of sample, evaluation years {y0}--{y1}: {n} one-year episodes. "
                   "Plug-in coefficients from the previous 10 years (at least 5). Columns as in Table~\\ref{{tab:emp_E1}}.",
