@@ -42,7 +42,7 @@ def simulate_exogenous(market, B, T, seed, alpha):
 class PathwisePolicy:
     def __init__(self, num_assets, f_dim, g_dim=5, equivariant=True, gz_prior=True, safety=True,
                  alpha=0.2, ell=0.2, tc=0.001, eta=0.05, rho=2.0, r=0.02, dt=1 / 252, gross_max=2.0,
-                 w_min=-0.5, w_max=2.0, lr=3e-3, seed=0, name="E-CBLPO"):
+                 w_min=-0.5, w_max=2.0, lr=3e-3, seed=0, name="E-CBLPO", detach_prev=False):
         torch.manual_seed(seed)
         self.name = name
         self.actor = EquivariantActor(f_dim, g_dim) if equivariant else MLPActor(num_assets, f_dim, g_dim)
@@ -53,10 +53,16 @@ class PathwisePolicy:
         self.r, self.dt = r, dt
         self.gross_max, self.w_min, self.w_max = gross_max, w_min, w_max
         self.gamma = rho
+        # detach_prev: the previous position enters the network and the safety budget as an
+        # exogenous input (no gradient through the position recurrence u_{t-1} -> u_t).  The
+        # recurrence can amplify gradients over 252 steps; used in the empirical study.
+        self.detach_prev = detach_prev
 
     # ----------------------------------------------------------------- policy map
     def weights(self, ex, vol, md, mkt, W, H, u_prev, t_frac):
         alpha = self.alpha
+        if self.detach_prev:
+            u_prev = u_prev.detach()
         h = W - (1 - alpha) * H
         D = 1 - W / H
         per = [ex * 10, vol * 5, md / 2]
@@ -109,20 +115,43 @@ class PathwisePolicy:
         g = self.gamma
         return torch.log(W) if g == 1.0 else (W ** (1 - g) - 1) / (1 - g)
 
-    def train(self, market, iters=300, B=512, T=252, seed=0, log_every=50, verbose=True):
+    def train(self, market, iters=300, B=512, T=252, seed=0, log_every=50, verbose=True, guard=False,
+              max_grad=1e3, ema=0.9):
+        """Pathwise-gradient training.
+
+        guard=True protects against exploding gradients through the wealth recursion
+        (backpropagation through T steps): an update whose gradient norm is non-finite or
+        above `max_grad` is skipped and the learning rate halved, and at the end the
+        parameters with the best exponentially smoothed training CE are restored.  Used for
+        the empirical study; the simulation experiments use guard=False.
+        """
         rng = np.random.default_rng(seed)
         hist = []
+        best, best_ce, ce_s = None, -np.inf, None
         for it in range(iters):
             E = simulate_exogenous(market, B, T, int(rng.integers(1 << 31)), self.alpha)
             out = self.rollout(E)
             loss = -self.utility(out["W_T"]).mean() * 100
             self.opt.zero_grad(); loss.backward()
-            torch.nn.utils.clip_grad_norm_(self.actor.parameters(), 1.0)
-            self.opt.step()
+            gn = torch.nn.utils.clip_grad_norm_(self.actor.parameters(), 1.0)
+            skipped = guard and (not torch.isfinite(loss) or not torch.isfinite(gn) or float(gn) > max_grad)
+            if skipped:
+                for g in self.opt.param_groups:
+                    g["lr"] *= 0.5
+            else:
+                self.opt.step()
             ce = float(torch.mean(out["W_T"].detach() ** (1 - self.gamma)) ** (1 / (1 - self.gamma)))
-            hist.append({"iter": it, "ce_train": ce, "viol": float((out["max_dd"] > self.alpha + 1e-9).float().mean())})
+            hist.append({"iter": it, "ce_train": ce, "viol": float((out["max_dd"] > self.alpha + 1e-9).float().mean()),
+                         "grad_norm": float(gn), "skipped": bool(skipped)})
+            if guard and np.isfinite(ce):
+                ce_s = ce if ce_s is None else ema * ce_s + (1 - ema) * ce
+                if ce_s > best_ce:
+                    best_ce = ce_s
+                    best = {k: v.detach().clone() for k, v in self.actor.state_dict().items()}
             if verbose and (it % log_every == 0 or it == iters - 1):
                 print(f"    [{self.name}] it {it:4d}  CE(train batch)={ce:.4f}  viol={100*hist[-1]['viol']:.2f}%  gross={float(out['mean_gross'].mean()):.3f}", flush=True)
+        if guard and best is not None:
+            self.actor.load_state_dict(best)
         return hist
 
     @torch.no_grad()

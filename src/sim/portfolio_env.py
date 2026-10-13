@@ -75,8 +75,11 @@ class DrawdownPortfolioEnv:
         u = self.enforce_leverage(np.asarray(u, dtype=np.float64))
         cost = self.tc * np.abs(u - self.u_prev).sum(axis=1)
         W_post = self.W * (1.0 - cost)
+        # cash return over the period: realised rate for historical markets, else r dt
+        rdt = self.m.period_rf(self.state) if hasattr(self.m, "period_rf") else self.r * self.dt
         R, self.state = self.m.step(self.state, self.rng)
-        port = self.r * self.dt + np.einsum("bi,bi->b", u, R - self.r * self.dt)
+        rdt_b = np.broadcast_to(rdt, (self.B,))
+        port = rdt_b + np.einsum("bi,bi->b", u, R - rdt_b[:, None])
         W_new = np.maximum(W_post * (1.0 + port), 1e-12)
 
         reward = self.utility(W_new) - self.utility(self.W)   # telescopes to U(W_T) - U(W_0)
