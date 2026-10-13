@@ -228,4 +228,32 @@ check("localisation max rel err to 1e-7, tau>=0.05 (%)", 0.5, max(rel(k, j) for 
 check("localisation rel err to 1e-7, tau=0.02 (%)", 1.3, max(rel("mu=0.06,sigma=0.2,tau=0.02,spd=32", j) for j in range(6)), 0.051)
 check("localisation tau=0.02 1e-7 at 8 steps (%)", 8.9, rel("mu=0.06,sigma=0.2,tau=0.02,spd=8", 5), 0.051)
 
+# ---- items 13-15: empirical diagnostics, violation bounds, stress exceedances
+DG = json.load(open(os.path.join(ROOT, "results", "empirical", "diagnostics", "summary.json")))["diff_bp"]
+for key, vals in [("TIPP5 - cert HJB, zero cost", (74, 30, 132)), ("TIPP5 - cert HJB, plug-in", (53, 12, 106)),
+                  ("ECP - cert HJB, zero cost", (-29, -50, -11)), ("TIPP5 - cert HJB, oracle drift", (-486, -746, -245)),
+                  ("cert HJB oracle - plug-in", (539, None, None))]:
+    for c, x in zip(vals, DG[key]):
+        if c is not None:
+            check(f"diag {key}", c, x, 0.55)
+PR = json.load(open(os.path.join(ROOT, "results", "empirical", "diagnostics", "summary.json")))["premium"]
+check("diag plug-in premium (%)", 6.7, 100 * PR["plugin_mean"], 0.051); check("diag realised drift (%)", 9.6, 100 * PR["realised_mean"], 0.051)
+check("diag corr", -0.15, PR["corr"], 0.0051)
+VC = json.load(open(os.path.join(ROOT, "results", "empirical", "violation_ci.json")))
+check("CP E1 44 years (%)", 6.6, 100 * VC["E1: 0 of 44 years"], 0.051); check("CP 21 years (%)", 13.3, 100 * VC["E3: 0 of 21 years"], 0.051)
+check("CP E1 524 episodes (%)", 0.57, 100 * VC["E1: 0 of 524 episodes (overlapping, not valid)"], 0.0051)
+check("CP sim (%)", 0.015, 100 * VC["simulation, 20000 paths"], 0.00051)
+SX = json.load(open(os.path.join(ROOT, "results", "empirical", "stress_exceedance.json")))
+e3 = [x for y in SX["E3"].values() for x in y["seed 0"]["events"]]
+check("E3 exceedance days", 69, len(e3), 0); check("E3 falling", 34, sum(min(x["excess"]) < -0.2 for x in e3), 0)
+check("E3 max stocks per day", 7, max(len(x["assets"]) for x in e3), 0)
+e3a = [x for y in SX["E3"].values() for k, v in y.items() for x in v["events"] if min(x["excess"]) < -0.2]
+check("E3 max weight in falling stock (%)", 5.1, 100 * max(max(abs(t) for t in x["weights"]) for x in e3a), 0.051)
+check("E3 worst port ret (%)", -3.8, 100 * min(x["port_ret"] for x in e3a), 0.051)
+check("E3 max cushion lost (%)", 54, 100 * max(x["cushion_lost_frac"] for x in e3a), 0.51)
+e2 = [x for y in SX["E2"].values() for k, v in y.items() if k.startswith("seed") for x in v["events"]]
+check("E2 max XLE weight (%)", 4, 100 * max(max(abs(t) for t in x["weights"]) for x in e2), 0.051)
+check("E2 max cushion lost (%)", 31, 100 * max(x["cushion_lost_frac"] for x in e2), 0.51)
+check("E2 CPPI violations 2019-20", 6, sum(sum(v["violated"]) for y in SX["E2"].values() for k, v in y.items() if k == "CPPI (m=3)"), 0)
+
 print("\nmismatches (total):", bad)
