@@ -256,4 +256,15 @@ check("E2 max XLE weight (%)", 4, 100 * max(max(abs(t) for t in x["weights"]) fo
 check("E2 max cushion lost (%)", 31, 100 * max(x["cushion_lost_frac"] for x in e2), 0.51)
 check("E2 CPPI violations 2019-20", 6, sum(sum(v["violated"]) for y in SX["E2"].values() for k, v in y.items() if k == "CPPI (m=3)"), 0)
 
+# ---- item 12: N-scaling
+NS = json.load(open(os.path.join(ROOT, "results", "extensions", "nscaling_summary.json")))
+lead = [NS[c]["ECP_minus_TIPP5_bp"][0] for c in ("N5", "N10", "N20", "N50", "N100")]
+check("N-scaling lead min", 68, min(lead), 0.55); check("N-scaling lead max", 81, max(lead), 0.55)
+check("N-scaling viol max", 0, max(NS[c]["ECP"]["viol"] for c in NS), 0)
+check("us/decision N5", 4, NS["N5"]["us_per_decision"], 0.5); check("us/decision N100", 68, NS["N100"]["us_per_decision"], 0.55)
+check("N50 lead (reproduction)", 75.3, NS["N50"]["ECP_minus_TIPP5_bp"][0], 0.051)
+check("rho=0 GZ over ECP (bp)", 99, 1e4 * (NS["N20_corr0"]["Grossman-Zhou"]["CE"] - NS["N20_corr0"]["ECP"]["CE"]), 0.55)
+check("cov err ECP loss (bp)", 16, 1e4 * (NS["N20"]["ECP"]["CE"] - NS["N20_coverr"]["ECP"]["CE"]), 0.55)
+check("cov err GZ loss (bp)", 40, 1e4 * (NS["N20"]["Grossman-Zhou"]["CE"] - NS["N20_coverr"]["Grossman-Zhou"]["CE"]), 0.55)
+
 print("\nmismatches (total):", bad)
