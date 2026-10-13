@@ -40,6 +40,26 @@ python experiments/run_estimation_risk.py
 # Sensitivity to risk aversion and horizon
 python experiments/run_sensitivity.py
 
+# Solver reliability, rate table, r -> 0, localisation accuracy (items 3-9 of the revision)
+PART=A python experiments/run_solver_checks.py; PART=B python experiments/run_solver_checks.py
+python experiments/make_rate_table.py
+python experiments/run_r_scaling.py
+SPD=8,32 python experiments/run_localisation.py && python experiments/make_localisation_table.py
+
+# Learning: ablations (Heston, jump) and zero-shot N-scaling
+python experiments/run_ablation.py; ABL_MARKET=jump python experiments/run_ablation.py
+python experiments/make_ablation_table.py > /dev/null
+python experiments/run_nscaling.py && python experiments/make_nscaling_table.py > /dev/null
+
+# Empirical diagnostics (licensed data)
+if [ -d data/raw/wrds ]; then
+  python experiments/run_empirical_diagnostics.py && python experiments/make_empirical_diagnostics.py > /dev/null
+  python experiments/run_stress_exceedance.py
+  python experiments/violation_ci.py > /dev/null
+  EMP_BLOCK=20 RESULTS_DIR=results/block20 python experiments/run_empirical.py E1 && python experiments/compare_bootstrap.py > /dev/null
+fi
+
 python experiments/make_tables.py > /dev/null
 python experiments/make_figures.py
+python experiments/check_manuscript_numbers.py | tail -1
 echo "ALL DONE"
