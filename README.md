@@ -59,6 +59,16 @@ In the paper and figures the learned method is called ECP (equivariant certified
 Main metric: certainty-equivalent terminal wealth on common random paths, with path-violation
 rates (Clopper–Pearson bounds) and gross exposure, to show that strategies are not simply holding cash.
 
+## Empirical study (CRSP, licensed)
+
+`experiments/data/wrds_export.py` and `wrds_export_top50_history.py` extract the data on WRDS
+(Fama-French daily factors, CRSP market index, nine sector SPDR ETFs, top-50 US stocks). Place the
+unzipped exports in `data/raw/wrds/` and `data/raw/wrds_top50_history/` (ignored by git), then run
+`run_empirical.py` (E1 US market 1982-2025, E2 sector ETFs 2004-2024), `run_empirical_zeroshot.py`
+(E3: ETF-trained policies on 50 stocks), `run_empirical_tipp.py` (TIPP with the multiplier chosen
+ex ante) and `make_empirical_tables.py`. Aggregated results are in `results/empirical/`; raw CRSP
+data are not redistributed.
+
 ## Layout
 
 ```

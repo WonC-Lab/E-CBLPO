@@ -23,6 +23,14 @@ python experiments/run_extensions.py
 [ -f results/extensions/boundary_layer.json ] || python experiments/run_boundary_layer.py
 for spd in 32 64; do for c in "r=0.02" "r=0.005" "r=0"; do SPD=$spd CASE=$c python experiments/run_price_rate.py; done; done
 
+# Empirical study on CRSP data (needs data/raw/wrds from experiments/data/wrds_export*.py; licensed)
+if [ -d data/raw/wrds ]; then
+  python experiments/run_empirical.py E1 E2
+  [ -d data/raw/wrds_top50_history ] && python experiments/run_empirical_zeroshot.py
+  python experiments/run_empirical_tipp.py E1 E2
+  python experiments/make_empirical_tables.py
+fi
+
 # Optimality gap without transaction costs (Black-Scholes and Kim-Omberg)
 python experiments/run_zero_cost.py
 

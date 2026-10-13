@@ -20,9 +20,9 @@ RES = os.environ.get("RESULTS_DIR", os.path.join(ROOT, "results"))
 EMP = os.path.join(RES, "empirical")
 ALPHA, GAMMA, NBOOT = 0.20, 2.0, 2000
 ORDER = ["Cash", "Constant mix (60% risky)", "Merton (unconstrained)", "CPPI (m=3)", "TIPP (m=3)", "TIPP (m=5)",
-         "Grossman-Zhou", "HJB optimum (robust class, K=1)", "HJB optimum (continuous-time)",
+         "TIPP (m chosen ex ante)", "Grossman-Zhou", "HJB optimum (robust class, K=1)", "HJB optimum (continuous-time)",
          "HJB optimum (certified class)", "ECP"]
-LABEL = {"Grossman-Zhou": "Grossman--Zhou", "Constant mix (60% risky)": "Constant mix (60\\% risky)",
+LABEL = {"Grossman-Zhou": "Grossman--Zhou", "TIPP (m chosen ex ante)": "TIPP ($m$ chosen ex ante)", "Constant mix (60% risky)": "Constant mix (60\\% risky)",
          "HJB optimum (robust class, K=1)": "HJB plug-in (robust class, $K=1$)",
          "HJB optimum (continuous-time)": "HJB plug-in (continuous-time)",
          "HJB optimum (certified class)": "HJB plug-in (certified class)", "ECP": "\\textbf{ECP}"}
@@ -74,7 +74,7 @@ def summarize(exp):
     boot = [np.concatenate([np.where(yl == y)[0] for y in rng.choice(years, len(years))]) for _ in range(NBOOT)]
     out = {"years": [int(years.min()), int(years.max())], "episodes": int(len(yl)),
            "stress_exceed_episodes": int(stress.sum()), "rows": {}}
-    refs = [r for r in ["Grossman-Zhou", "TIPP (m=3)", "HJB optimum (certified class)"] if r in data]
+    refs = [r for r in ["Grossman-Zhou", "TIPP (m=3)", "TIPP (m chosen ex ante)", "HJB optimum (certified class)"] if r in data]
     for n in names:
         v = data[n]
         W = np.asarray(v["W_T"]); Wm = W.mean(0) if W.ndim == 2 else W
@@ -168,8 +168,8 @@ def main():
             print(f"  {c}: {v['episodes']} episodes; violations", {k: x for k, x in v["viol"].items() if x})
     if "E1" in summary:
         cols = ["Merton (unconstrained)", "Constant mix (60% risky)", "CPPI (m=3)", "HJB optimum (continuous-time)",
-                "HJB optimum (certified class)", "TIPP (m=5)", "ECP"]
-        head = ["Merton", "60\\% mix", "CPPI (3)", "HJB (cont.)", "HJB (cert.)", "TIPP (5)", "ECP"]
+                "HJB optimum (certified class)", "TIPP (m=5)", "TIPP (m chosen ex ante)", "ECP"]
+        head = ["Merton", "60\\% mix", "CPPI (3)", "HJB (cont.)", "HJB (cert.)", "TIPP (5)", "TIPP (ex ante)", "ECP"]
         L = [r"\begin{table}[t]", r"\centering\footnotesize",
              r"\caption{US market: one-year episodes that violate the 20\% drawdown limit, by start date: 1987 crash, "
              r"November 1986--19 October 1987; 2000--02, January 2000--December 2002; 2008, October 2007--December "
