@@ -20,8 +20,9 @@ $W_t \ge (1-\alpha)H_t$, $H_t=\max_{s\le t}W_s$, with daily trading and proporti
 
 * **The finite-horizon optimum cannot be executed safely in discrete time.** Near the floor its cushion
   multiplier diverges, and under daily rebalancing it breaches the limit on 7–36% of paths.
-* **Price of discrete-time safety.** Capping the cushion multiplier at $K$ costs roughly $K^{-2}$ in
-  certainty equivalent. The robust class ($K=1$; De Franco, Nicolle & Pham 2020; Hsieh 2026) costs
+* **Price of discrete-time safety.** Capping the cushion multiplier at $K$ costs, numerically, an
+  interest-rate component close to $c_rK^{-2}$ plus a zero-interest component close to $K^{-3}$ (a conjecture;
+  see the manuscript for what is proved). The robust class ($K=1$; De Franco, Nicolle & Pham 2020; Hsieh 2026) costs
   about 123 bp per year in our calibration, while $K=15$ costs 0.6 bp and produces no violations.
 * **Learning the certified optimum where no Bellman reduction exists.** An $S_N$-equivariant residual on
   the Grossman–Zhou cushion multiplier, trained by pathwise gradients through the wealth recursion,
