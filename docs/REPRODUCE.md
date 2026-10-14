@@ -13,7 +13,7 @@ appendix.
 | Robust class, zero-shot N=50, alpha sweep | `run_robust_class.py`, `run_extensions.py` | `results/extensions/` | benchmark checkpoints |
 | Kim–Omberg 2-D HJB, zero-cost gap | `run_ko_hjb.py`, `run_zero_cost.py` | `results/extensions/zero_cost/` | – |
 | Estimation risk, gamma/horizon sensitivity | `run_estimation_risk.py`, `run_sensitivity.py` | `results/extensions/` | – |
-| Near-floor numerics (Section 3) | `run_boundary_layer.py`, `run_localisation.py`, `run_r_scaling.py`, `check_smooth_fit.py`, `check_floor_equation.py` | `results/extensions/` | – |
+| Near-floor numerics (Section 3) | `run_boundary_layer.py`, `run_localisation.py`, `run_r_scaling.py`, `check_smooth_fit.py`, `check_free_boundary.py`, `check_floor_equation.py` | `results/extensions/` | – |
 | Price of certification, rate table | `run_price_of_safety.py`, `run_price_rate.py` (SPD=32,64), `run_solver_checks.py` (PART=A,B), `make_rate_table.py` | `results/extensions/` | – |
 | Independent dual solver | `compare_primal_dual.py` | `results/extensions/primal_dual.json` | – |
 | (G*) certificate | `check_Gstar.py`, `run_gstar_value.py` | `results/extensions/gstar_*.json` | – |
