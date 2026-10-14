@@ -1,7 +1,8 @@
 """
 Item 10: independent check of the primal graded-mesh solver against the dual solver (src/agents/dual_solver.py),
 r = 2%, gamma = 2, alpha = 20%, theta = 0.3, T = 1: certainty equivalent, floor marginal value ln v_x(t, a+) and the
-optimal multiplier at x - a in {1e-3, 1e-4, 1e-5} at t = 0.5, under refinement of both solvers.
+optimal multiplier at x - a in {1e-3, 1e-4, 1e-5} at t = 0.5, under refinement of both solvers; and the primal
+value at M = 2000, 4000 with Richardson extrapolation in M.
 Output: results/extensions/primal_dual.json
 """
 import json, os, sys
@@ -31,4 +32,12 @@ for N, spd in ((2000, 8), (4000, 32), (8000, 32)):
     m_at = np.interp(YS, Y[pos][order], mm[pos][order]).tolist()
     out["dual"][f"N{N}_spd{spd}"] = {"ce": d["ce"], "ln_vx_a": {t: float(z) for t, z in d["zeta_a"].items()}, "m": m_at}
     print("dual", N, spd, out["dual"][f"N{N}_spd{spd}"], flush=True)
+# Primal value under mesh refinement (M = 2000, 4000 at 32 steps/day) and first-order Richardson extrapolation in M:
+# the primal value converges at first order through its one-sided reflection condition (Section 4).
+pm = {}
+for M in (2000, 4000):
+    pm[f"M{M}_spd32"] = solve_hjb_graded(mu=0.08, sigma=0.2, r=0.02, alpha=0.2, gamma=2.0, T=1.0, M=M, q=3.5, steps_per_day=32)["ce"]
+pm["richardson_space"] = 2 * pm["M4000_spd32"] - pm["M2000_spd32"]
+out["primal_M"] = pm
+print("primal_M", pm, flush=True)
 json.dump(out, open(os.path.join(ROOT, "results", "extensions", "primal_dual.json"), "w"), indent=1)
