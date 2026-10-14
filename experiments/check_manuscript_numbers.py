@@ -346,4 +346,8 @@ for m in ("constant_bs", "E1"):
     check(f"ranking preserved {m}", 1, float(rk("target") == rk("drift")), 0)
 check("KO GZ - TIPP5 under target (bp)", 0.2, 1e4 * (CS["kim_omberg"]["Grossman-Zhou"]["target"]["CE"] - CS["kim_omberg"]["TIPP (m=5)"]["target"]["CE"]), 0.051)
 
+# ---- free-boundary values quoted in Remark 3.13
+check("zeta_a(0) dual", 0.815, PD["dual"]["N8000_spd32"]["ln_vx_a"]["0.0"], 0.0006)
+check("zeta_a(T/2) dual", 0.753, PD["dual"]["N8000_spd32"]["ln_vx_a"]["0.5"], 0.0006)
+
 print("\nmismatches (total):", bad)
