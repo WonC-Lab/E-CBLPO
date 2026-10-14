@@ -4,8 +4,8 @@
 
 Code, saved results and reproduction scripts for the manuscript of the same title
 (WonChan Cho, Department of Mathematics, Sungkyunkwan University, `chln0124@skku.edu`).
-The repository name and the code keep the earlier project name E-CBLPO; in the paper the learned method is called
-ECP (equivariant certified policy).
+Repository: <https://github.com/WonC-Lab/drawdown-safety-price> (formerly `E-CBLPO`; old links redirect). The code
+keeps the earlier project name E-CBLPO for the learned method, which the paper calls ECP (equivariant certified policy).
 
 ## Problem
 
