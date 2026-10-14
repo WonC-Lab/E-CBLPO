@@ -245,9 +245,9 @@ check("CP E1 524 episodes (%)", 0.57, 100 * VC["E1: 0 of 524 episodes (overlappi
 check("CP sim (%)", 0.015, 100 * VC["simulation, 20000 paths"], 0.00051)
 SX = json.load(open(os.path.join(ROOT, "results", "empirical", "stress_exceedance.json")))
 e3 = [x for y in SX["E3"].values() for x in y["seed 0"]["events"]]
-check("E3 exceedance days", 69, len(e3), 0); check("E3 falling", 34, sum(min(x["excess"]) < -0.2 for x in e3), 0)
+check("E3 exceedance days", 69, len(e3), 0); check("E3 falling", 34, sum(x["falling"] for x in e3), 0)
 check("E3 max stocks per day", 7, max(len(x["assets"]) for x in e3), 0)
-e3a = [x for y in SX["E3"].values() for k, v in y.items() for x in v["events"] if min(x["excess"]) < -0.2]
+e3a = [x for y in SX["E3"].values() for k, v in y.items() for x in v["events"] if x["falling"]]
 check("E3 max weight in falling stock (%)", 5.1, 100 * max(max(abs(t) for t in x["weights"]) for x in e3a), 0.051)
 check("E3 worst port ret (%)", -3.8, 100 * min(x["port_ret"] for x in e3a), 0.051)
 check("E3 max cushion lost (%)", 54, 100 * max(x["cushion_lost_frac"] for x in e3a), 0.51)

@@ -37,7 +37,7 @@ def trace(market, strat, T, Xex):
         min_ratio = min(min_ratio, float((h1 / h0).min()))
         for b in np.where((np.abs(Xex[:, t]) > ELL).any(1))[0]:
             idx = np.where(np.abs(Xex[b, t]) > ELL)[0]
-            ev.append({"episode": int(b), "day": t, "assets": idx.tolist(), "excess": Xex[b, t, idx].tolist(),
+            ev.append({"episode": int(b), "day": t, "assets": idx.tolist(), "falling": bool(Xex[b, t, idx].min() < -ELL),  # flag only: no CRSP returns are stored
                        "weights": u[b, idx].tolist(), "gross": float(np.abs(u[b]).sum()),
                        "cushion_before": float(h0[b] / H0[b]), "cushion_lost_frac": float(1 - h1[b] / h0[b]),
                        "port_ret": float(env.W[b] / W0[b] - 1)})
