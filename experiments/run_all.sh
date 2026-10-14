@@ -46,6 +46,10 @@ python experiments/make_rate_table.py
 python experiments/run_r_scaling.py
 SPD=8,32 python experiments/run_localisation.py && python experiments/make_localisation_table.py
 
+python experiments/check_floor_equation.py; python experiments/check_smooth_fit.py
+python experiments/compare_primal_dual.py
+python experiments/check_Gstar.py > /dev/null; python experiments/run_gstar_value.py
+
 # Learning: ablations (Heston, jump) and zero-shot N-scaling
 python experiments/run_ablation.py; ABL_MARKET=jump python experiments/run_ablation.py
 python experiments/make_ablation_table.py > /dev/null
@@ -57,6 +61,7 @@ if [ -d data/raw/wrds ]; then
   python experiments/run_stress_exceedance.py
   python experiments/violation_ci.py > /dev/null
   EMP_BLOCK=20 RESULTS_DIR=results/block20 python experiments/run_empirical.py E1 && python experiments/compare_bootstrap.py > /dev/null
+  python experiments/run_cost_sensitivity.py && python experiments/make_cost_sensitivity.py > /dev/null
 fi
 
 python experiments/make_tables.py > /dev/null
