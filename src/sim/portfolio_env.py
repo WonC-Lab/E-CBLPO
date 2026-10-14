@@ -16,7 +16,7 @@ import numpy as np
 
 class DrawdownPortfolioEnv:
     def __init__(self, market, batch_size=64, horizon=252, alpha=0.20, tc=0.001,
-                 w_min=-0.5, w_max=2.0, gross_max=2.0, gamma=2.0):
+                 w_min=-0.5, w_max=2.0, gross_max=2.0, gamma=2.0, drift_cost=False):
         self.m = market
         self.N = market.N
         self.B = batch_size
@@ -27,6 +27,10 @@ class DrawdownPortfolioEnv:
         self.gamma = gamma
         self.r = market.r
         self.dt = market.dt
+        # drift_cost=True charges costs on the move from the drift-adjusted pre-trade weights
+        # u_{t-1} * (1 + R_t) / (1 + r dt + u_{t-1}^T X_t) instead of from the previous target weights
+        # (Remark rem:drift); the default reproduces all results of the paper.
+        self.drift_cost = drift_cost
 
     # ------------------------------------------------------------------ utils
     def utility(self, W):
@@ -47,6 +51,8 @@ class DrawdownPortfolioEnv:
         self.W = np.ones(self.B)
         self.H = np.ones(self.B)
         self.u_prev = np.zeros((self.B, self.N))
+        self.u_pre = np.zeros((self.B, self.N))
+        self.turnover = np.zeros(self.B)
         self.t = 0
         self.max_dd = np.zeros(self.B)
         self.violated = np.zeros(self.B, dtype=bool)
@@ -73,7 +79,10 @@ class DrawdownPortfolioEnv:
 
     def step(self, u):
         u = self.enforce_leverage(np.asarray(u, dtype=np.float64))
-        cost = self.tc * np.abs(u - self.u_prev).sum(axis=1)
+        ref = self.u_pre if self.drift_cost else self.u_prev
+        trade = np.abs(u - ref).sum(axis=1)
+        self.turnover += trade
+        cost = self.tc * trade
         W_post = self.W * (1.0 - cost)
         # cash return over the period: realised rate for historical markets, else r dt
         rdt = self.m.period_rf(self.state) if hasattr(self.m, "period_rf") else self.r * self.dt
@@ -90,6 +99,8 @@ class DrawdownPortfolioEnv:
         newly = D > self.alpha + 1e-12
         self.violated |= newly
         self.u_prev = u
+        growth = 1.0 + port
+        self.u_pre = u * (1.0 + R) / np.where(np.abs(growth) > 1e-12, growth, 1e-12)[:, None]
         self.t += 1
         self.wealth_path.append(self.W.copy())
         self.exposure_path.append(np.abs(u).sum(axis=1))
@@ -100,6 +111,7 @@ class DrawdownPortfolioEnv:
     def summary(self):
         return {
             "W_T": self.W.copy(),
+            "turnover": self.turnover.copy(),
             "max_dd": self.max_dd.copy(),
             "violated": self.violated.copy(),
             "mean_gross": np.mean(np.stack(self.exposure_path, 0), axis=0),

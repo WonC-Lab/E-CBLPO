@@ -310,4 +310,40 @@ R0 = json.load(open(os.path.join(X, "rate_table.json")))["r=0"]
 q = [sc / math.log(K) for K, sc in zip(R0["K"], R0["scaled"])]
 check("K^3 gap / ln K min (r=0)", 600, min(q), 5); check("K^3 gap / ln K max (r=0)", 710, max(q), 5)
 
+# ---- item 9/11: (G*)
+GS = json.load(open(os.path.join(X, "gstar_check.json")))
+check("G* violations", 0, sum(GS["violations"].values()), 0)
+check("G* simulated steps (1e7)", 1.5, GS["counts"]["v_steps"] / 1e7, 0.051)
+check("G* random instances (1e6)", 1.0, (GS["counts"]["i"] + GS["counts"]["iii"] + GS["counts"]["iv"]) / 1e6, 0.051)
+check("cap G*", 4.975, GS["caps_limit"]["Gstar"], 0.0006); check("cap G eta0", 4.926, GS["caps_limit"]["G_eta0"], 0.0006)
+check("cap G eta005", 4.680, GS["caps_limit"]["G_eta005"], 0.0006)
+GV = json.load(open(os.path.join(X, "gstar_value.json")))["spd64"]
+check("price G eta .05", 8.78, GV["G (eta=0.05)"]["gap_bp"], 0.0051); check("price G* eta .05", 8.68, GV["G* (eta=0.05 margin)"]["gap_bp"], 0.0051)
+check("price G eta 0", 7.75, GV["G (eta=0)"]["gap_bp"], 0.0051); check("price G* eta 0", 7.66, GV["G* (eta=0)"]["gap_bp"], 0.0051)
+
+# ---- item 10: primal vs dual
+PD = json.load(open(os.path.join(X, "primal_dual.json")))
+pr, du = PD["primal"]["spd32"], PD["dual"]["N8000_spd32"]
+for i, (cp, cd) in enumerate([(44.64, 44.62), (131.2, 131.1), (405.5, 405.2)]):
+    check(f"primal m {i}", cp, pr["m"][i], 0.051 if cp < 100 else 0.051); check(f"dual m {i}", cd, du["m"][i], 0.051)
+check("primal ln vx", 0.8143, pr["ln_vx_a"]["0.0"], 0.00006); check("dual ln vx", 0.8152, du["ln_vx_a"]["0.0"], 0.00006)
+check("CE diff (bp)", 0.7, 1e4 * (du["ce"] - pr["ce"]), 0.051)
+check("Richardson primal CE", 1.042709, PD["primal_M"]["richardson_space"], 0.0000006); check("dual CE", 1.042709, du["ce"], 0.0000006)
+
+# ---- item 12: cost convention
+CS = json.load(open(os.path.join(X, "cost_sensitivity_summary.json")))
+check("cap target", 4.70, CS["caps"]["target"], 0.0051); check("cap drift", 4.68, CS["caps"]["drift (lambda c)"], 0.0051)
+check("lambda", 1.48, CS["caps"]["lambda"], 0.0051)
+dd = [1e4 * (r["drift"]["CE"] - r["target"]["CE"]) for m in ("constant_bs", "kim_omberg", "E1") for r in CS[m].values()]
+check("cost conv CE change min", -3.0, min(dd), 0.051); check("cost conv CE change max", 5.9, max(dd), 0.051)
+d = lambda m, n: 1e4 * (CS[m][n]["drift"]["CE"] - CS[m][n]["target"]["CE"])
+check("ECP BS", -3.0, d("constant_bs", "ECP"), 0.051); check("ECP KO", -1.3, d("kim_omberg", "ECP"), 0.051); check("ECP E1", 1.9, d("E1", "ECP"), 0.051)
+rules = [d(m, n) for m in ("constant_bs", "kim_omberg", "E1") for n in ("TIPP (m=3)", "TIPP (m=5)", "CPPI (m=3)")]
+check("rules gain min", 3, min(rules), 0.5); check("rules gain max", 6, max(rules), 0.5)
+check("viol/maxdd unchanged (max abs diff)", 0, max(max(abs(r["drift"]["viol"] - r["target"]["viol"]), abs(r["drift"]["mean_maxdd"] - r["target"]["mean_maxdd"])) for m in ("constant_bs", "kim_omberg", "E1") for r in CS[m].values()), 0.0002)
+for m in ("constant_bs", "E1"):
+    rk = lambda conv: [n for n, _ in sorted(CS[m].items(), key=lambda kv: -kv[1][conv]["CE"])]
+    check(f"ranking preserved {m}", 1, float(rk("target") == rk("drift")), 0)
+check("KO GZ - TIPP5 under target (bp)", 0.2, 1e4 * (CS["kim_omberg"]["Grossman-Zhou"]["target"]["CE"] - CS["kim_omberg"]["TIPP (m=5)"]["target"]["CE"]), 0.051)
+
 print("\nmismatches (total):", bad)
