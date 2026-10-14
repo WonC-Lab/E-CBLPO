@@ -46,7 +46,7 @@ python experiments/make_rate_table.py
 python experiments/run_r_scaling.py
 SPD=8,32 python experiments/run_localisation.py && python experiments/make_localisation_table.py
 
-python experiments/check_floor_equation.py; python experiments/check_smooth_fit.py
+python experiments/check_floor_equation.py; python experiments/check_smooth_fit.py; python experiments/check_free_boundary.py
 python experiments/compare_primal_dual.py
 python experiments/check_Gstar.py > /dev/null; python experiments/run_gstar_value.py
 
