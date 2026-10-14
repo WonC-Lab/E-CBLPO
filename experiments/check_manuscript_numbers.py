@@ -305,6 +305,18 @@ check("2 sqrt(ra)/sigma", 1.265, SF["predicted_sqrt_constant"], 0.0006)
 yzz = [SF["times"][t]["Yzz"][-1] for t in ("0.1", "0.5", "0.9")]
 check("Yzz min", 0.359, min(yzz), 0.0006); check("Yzz max", 0.363, max(yzz), 0.0006)
 check("2ra/theta^2", 0.356, SF["predicted_Yzz"], 0.0006)
+FB = json.load(open(os.path.join(X, "free_boundary_check.json")))
+import numpy as _np
+check("zeta_a decreasing on all dates", 1, float(all(_np.diff(FB["zeta_a"]) < 0)), 0)
+check("number of dates", 20, len(FB["dates"]), 0)
+yt7 = [row[-1] for row in FB["Yt_over_ra"]]
+check("Y_t/(ra) at 1e-7 min", -0.026, min(yt7), 0.0006); check("Y_t/(ra) at 1e-7 max", -0.010, max(yt7), 0.0006)
+i5 = FB["dates"].index(0.5)
+for k, c in enumerate([-0.100, -0.034, -0.016, -0.015]):
+    check(f"Y_t/(ra) t=0.5 y idx {k}", c, FB["Yt_over_ra"][i5][k], 0.0006)
+check("zeta_a(0) fb check", 0.814, FB["zeta_a"][0], 0.0006); check("zeta_a(0.95)", 0.583, FB["zeta_a"][-1], 0.0006)
+ms = [row[-1] for row in FB["m_sqrt_y"]]
+check("m sqrt y at 1e-7 min", 1.257, min(ms), 0.0006); check("m sqrt y at 1e-7 max", 1.267, max(ms), 0.0006)
 import math
 R0 = json.load(open(os.path.join(X, "rate_table.json")))["r=0"]
 q = [sc / math.log(K) for K, sc in zip(R0["K"], R0["scaled"])]
