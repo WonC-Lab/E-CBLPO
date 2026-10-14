@@ -297,4 +297,17 @@ check("block viol", 0, BC["block20"]["viol"], 0)
 for k, c in [("1962-1981", 0.25), ("1970-1989", 0.20), ("1990-2009", -0.03)]:
     check(f"autocorr {k}", c, BC["lag1_autocorr"][k], 0.0051)
 
+# ---- item 5: smooth fit observations; floor equation consistency
+SF = json.load(open(os.path.join(X, "smooth_fit_check.json")))
+for t, c in [("0.1", 1.260), ("0.5", 1.262), ("0.9", 1.265)]:
+    check(f"exposure/sqrt(y) at 1e-7, t={t}", c, SF["times"][t]["exposure_over_sqrt_y"][-1], 0.0006)
+check("2 sqrt(ra)/sigma", 1.265, SF["predicted_sqrt_constant"], 0.0006)
+yzz = [SF["times"][t]["Yzz"][-1] for t in ("0.1", "0.5", "0.9")]
+check("Yzz min", 0.359, min(yzz), 0.0006); check("Yzz max", 0.363, max(yzz), 0.0006)
+check("2ra/theta^2", 0.356, SF["predicted_Yzz"], 0.0006)
+import math
+R0 = json.load(open(os.path.join(X, "rate_table.json")))["r=0"]
+q = [sc / math.log(K) for K, sc in zip(R0["K"], R0["scaled"])]
+check("K^3 gap / ln K min (r=0)", 600, min(q), 5); check("K^3 gap / ln K max (r=0)", 710, max(q), 5)
+
 print("\nmismatches (total):", bad)
